@@ -291,3 +291,19 @@ view plain copy
 $ composer config -g secure-http false
 ```
 
+### 手动安装扩展
+
+```bash
+cd /root/oneinstack/src
+tar zxvf php-7.4.5.tar.gz  # 解压已经安装的php版本
+cd php-7.4.5/ext/fileinfo
+/usr/local/php/bin/phpize
+./configure --with-php-config=/usr/local/php/bin/php-config
+make && make install
+cd /usr/local/php/lib/php/extensions
+ls  #看到no-debug-non-zts-20131226类似文件夹
+cd no-debug-non-zts-20131226
+ls  #查看有没有 fileinfo.so,如果有，证明编译成功
+加载fileinfo
+echo 'extension=fileinfo.so' > /usr/local/php/etc/php.d/ext-fileinfo.ini
+```

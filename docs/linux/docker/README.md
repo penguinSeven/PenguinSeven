@@ -119,6 +119,12 @@ $ sudo chmod +x /usr/local/bin/docker-compose
 $ sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
 ```
 
+## 阿里云云镜像源
+
+```
+https://cr.console.aliyun.com/cn-hangzhou/instances/mirrors
+```
+
 ## laradock 
 
 ### 安装
