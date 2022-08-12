@@ -4,11 +4,11 @@
 
 > 系统版本：Ubuntu 16.04.7 LTS
 > 
-> OpenResty版本：1.19.3.2
+> OpenResty版本：1.21.4.1
 >
 > Lua版本：5.1.5
 > 
-> luarocks版本：3.7.0
+> luarocks版本：3.9.1
 > 
 > Orange版本：0.8.1
 
@@ -39,10 +39,10 @@ make install
 
 ```shell
 # 下载安装包
-wget https://openresty.org/download/openresty-1.19.3.2.tar.gz
+wget https://openresty.org/download/openresty-1.21.4.1.tar.gz
 
 # 解压
-tar -xzvf openresty-1.19.3.2.tar.gz
+tar -xzvf openresty-1.21.4.1.tar.gz
 
 # 编译安装
 cd openresty-VERSION
@@ -63,10 +63,13 @@ source /etc/profile
 ```shell
 
 # 下载安装包
-wget https://luarocks.github.io/luarocks/releases/luarocks-3.7.0.tar.gz
+wget https://luarocks.github.io/luarocks/releases/luarocks-3.9.1.tar.gz
 
 # 解压
-tar -zxvf luarocks-3.7.0.tar.gz
+tar -zxvf luarocks-3.9.1.tar.gz
+
+# 初始化配置
+./configure
 
 # 编译安装，make && make install 和 make bootstrap 之间选择，推荐 make bootstrap
 make bootstrap
@@ -88,6 +91,7 @@ sudo make install
 ```shell
 git clone https://github.com/orlabs/orange.git
 cd orange
+# 该方式不推荐，属于全局部署，但项目可以正常允许
 sudo make dev
 ```
 
