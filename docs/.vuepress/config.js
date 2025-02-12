@@ -1,5 +1,5 @@
 module.exports = {
-    base : '/',                             // 网站将在其部署的基本 URL
+    base : '/PenguinSeven/',                             // 网站将在其部署的基本 URL
     title: '吧食笔记',                      // 网站的标题
     dest: './dist',                    //指定 vuepress build 的输出目录
     description: 'PenguinSeven',        //网站描述
@@ -7,16 +7,6 @@ module.exports = {
         ['link', { rel: 'icon', href: '/logo.png' }]
     ],
     port : '8077',              //指定用于 dev 服务器的端口
-
-    configureWebpack: {
-        resolve: {
-            alias: {
-                '@alias': 'docs/public'
-            }
-        }
-    },
-
-    theme: 'reco',
 
     themeConfig: {
         lastUpdated: '上次更新时间',
