@@ -16,6 +16,8 @@ module.exports = {
         }
     },
 
+    theme: 'reco',
+
     themeConfig: {
         lastUpdated: '上次更新时间',
         nav: [
