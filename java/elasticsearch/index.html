@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Elasticsearch | 吧食笔记</title>
+    <meta name="generator" content="VuePress 1.9.10">
+    <link rel="icon" href="/PenguinSeven/logo.png">
+    <meta name="description" content="PenguinSeven">
+    
+    <link rel="preload" href="/PenguinSeven/assets/css/0.styles.feb1df48.css" as="style"><link rel="preload" href="/PenguinSeven/assets/js/app.feb3916a.js" as="script"><link rel="preload" href="/PenguinSeven/assets/js/2.f28e70e0.js" as="script"><link rel="preload" href="/PenguinSeven/assets/js/1.bb87e0ea.js" as="script"><link rel="preload" href="/PenguinSeven/assets/js/14.619aee36.js" as="script"><link rel="prefetch" href="/PenguinSeven/assets/js/10.e38c7cc5.js"><link rel="prefetch" href="/PenguinSeven/assets/js/100.b70b0c1d.js"><link rel="prefetch" href="/PenguinSeven/assets/js/101.46e03238.js"><link rel="prefetch" href="/PenguinSeven/assets/js/102.efb0e370.js"><link rel="prefetch" href="/PenguinSeven/assets/js/103.f5faa006.js"><link rel="prefetch" href="/PenguinSeven/assets/js/104.5564a1fa.js"><link rel="prefetch" href="/PenguinSeven/assets/js/105.39dab30f.js"><link rel="prefetch" href="/PenguinSeven/assets/js/106.c0bb3b4a.js"><link rel="prefetch" href="/PenguinSeven/assets/js/107.257c0c6e.js"><link rel="prefetch" href="/PenguinSeven/assets/js/108.8fc0260e.js"><link rel="prefetch" href="/PenguinSeven/assets/js/109.a137b455.js"><link rel="prefetch" href="/PenguinSeven/assets/js/11.d23c0f5a.js"><link rel="prefetch" href="/PenguinSeven/assets/js/110.fc1e49b3.js"><link rel="prefetch" href="/PenguinSeven/assets/js/111.4a8ae938.js"><link rel="prefetch" href="/PenguinSeven/assets/js/112.48914f2b.js"><link rel="prefetch" href="/PenguinSeven/assets/js/12.3a7a7e61.js"><link rel="prefetch" href="/PenguinSeven/assets/js/13.f6d05845.js"><link rel="prefetch" href="/PenguinSeven/assets/js/15.3b9d1f7c.js"><link rel="prefetch" href="/PenguinSeven/assets/js/16.b49954cb.js"><link rel="prefetch" href="/PenguinSeven/assets/js/17.e528107c.js"><link rel="prefetch" href="/PenguinSeven/assets/js/18.4f4038bf.js"><link rel="prefetch" href="/PenguinSeven/assets/js/19.bd01e132.js"><link rel="prefetch" href="/PenguinSeven/assets/js/20.e3c1893e.js"><link rel="prefetch" href="/PenguinSeven/assets/js/21.3ba92fa5.js"><link rel="prefetch" href="/PenguinSeven/assets/js/22.446578c9.js"><link rel="prefetch" href="/PenguinSeven/assets/js/23.1ec8450c.js"><link rel="prefetch" href="/PenguinSeven/assets/js/24.65a37d34.js"><link rel="prefetch" href="/PenguinSeven/assets/js/25.4f168d23.js"><link rel="prefetch" href="/PenguinSeven/assets/js/26.5934d5a2.js"><link rel="prefetch" href="/PenguinSeven/assets/js/27.cb31c557.js"><link rel="prefetch" href="/PenguinSeven/assets/js/28.bd201709.js"><link rel="prefetch" href="/PenguinSeven/assets/js/29.f3679f2e.js"><link rel="prefetch" href="/PenguinSeven/assets/js/3.0d8eae40.js"><link rel="prefetch" href="/PenguinSeven/assets/js/30.5d895107.js"><link rel="prefetch" href="/PenguinSeven/assets/js/31.2a21575b.js"><link rel="prefetch" href="/PenguinSeven/assets/js/32.81ff732f.js"><link rel="prefetch" href="/PenguinSeven/assets/js/33.ff7c2f5e.js"><link rel="prefetch" href="/PenguinSeven/assets/js/34.9bdb8c46.js"><link rel="prefetch" href="/PenguinSeven/assets/js/35.da89b41e.js"><link rel="prefetch" href="/PenguinSeven/assets/js/36.f8772b8e.js"><link rel="prefetch" href="/PenguinSeven/assets/js/37.61105f93.js"><link rel="prefetch" href="/PenguinSeven/assets/js/38.f7790cf4.js"><link rel="prefetch" href="/PenguinSeven/assets/js/39.54af282a.js"><link rel="prefetch" href="/PenguinSeven/assets/js/4.4f963454.js"><link rel="prefetch" href="/PenguinSeven/assets/js/40.1a7a9b9a.js"><link rel="prefetch" href="/PenguinSeven/assets/js/41.b02d0f12.js"><link rel="prefetch" href="/PenguinSeven/assets/js/42.b103deb5.js"><link rel="prefetch" href="/PenguinSeven/assets/js/43.e0b77010.js"><link rel="prefetch" href="/PenguinSeven/assets/js/44.588ffc70.js"><link rel="prefetch" href="/PenguinSeven/assets/js/45.f5e03ed0.js"><link rel="prefetch" href="/PenguinSeven/assets/js/46.f0dea127.js"><link rel="prefetch" href="/PenguinSeven/assets/js/47.2fd249d7.js"><link rel="prefetch" href="/PenguinSeven/assets/js/48.687fabe4.js"><link rel="prefetch" href="/PenguinSeven/assets/js/49.3fa54d08.js"><link rel="prefetch" href="/PenguinSeven/assets/js/5.5cd94255.js"><link rel="prefetch" href="/PenguinSeven/assets/js/50.055e08df.js"><link rel="prefetch" href="/PenguinSeven/assets/js/51.ce3e0044.js"><link rel="prefetch" href="/PenguinSeven/assets/js/52.9fd95bb4.js"><link rel="prefetch" href="/PenguinSeven/assets/js/53.c26ffd47.js"><link rel="prefetch" href="/PenguinSeven/assets/js/54.0541a968.js"><link rel="prefetch" href="/PenguinSeven/assets/js/55.6209f14b.js"><link rel="prefetch" href="/PenguinSeven/assets/js/56.d7565bf2.js"><link rel="prefetch" href="/PenguinSeven/assets/js/57.a153410b.js"><link rel="prefetch" href="/PenguinSeven/assets/js/58.24db348e.js"><link rel="prefetch" href="/PenguinSeven/assets/js/59.4215ec40.js"><link rel="prefetch" href="/PenguinSeven/assets/js/6.918d102d.js"><link rel="prefetch" href="/PenguinSeven/assets/js/60.8af7fe3a.js"><link rel="prefetch" href="/PenguinSeven/assets/js/61.8176ca2c.js"><link rel="prefetch" href="/PenguinSeven/assets/js/62.473842c3.js"><link rel="prefetch" href="/PenguinSeven/assets/js/63.3dd08959.js"><link rel="prefetch" href="/PenguinSeven/assets/js/64.f8ff329c.js"><link rel="prefetch" href="/PenguinSeven/assets/js/65.7c8e9d0f.js"><link rel="prefetch" href="/PenguinSeven/assets/js/66.719e81e3.js"><link rel="prefetch" href="/PenguinSeven/assets/js/67.aaaa6fb3.js"><link rel="prefetch" href="/PenguinSeven/assets/js/68.941206b0.js"><link rel="prefetch" href="/PenguinSeven/assets/js/69.68b0053c.js"><link rel="prefetch" href="/PenguinSeven/assets/js/7.47f27853.js"><link rel="prefetch" href="/PenguinSeven/assets/js/70.174fd7e6.js"><link rel="prefetch" href="/PenguinSeven/assets/js/71.d99ae443.js"><link rel="prefetch" href="/PenguinSeven/assets/js/72.a8402aeb.js"><link rel="prefetch" href="/PenguinSeven/assets/js/73.f91e4cde.js"><link rel="prefetch" href="/PenguinSeven/assets/js/74.53345e83.js"><link rel="prefetch" href="/PenguinSeven/assets/js/75.5550825f.js"><link rel="prefetch" href="/PenguinSeven/assets/js/76.7775f7d8.js"><link rel="prefetch" href="/PenguinSeven/assets/js/77.fc6220ec.js"><link rel="prefetch" href="/PenguinSeven/assets/js/78.b918de51.js"><link rel="prefetch" href="/PenguinSeven/assets/js/79.abf83adf.js"><link rel="prefetch" href="/PenguinSeven/assets/js/80.d8b3e41c.js"><link rel="prefetch" href="/PenguinSeven/assets/js/81.ef42d0c5.js"><link rel="prefetch" href="/PenguinSeven/assets/js/82.6b4daeeb.js"><link rel="prefetch" href="/PenguinSeven/assets/js/83.dd2cb066.js"><link rel="prefetch" href="/PenguinSeven/assets/js/84.16cd76e5.js"><link rel="prefetch" href="/PenguinSeven/assets/js/85.361035e2.js"><link rel="prefetch" href="/PenguinSeven/assets/js/86.f15739f4.js"><link rel="prefetch" href="/PenguinSeven/assets/js/87.c2e26100.js"><link rel="prefetch" href="/PenguinSeven/assets/js/88.3fd017d3.js"><link rel="prefetch" href="/PenguinSeven/assets/js/89.da561da4.js"><link rel="prefetch" href="/PenguinSeven/assets/js/90.af1641e9.js"><link rel="prefetch" href="/PenguinSeven/assets/js/91.a0270273.js"><link rel="prefetch" href="/PenguinSeven/assets/js/92.b1107c24.js"><link rel="prefetch" href="/PenguinSeven/assets/js/93.9f01b02f.js"><link rel="prefetch" href="/PenguinSeven/assets/js/94.686f81a4.js"><link rel="prefetch" href="/PenguinSeven/assets/js/95.f72d4f1c.js"><link rel="prefetch" href="/PenguinSeven/assets/js/96.06d3c75c.js"><link rel="prefetch" href="/PenguinSeven/assets/js/97.676935b9.js"><link rel="prefetch" href="/PenguinSeven/assets/js/98.8a6b338c.js"><link rel="prefetch" href="/PenguinSeven/assets/js/99.f7e47ec4.js"><link rel="prefetch" href="/PenguinSeven/assets/js/vendors~docsearch.70bf0358.js">
+    <link rel="stylesheet" href="/PenguinSeven/assets/css/0.styles.feb1df48.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/PenguinSeven/" class="home-link router-link-active"><!----> <span class="site-name">吧食笔记</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/PenguinSeven/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/PenguinSeven/php/" class="nav-link">
+  PHP
+</a></div><div class="nav-item"><a href="https://google.com" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  External
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/PenguinSeven/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/PenguinSeven/php/" class="nav-link">
+  PHP
+</a></div><div class="nav-item"><a href="https://google.com" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  External
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <!----> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="elasticsearch"><a href="#elasticsearch" class="header-anchor">#</a> Elasticsearch</h1> <h2 id="前言"><a href="#前言" class="header-anchor">#</a> 前言</h2> <blockquote><p>本是个web开发小生，在之前的公司接触到了Elasticsearch，出于对大数据的好奇，开始了自学，
+本文参看了部分博客，慕课网视频，本着对原创敬佩的态度，贴出参考路径...</p></blockquote> <ul><li>慕课网学习视频 <strong>https://www.imooc.com/learn/920</strong></li> <li>JDK安装 <strong>http://blog.csdn.net/wangkuangs/article/details/54232681</strong></li> <li>使用问题 <strong>http://blog.csdn.net/zhang89xiao/article/details/68925294</strong></li></ul> <h2 id="安装-运行"><a href="#安装-运行" class="header-anchor">#</a> 安装/运行</h2> <h3 id="_1-初始化"><a href="#_1-初始化" class="header-anchor">#</a> 1. 初始化</h3> <ul><li><p>成功安装jdk1.8</p></li> <li><p>下载、安装</p></li></ul> <div class="language-bash extra-class"><pre class="language-bash"><code>    <span class="token function">wget</span> https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-5.6.3.tar.gz
+    <span class="token comment"># 解压</span>
+    <span class="token function">tar</span> <span class="token parameter variable">-zxvf</span> elasticsearch-5.6.3.tar.gz
+</code></pre></div><h3 id="_2-启动"><a href="#_2-启动" class="header-anchor">#</a> 2. 启动</h3> <div class="language-bash extra-class"><pre class="language-bash"><code>
+    <span class="token comment"># 新建普通用户</span>
+     <span class="token function">groupadd</span> elasticsearch
+     <span class="token function">useradd</span> <span class="token parameter variable">-m</span> elasticsearch <span class="token parameter variable">-g</span> elasticsearch <span class="token parameter variable">-d</span> /home/elasticsearch
+    
+    <span class="token comment"># 修改密码</span>
+     <span class="token function">passwd</span> elasticsearch
+    
+    <span class="token comment"># 切换普通用户</span>
+    <span class="token function">su</span> elasticsearch
+    
+    <span class="token comment"># 启动</span>
+    ./bin/elasticsearch
+    
+</code></pre></div><h3 id="_3-修改配置"><a href="#_3-修改配置" class="header-anchor">#</a> 3. 修改配置</h3> <ul><li>基础配置</li></ul> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">vi</span> /usr/local/elasticsearch/config/elasticsearch.yml
+</code></pre></div><p><img src="/PenguinSeven/assets/img/elasticsearch-01.f59f5c7b.jpg" alt="elasticsearch"></p> <ul><li>内存配置</li></ul> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">vi</span> ./config/jvm.options
+
+<span class="token comment">#修改内存配置</span>
+<span class="token parameter variable">-Xms2g</span>
+<span class="token parameter variable">-Xmx2g</span>
+</code></pre></div><h3 id="_4-安装插件"><a href="#_4-安装插件" class="header-anchor">#</a> 4. 安装插件</h3> <h4 id="elasticsearch-head"><a href="#elasticsearch-head" class="header-anchor">#</a> elasticsearch-head</h4> <ul><li>下载</li></ul> <div class="language-bash extra-class"><pre class="language-bash"><code>
+<span class="token function">git</span> clone https://github.com/mobz/elasticsearch-head.git
+
+<span class="token comment"># 成功安装node (大于6.0)</span>
+
+<span class="token comment"># 初始化项目</span>
+<span class="token builtin class-name">cd</span> elasticsearch-head
+<span class="token function">npm</span> <span class="token function">install</span>
+
+<span class="token comment"># 启动</span>
+<span class="token function">npm</span> run start
+
+</code></pre></div><ul><li>解决跨域问题</li></ul> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment"># 修改 elasticsearch.yml, 允许跨域, 在文件末尾添加</span>
+http.cors.enabled: <span class="token boolean">true</span>
+http.cors.allow-origin: <span class="token string">&quot;*&quot;</span>
+</code></pre></div><h2 id="快速搭建集群"><a href="#快速搭建集群" class="header-anchor">#</a> 快速搭建集群</h2> <h3 id="启动"><a href="#启动" class="header-anchor">#</a> 启动</h3> <ul><li>启动第一个节点</li></ul> <div class="language-bash extra-class"><pre class="language-bash"><code>./bin/elasticsearch 
+</code></pre></div><ul><li>启动第二个节点</li></ul> <div class="language-bash extra-class"><pre class="language-bash"><code>./bin/elasticsearch <span class="token parameter variable">-Ehttp.port</span><span class="token operator">=</span><span class="token number">8200</span> <span class="token parameter variable">-Epath.data</span><span class="token operator">=</span>node2
+</code></pre></div><ul><li>启动第三个节点</li></ul> <div class="language-bash extra-class"><pre class="language-bash"><code>./bin/elasticsearch <span class="token parameter variable">-Ehttp.port</span><span class="token operator">=</span><span class="token number">7200</span> <span class="token parameter variable">-Epath.data</span><span class="token operator">=</span>node3
+</code></pre></div><h3 id="查看"><a href="#查看" class="header-anchor">#</a> 查看</h3> <ul><li>查看启动集群状态 <strong>http://localhost:9200/_cat/nodes</strong></li></ul> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token number">192.168</span>.1.111 <span class="token number">11</span> <span class="token number">97</span> <span class="token number">5</span> <span class="token number">0.22</span> <span class="token number">0.54</span> <span class="token number">0.52</span> mdi - P6j2v_c
+<span class="token number">192.168</span>.1.111 <span class="token number">13</span> <span class="token number">97</span> <span class="token number">5</span> <span class="token number">0.22</span> <span class="token number">0.54</span> <span class="token number">0.52</span> mdi - DQOqgiL
+<span class="token number">192.168</span>.1.111 <span class="token number">17</span> <span class="token number">97</span> <span class="token number">5</span> <span class="token number">0.22</span> <span class="token number">0.54</span> <span class="token number">0.52</span> mdi * JPWkmUG
+</code></pre></div><ul><li>集群详情 ： <strong>http://192.168.1.111:9200/_cluster/stats</strong></li></ul> <div class="language-json extra-class"><pre class="language-json"><code><span class="token punctuation">{</span>
+    <span class="token property">&quot;_nodes&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token property">&quot;total&quot;</span><span class="token operator">:</span> <span class="token number">3</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;successful&quot;</span><span class="token operator">:</span> <span class="token number">3</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;failed&quot;</span><span class="token operator">:</span> <span class="token number">0</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;cluster_name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;elasticsearch&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;timestamp&quot;</span><span class="token operator">:</span> <span class="token number">1512828954692</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;status&quot;</span><span class="token operator">:</span> <span class="token string">&quot;green&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;indices&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token property">&quot;count&quot;</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;shards&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+            <span class="token property">&quot;total&quot;</span><span class="token operator">:</span> <span class="token number">16</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;primaries&quot;</span><span class="token operator">:</span> <span class="token number">8</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;replication&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;index&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                <span class="token property">&quot;shards&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                    <span class="token property">&quot;min&quot;</span><span class="token operator">:</span> <span class="token number">6</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;max&quot;</span><span class="token operator">:</span> <span class="token number">10</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;avg&quot;</span><span class="token operator">:</span> <span class="token number">8</span>
+                <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;primaries&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                    <span class="token property">&quot;min&quot;</span><span class="token operator">:</span> <span class="token number">3</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;max&quot;</span><span class="token operator">:</span> <span class="token number">5</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;avg&quot;</span><span class="token operator">:</span> <span class="token number">4</span>
+                <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;replication&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                    <span class="token property">&quot;min&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;max&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;avg&quot;</span><span class="token operator">:</span> <span class="token number">1</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;docs&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+            <span class="token property">&quot;count&quot;</span><span class="token operator">:</span> <span class="token number">6</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;deleted&quot;</span><span class="token operator">:</span> <span class="token number">0</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;store&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+            <span class="token property">&quot;size_in_bytes&quot;</span><span class="token operator">:</span> <span class="token number">59706</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;throttle_time_in_millis&quot;</span><span class="token operator">:</span> <span class="token number">0</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;fielddata&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+            <span class="token property">&quot;memory_size_in_bytes&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;evictions&quot;</span><span class="token operator">:</span> <span class="token number">0</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;query_cache&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+            <span class="token property">&quot;memory_size_in_bytes&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;total_count&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;hit_count&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;miss_count&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;cache_size&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;cache_count&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;evictions&quot;</span><span class="token operator">:</span> <span class="token number">0</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;completion&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+            <span class="token property">&quot;size_in_bytes&quot;</span><span class="token operator">:</span> <span class="token number">0</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;segments&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+            <span class="token property">&quot;count&quot;</span><span class="token operator">:</span> <span class="token number">12</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;memory_in_bytes&quot;</span><span class="token operator">:</span> <span class="token number">34228</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;terms_memory_in_bytes&quot;</span><span class="token operator">:</span> <span class="token number">26796</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;stored_fields_memory_in_bytes&quot;</span><span class="token operator">:</span> <span class="token number">3744</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;term_vectors_memory_in_bytes&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;norms_memory_in_bytes&quot;</span><span class="token operator">:</span> <span class="token number">2560</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;points_memory_in_bytes&quot;</span><span class="token operator">:</span> <span class="token number">24</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;doc_values_memory_in_bytes&quot;</span><span class="token operator">:</span> <span class="token number">1104</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;index_writer_memory_in_bytes&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;version_map_memory_in_bytes&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;fixed_bit_set_memory_in_bytes&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;max_unsafe_auto_id_timestamp&quot;</span><span class="token operator">:</span> <span class="token number">-1</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;file_sizes&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;nodes&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token property">&quot;count&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+            <span class="token property">&quot;total&quot;</span><span class="token operator">:</span> <span class="token number">3</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;data&quot;</span><span class="token operator">:</span> <span class="token number">3</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;coordinating_only&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;master&quot;</span><span class="token operator">:</span> <span class="token number">3</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;ingest&quot;</span><span class="token operator">:</span> <span class="token number">3</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;versions&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+            <span class="token string">&quot;5.6.2&quot;</span>
+        <span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;os&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+            <span class="token property">&quot;available_processors&quot;</span><span class="token operator">:</span> <span class="token number">6</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;allocated_processors&quot;</span><span class="token operator">:</span> <span class="token number">6</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;names&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+                <span class="token punctuation">{</span>
+                    <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Linux&quot;</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;count&quot;</span><span class="token operator">:</span> <span class="token number">3</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">]</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;mem&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                <span class="token property">&quot;total_in_bytes&quot;</span><span class="token operator">:</span> <span class="token number">11113943040</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;free_in_bytes&quot;</span><span class="token operator">:</span> <span class="token number">400244736</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;used_in_bytes&quot;</span><span class="token operator">:</span> <span class="token number">10713698304</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;free_percent&quot;</span><span class="token operator">:</span> <span class="token number">4</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;used_percent&quot;</span><span class="token operator">:</span> <span class="token number">96</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;process&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+            <span class="token property">&quot;cpu&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                <span class="token property">&quot;percent&quot;</span><span class="token operator">:</span> <span class="token number">0</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;open_file_descriptors&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                <span class="token property">&quot;min&quot;</span><span class="token operator">:</span> <span class="token number">196</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;max&quot;</span><span class="token operator">:</span> <span class="token number">204</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;avg&quot;</span><span class="token operator">:</span> <span class="token number">199</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;jvm&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+            <span class="token property">&quot;max_uptime_in_millis&quot;</span><span class="token operator">:</span> <span class="token number">1287394</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;versions&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+                <span class="token punctuation">{</span>
+                    <span class="token property">&quot;version&quot;</span><span class="token operator">:</span> <span class="token string">&quot;1.8.0_144&quot;</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;vm_name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Java HotSpot(TM) 64-Bit Server VM&quot;</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;vm_version&quot;</span><span class="token operator">:</span> <span class="token string">&quot;25.144-b01&quot;</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;vm_vendor&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Oracle Corporation&quot;</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;count&quot;</span><span class="token operator">:</span> <span class="token number">3</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">]</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;mem&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                <span class="token property">&quot;heap_used_in_bytes&quot;</span><span class="token operator">:</span> <span class="token number">480286304</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;heap_max_in_bytes&quot;</span><span class="token operator">:</span> <span class="token number">3168927744</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;threads&quot;</span><span class="token operator">:</span> <span class="token number">93</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;fs&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+            <span class="token property">&quot;total_in_bytes&quot;</span><span class="token operator">:</span> <span class="token number">484573421568</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;free_in_bytes&quot;</span><span class="token operator">:</span> <span class="token number">443235115008</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;available_in_bytes&quot;</span><span class="token operator">:</span> <span class="token number">418596622336</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;plugins&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;network_types&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+            <span class="token property">&quot;transport_types&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                <span class="token property">&quot;netty4&quot;</span><span class="token operator">:</span> <span class="token number">3</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;http_types&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                <span class="token property">&quot;netty4&quot;</span><span class="token operator">:</span> <span class="token number">3</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="下载安装kibana"><a href="#下载安装kibana" class="header-anchor">#</a> 下载安装kibana</h2> <h3 id="下载"><a href="#下载" class="header-anchor">#</a> 下载</h3> <ul><li>地址<strong>https://www.elastic.co/downloads/kibana</strong>，目前我使用的是<strong>Debian 64位</strong>，根据自己的系统，对应下载。</li></ul> <p><img src="/PenguinSeven/assets/img/kibana-01.569d9666.jpg" alt="kibana"></p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">wget</span> https://artifacts.elastic.co/downloads/kibana/kibana-6.0.1-linux-x86_64.tar.gz
+</code></pre></div><h3 id="修改配置"><a href="#修改配置" class="header-anchor">#</a> 修改配置</h3> <p><img src="/PenguinSeven/assets/img/kibana-02.c4b4c364.jpg" alt="kibana-config"></p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">vi</span> ./config/kibana.yml
+
+<span class="token comment"># 修改 elasticsearch 路径地址</span>
+elasticsearch.url <span class="token operator">=</span> <span class="token string">'http://localhost:9200'</span>
+</code></pre></div><h3 id="启动-2"><a href="#启动-2" class="header-anchor">#</a> 启动</h3> <div class="language-bash extra-class"><pre class="language-bash"><code>./bin/kibana <span class="token parameter variable">-H</span> <span class="token number">0.0</span>.0.0 <span class="token parameter variable">-p</span> <span class="token number">5601</span>
+</code></pre></div><h3 id="功能介绍"><a href="#功能介绍" class="header-anchor">#</a> 功能介绍</h3> <p><img src="/PenguinSeven/assets/img/kibana-03.09ed56e6.jpg" alt="kibana-config"></p> <h2 id="beat"><a href="#beat" class="header-anchor">#</a> beat</h2> <h3 id="介绍"><a href="#介绍" class="header-anchor">#</a> 介绍</h3> <p><img src="/PenguinSeven/assets/img/beat-01.26a9b388.jpg" alt="beat"></p> <h3 id="filebeat"><a href="#filebeat" class="header-anchor">#</a> FileBeat</h3> <p><img src="/PenguinSeven/assets/img/beat-02.3c35c77a.jpg" alt="fileBeat"></p> <h3 id="下载安装"><a href="#下载安装" class="header-anchor">#</a> 下载安装</h3> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">wget</span> https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-5.6.2-linux-x86_64.tar.gz
+</code></pre></div><h3 id="配置运行"><a href="#配置运行" class="header-anchor">#</a> 配置运行</h3> <h4 id="配置-nginx-yml"><a href="#配置-nginx-yml" class="header-anchor">#</a> 配置  <strong>nginx.yml</strong></h4> <div class="language-yaml extra-class"><pre class="language-yaml"><code><span class="token comment">#=========================== Filebeat prospectors =============================</span>
+<span class="token key atrule">filebeat.prospectors</span><span class="token punctuation">:</span>
+<span class="token punctuation">-</span> <span class="token key atrule">input_type</span><span class="token punctuation">:</span> stdin
+<span class="token comment">#================================ Outputs =====================================</span>
+<span class="token key atrule">output.console</span><span class="token punctuation">:</span>
+    <span class="token key atrule">pretty</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+</code></pre></div><h4 id="配合nginx-日志运行"><a href="#配合nginx-日志运行" class="header-anchor">#</a> 配合<strong>nginx</strong> 日志运行</h4> <h5 id="运行"><a href="#运行" class="header-anchor">#</a> 运行</h5> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">head</span> <span class="token parameter variable">-n</span> <span class="token number">1</span> /data/wwwlogs/access_nginx.log <span class="token operator">|</span> ./filebeat <span class="token parameter variable">-e</span> <span class="token parameter variable">-c</span> nginx.yml
+</code></pre></div><h5 id="输出"><a href="#输出" class="header-anchor">#</a> 输出</h5> <blockquote><p>原数据 192.168.1.108 - - [10/Dec/2017:21:12:11 +0800]
+&quot;GET / HTTP/1.1&quot; 200 21 &quot;-&quot; &quot;Mozilla/5.0 (Windows NT 6.1; Win64; x64)
+AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36&quot;</p></blockquote> <div class="language-json extra-class"><pre class="language-json"><code><span class="token punctuation">{</span>
+  <span class="token property">&quot;@timestamp&quot;</span><span class="token operator">:</span> <span class="token string">&quot;2017-12-10T13:16:00.964Z&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;beat&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;hostname&quot;</span><span class="token operator">:</span> <span class="token string">&quot;penguinSeven&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;penguinSeven&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;version&quot;</span><span class="token operator">:</span> <span class="token string">&quot;5.6.2&quot;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;input_type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;stdin&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;message&quot;</span><span class="token operator">:</span> <span class="token string">&quot;192.168.1.108 - - [10/Dec/2017:21:12:11 +0800] \&quot;GET / HTTP/1.1\&quot; 200 21 \&quot;-\&quot; \&quot;Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36\&quot;&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;offset&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;source&quot;</span><span class="token operator">:</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;log&quot;</span>
+<span class="token punctuation">}</span>
+
+</code></pre></div><h2 id="packetbeat"><a href="#packetbeat" class="header-anchor">#</a> packetbeat</h2> <blockquote><p>实时抓取网络包</p></blockquote> <h3 id="下载-2"><a href="#下载-2" class="header-anchor">#</a> 下载</h3> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">wget</span> https://artifacts.elastic.co/downloads/beats/packetbeat/packetbeat-5.6.2-linux-x86_64.tar.gz
+</code></pre></div><h3 id="配置运行-2"><a href="#配置运行-2" class="header-anchor">#</a> 配置运行</h3> <h4 id="配置"><a href="#配置" class="header-anchor">#</a> 配置</h4> <div class="language-yaml extra-class"><pre class="language-yaml"><code>
+<span class="token comment">#============================== Network device ================================</span>
+
+<span class="token key atrule">packetbeat.interfaces.device</span><span class="token punctuation">:</span> eth0
+
+<span class="token key atrule">packetbeat.protocols.http</span><span class="token punctuation">:</span>
+  <span class="token comment"># Configure the ports where to listen for HTTP traffic. You can disable</span>
+  <span class="token comment"># the HTTP protocol by commenting out the list of ports.</span>
+  <span class="token key atrule">ports</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token number">9200</span><span class="token punctuation">]</span>
+  <span class="token key atrule">send_request</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>   
+  <span class="token key atrule">include_body_for</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">&quot;application/json&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;x-www-form-urlencoded&quot;</span><span class="token punctuation">]</span>
+
+
+<span class="token comment">#================================ Outputs =====================================</span>
+
+<span class="token key atrule">output.console</span><span class="token punctuation">:</span>
+    <span class="token key atrule">pretty</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+
+</code></pre></div><h4 id="运行-2"><a href="#运行-2" class="header-anchor">#</a> 运行</h4> <div class="language-bash extra-class"><pre class="language-bash"><code>./packetbeat <span class="token parameter variable">-e</span> <span class="token parameter variable">-c</span> es.yml <span class="token parameter variable">-strict.perms</span><span class="token operator">=</span>false
+</code></pre></div><h4 id="输出结果"><a href="#输出结果" class="header-anchor">#</a> 输出结果</h4> <div class="language-json extra-class"><pre class="language-json"><code><span class="token punctuation">{</span>
+  <span class="token property">&quot;@timestamp&quot;</span><span class="token operator">:</span> <span class="token string">&quot;2017-12-10T14:39:10.624Z&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;beat&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;hostname&quot;</span><span class="token operator">:</span> <span class="token string">&quot;penguinSeven&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;penguinSeven&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;version&quot;</span><span class="token operator">:</span> <span class="token string">&quot;5.6.2&quot;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;bytes_in&quot;</span><span class="token operator">:</span> <span class="token number">1250</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;bytes_out&quot;</span><span class="token operator">:</span> <span class="token number">193</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;client_ip&quot;</span><span class="token operator">:</span> <span class="token string">&quot;192.168.1.108&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;client_port&quot;</span><span class="token operator">:</span> <span class="token number">14400</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;client_proc&quot;</span><span class="token operator">:</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;client_server&quot;</span><span class="token operator">:</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;direction&quot;</span><span class="token operator">:</span> <span class="token string">&quot;in&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;http&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;request&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token property">&quot;headers&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token property">&quot;content-length&quot;</span><span class="token operator">:</span> <span class="token number">0</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;params&quot;</span><span class="token operator">:</span> <span class="token string">&quot;&quot;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;response&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token property">&quot;code&quot;</span><span class="token operator">:</span> <span class="token number">200</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;headers&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token property">&quot;content-length&quot;</span><span class="token operator">:</span> <span class="token number">89</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;content-type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;text/plain; charset=UTF-8&quot;</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;phrase&quot;</span><span class="token operator">:</span> <span class="token string">&quot;OK&quot;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;ip&quot;</span><span class="token operator">:</span> <span class="token string">&quot;192.168.1.111&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;method&quot;</span><span class="token operator">:</span> <span class="token string">&quot;GET&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;path&quot;</span><span class="token operator">:</span> <span class="token string">&quot;/_cat/nodes&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;port&quot;</span><span class="token operator">:</span> <span class="token number">9200</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;proc&quot;</span><span class="token operator">:</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;query&quot;</span><span class="token operator">:</span> <span class="token string">&quot;GET /_cat/nodes&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;request&quot;</span><span class="token operator">:</span> <span class="token string">&quot;GET /_cat/nodes HTTP/1.1\r\nHost: 192.168.1.111:9200\r\nConnection: keep-alive\r\nCache-Control: max-age=0\r\nUser-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36\r\nUpgrade-Insecure-Requests: 1\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: zh-CN,zh;q=0.9,en;q=0.8\r\nCookie: _identity-frontend=687c0976b190b7123bf2d7a4bf9065cc490e67a1a4412a819deab9c077217034a%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B3%2C%22j5gIPkp6dhRxGUdmbp3yfIihFr64u8IC%22%2C2592000%5D%22%3B%7D; XSRF-TOKEN=eyJpdiI6IlBaVnpucWQxTkRkNk5TWGg2d2RmWFE9PSIsInZhbHVlIjoiMzlqQkM3ZXZqVzF5M2F6Y2JvTDVsRmVGNDNDb2cxQzZRdGIxblFzOHZ6YmlpQUFNdE1MZG5TS0lDYmpcL21sRXhPV0RsM1hrcWlYYTRKNFJlTStWWHlBPT0iLCJtYWMiOiJmOWFjNWIwMWY1OThjMzQyZGQ2NGM4Y2RmZGM1YjM5ZjcxNzZjMGY1MTBkZDRlYzkxNzU4MTJlZDJiZTZlOTQ4In0%3D; laravel_session=eyJpdiI6IktaRFRNTXRkWTBob3Z1bTNFbnp5Z0E9PSIsInZhbHVlIjoiZkdqbngxSXN1eEFoY1d1R1wvMGUwTnBvOUp3VVwvaThUUkZHMXpwOXpTc0Z2cUdFeDhDSFhCZUhPSmpOVUU2MHpGcUxPYWszNmlkNGgxSXE4Rlg0bGZNQT09IiwibWFjIjoiZTFkMWZjNzY2YTgxN2ViMzgwYWE3N2FjM2NjODJkNGVmMWIwNDM0MTAwOTBlOGRiMjBmNzFmNjc2M2RhZDU0OSJ9\r\n\r\n&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;responsetime&quot;</span><span class="token operator">:</span> <span class="token number">162</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;server&quot;</span><span class="token operator">:</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;status&quot;</span><span class="token operator">:</span> <span class="token string">&quot;OK&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;http&quot;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="logstash"><a href="#logstash" class="header-anchor">#</a> Logstash</h2> <h3 id="下载安装-2"><a href="#下载安装-2" class="header-anchor">#</a> 下载安装</h3> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">wget</span> https://artifacts.elastic.co/downloads/logstash/logstash-5.6.2.tar.gz
+</code></pre></div><h3 id="配置-2"><a href="#配置-2" class="header-anchor">#</a> 配置</h3> <div class="language-conf extra-class"><pre class="language-text"><code>input {
+  stdin { }
+}
+
+filter {
+  grok {
+    match =&gt; {
+      &quot;message&quot; =&gt; '%{IPORHOST:remote_ip} - %{DATA:user_name} \[%{HTTPDATE:time}\] &quot;%{WORD:request_action} %{DATA:request} HTTP/%{NUMBER:http_version}&quot; %{NUMBER:response} %{NUMBER:bytes} &quot;%{DATA:referrer}&quot; &quot;%{DATA:agent}&quot;'
+    }
+  }
+
+  date {
+    match =&gt; [ &quot;time&quot;, &quot;dd/MMM/YYYY:HH:mm:ss Z&quot; ]
+    locale =&gt; en
+  }
+
+  geoip {
+    source =&gt; &quot;remote_ip&quot;
+    target =&gt; &quot;geoip&quot;
+  }
+
+  useragent {
+    source =&gt; &quot;agent&quot;
+    target =&gt; &quot;user_agent&quot;
+  }
+}
+
+output {
+stdout {
+ codec =&gt; rubydebug 
+ }
+}
+
+</code></pre></div><h3 id="运行与输出"><a href="#运行与输出" class="header-anchor">#</a> 运行与输出</h3> <h4 id="运行-3"><a href="#运行-3" class="header-anchor">#</a> 运行</h4> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">head</span> <span class="token parameter variable">-n</span> <span class="token number">1</span> /data/wwwlogs/access_nginx.log <span class="token operator">|</span> ./bin/logstash <span class="token parameter variable">-f</span> nginx.conf
+</code></pre></div><p>####输出</p> <blockquote><p>原数据 192.168.1.108 - - [10/Dec/2017:21:12:11 +0800] &quot;GET / HTTP/1.1&quot; 200 21 &quot;-&quot; &quot;Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36&quot;</p></blockquote> <div class="language-txt extra-class"><pre class="language-txt"><code>{
+           &quot;request&quot; =&gt; &quot;/&quot;,
+    &quot;request_action&quot; =&gt; &quot;GET&quot;,
+             &quot;agent&quot; =&gt; &quot;Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36&quot;,
+             &quot;geoip&quot; =&gt; {},
+         &quot;user_name&quot; =&gt; &quot;-&quot;,
+      &quot;http_version&quot; =&gt; &quot;1.1&quot;,
+           &quot;message&quot; =&gt; &quot;192.168.1.108 - - [10/Dec/2017:21:12:11 +0800] \&quot;GET / HTTP/1.1\&quot; 200 21 \&quot;-\&quot; \&quot;Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36\&quot;&quot;,
+              &quot;tags&quot; =&gt; [
+        [0] &quot;_geoip_lookup_failure&quot;
+    ],
+          &quot;referrer&quot; =&gt; &quot;-&quot;,
+        &quot;@timestamp&quot; =&gt; 2017-12-10T13:12:11.000Z,
+         &quot;remote_ip&quot; =&gt; &quot;192.168.1.108&quot;,
+          &quot;response&quot; =&gt; &quot;200&quot;,
+             &quot;bytes&quot; =&gt; &quot;21&quot;,
+          &quot;@version&quot; =&gt; &quot;1&quot;,
+              &quot;host&quot; =&gt; &quot;penguinSeven&quot;,
+              &quot;time&quot; =&gt; &quot;10/Dec/2017:21:12:11 +0800&quot;,
+        &quot;user_agent&quot; =&gt; {
+          &quot;patch&quot; =&gt; &quot;3202&quot;,
+             &quot;os&quot; =&gt; &quot;Windows 7&quot;,
+          &quot;major&quot; =&gt; &quot;62&quot;,
+          &quot;minor&quot; =&gt; &quot;0&quot;,
+          &quot;build&quot; =&gt; &quot;&quot;,
+           &quot;name&quot; =&gt; &quot;Chrome&quot;,
+        &quot;os_name&quot; =&gt; &quot;Windows 7&quot;,
+         &quot;device&quot; =&gt; &quot;Other&quot;
+    }
+}
+
+</code></pre></div><h2 id="实战目标"><a href="#实战目标" class="header-anchor">#</a> 实战目标</h2> <h3 id="方案"><a href="#方案" class="header-anchor">#</a> 方案</h3> <ul><li>Production Cluster</li></ul> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment"># Elasticsearch http://127.0.0.1:9200</span>
+<span class="token function">su</span> www
+./bin/elasticsearch
+
+<span class="token comment"># kibana http://127.0.0.1:5601</span>
+./bin/kibana
+
+</code></pre></div><ul><li>Monitoring Cluster</li></ul> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment"># elasticsearch http://127.0.0.1:9200</span>
+<span class="token function">su</span> www
+./bin/elasticsearch <span class="token parameter variable">-Ecluster.name</span><span class="token operator">=</span>sniff_search <span class="token parameter variable">-Ehttp.port</span><span class="token operator">=</span><span class="token number">8200</span> <span class="token parameter variable">-Epath.data</span><span class="token operator">=</span>sniff
+
+<span class="token comment"># kibana http://127.0.0.1:8601</span>
+./bin/kibana <span class="token parameter variable">-e</span> http://127.0.0.1:8200 <span class="token parameter variable">-p</span> <span class="token number">8601</span>
+</code></pre></div><blockquote><p>请确保production和monitoring不是一个集群，否则会进入抓包死循环 。<strong>-Ecluster.name=sniff_search</strong> 设置</p></blockquote> <p><img src="/PenguinSeven/assets/img/cluster-01.60af97e8.jpg" alt="CLUSTER"></p> <ul><li>Logstash 配置</li></ul> <div class="language-conf extra-class"><pre class="language-text"><code>input {
+    beats {
+        port =&gt; 5044
+    }
+}
+filter {
+    if &quot;search&quot; in [request]{
+        grok {
+            match =&gt; { &quot;request&quot; =&gt; &quot;.*\n\{(?&lt;query_body&gt;.*)&quot;} 
+        }
+        grok {
+            match =&gt; { &quot;path&quot; =&gt; &quot;\/(?&lt;index&gt;.*)\/_search&quot;}     
+        }
+     if [index] {
+      } else {
+            mutate {
+              add_field  =&gt; { &quot;index&quot; =&gt; &quot;All&quot; }
+        }
+      }
+
+      mutate {
+              update  =&gt; { &quot;query_body&quot; =&gt; &quot;{%{query_body}&quot;}}
+      }
+
+  #    mutate {
+  #        remove_field =&gt; [ &quot;[http][response][body]&quot; ]
+  #    }
+}
+
+output {
+  #stdout{codec=&gt;rubydebug}
+
+  if &quot;search&quot; in [request]{
+        elasticsearch {
+        hosts =&gt; &quot;127.0.0.1:8200&quot;
+        }
+   }
+}
+
+</code></pre></div><ul><li>packetbeat 配置</li></ul> <div class="language-yaml extra-class"><pre class="language-yaml"><code>
+<span class="token comment">#============================== Network device ================================</span>
+
+<span class="token comment"># Select the network interface to sniff the data. On Linux, you can use the</span>
+<span class="token comment"># &quot;any&quot; keyword to sniff on all connected interfaces.</span>
+<span class="token key atrule">packetbeat.interfaces.device</span><span class="token punctuation">:</span> eth0
+
+<span class="token key atrule">packetbeat.protocols.http</span><span class="token punctuation">:</span>
+  <span class="token comment"># Configure the ports where to listen for HTTP traffic. You can disable</span>
+  <span class="token comment"># the HTTP protocol by commenting out the list of ports.</span>
+  <span class="token key atrule">ports</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token number">9200</span><span class="token punctuation">]</span>
+  <span class="token key atrule">send_request</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>   
+  <span class="token key atrule">include_body_for</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">&quot;application/json&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;x-www-form-urlencoded&quot;</span><span class="token punctuation">]</span>
+
+
+<span class="token comment">#================================ Outputs =====================================</span>
+
+<span class="token comment"># Configure what outputs to use when sending the data collected by the beat.</span>
+<span class="token comment"># Multiple outputs may be used.</span>
+
+<span class="token comment">#-------------------------- Elasticsearch output ------------------------------</span>
+
+<span class="token key atrule">output.console</span><span class="token punctuation">:</span>
+    <span class="token key atrule">pretty</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+
+<span class="token key atrule">output.logstash</span><span class="token punctuation">:</span>
+    <span class="token key atrule">hosts</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">&quot;127.0.0.1:5044&quot;</span><span class="token punctuation">]</span>
+
+</code></pre></div><ul><li>启动 logstash 和 packetbeat</li></ul> <div class="language-bash extra-class"><pre class="language-bash"><code>./bin/logstash <span class="token parameter variable">-f</span> ./config/sinff_search.conf 
+
+./packetbeat <span class="token parameter variable">-e</span> <span class="token parameter variable">-c</span> sniff_search.yml <span class="token parameter variable">-strict.perms</span><span class="token operator">=</span>false
+</code></pre></div><ul><li>启动效果图</li></ul> <p><img src="/PenguinSeven/assets/img/cluster-01.60af97e8.jpg" alt="cluster"></p> <ul><li></li></ul> <h2 id="问题"><a href="#问题" class="header-anchor">#</a> 问题</h2> <h3 id="使用问题"><a href="#使用问题" class="header-anchor">#</a> 使用问题</h3> <h3 id="安装配置问题"><a href="#安装配置问题" class="header-anchor">#</a> 安装配置问题</h3> <ul><li>1、can not run elasticsearch as root</li></ul> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment"># 切换到非root用户</span>
+</code></pre></div><ul><li>2、main ERROR Could not register mbeans java.security.AccessControlException: access denied (&quot;javax.management.MBeanTrustPermission&quot; &quot;register&quot;)</li></ul> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment"># 改变elasticsearch文件夹所有者到当前用户</span>
+<span class="token function">sudo</span> <span class="token function">chown</span> <span class="token parameter variable">-R</span> noroot:noroot elasticsearch
+</code></pre></div><ul><li>3、max virtual memory areas vm.max_map_count [65530] is too low, increase to at least [262144]</li></ul> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">sudo</span> <span class="token function">vi</span> /etc/sysctl.conf 
+<span class="token comment"># 添加下面配置：</span>
+<span class="token assign-left variable">vm.max_map_count</span><span class="token operator">=</span><span class="token number">655360</span>
+<span class="token comment"># 并执行命令：</span>
+<span class="token function">sudo</span> <span class="token function">sysctl</span> <span class="token parameter variable">-p</span>
+</code></pre></div><ul><li>4、max file descriptors [4096] for elasticsearch process is too low, increase to at least [65536]</li></ul> <div class="language-bash extra-class"><pre class="language-bash"><code>
+<span class="token function">sudo</span> <span class="token function">vi</span> /etc/security/limits.conf
+
+<span class="token comment"># 添加如下内容:</span>
+* soft nofile <span class="token number">65536</span>
+* hard nofile <span class="token number">131072</span>
+* soft nproc <span class="token number">2048</span>
+* hard nproc <span class="token number">4096</span>
+
+<span class="token function">sudo</span> <span class="token function">vi</span> /etc/pam.d/common-session
+添加 session required pam_limits.so
+
+<span class="token function">sudo</span> <span class="token function">vi</span> /etc/pam.d/common-session-noninteractive
+添加 session required pam_limits.so
+
+</code></pre></div></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">上次更新时间:</span> <span class="time">5/2/2018, 10:29:20 AM</span></div></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/PenguinSeven/assets/js/app.feb3916a.js" defer></script><script src="/PenguinSeven/assets/js/2.f28e70e0.js" defer></script><script src="/PenguinSeven/assets/js/1.bb87e0ea.js" defer></script><script src="/PenguinSeven/assets/js/14.619aee36.js" defer></script>
+  </body>
+</html>

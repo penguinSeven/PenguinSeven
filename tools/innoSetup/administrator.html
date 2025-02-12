@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>INNO SETUP 学习心得 | 吧食笔记</title>
+    <meta name="generator" content="VuePress 1.9.10">
+    <link rel="icon" href="/PenguinSeven/logo.png">
+    <meta name="description" content="PenguinSeven">
+    
+    <link rel="preload" href="/PenguinSeven/assets/css/0.styles.feb1df48.css" as="style"><link rel="preload" href="/PenguinSeven/assets/js/app.feb3916a.js" as="script"><link rel="preload" href="/PenguinSeven/assets/js/2.f28e70e0.js" as="script"><link rel="preload" href="/PenguinSeven/assets/js/1.bb87e0ea.js" as="script"><link rel="preload" href="/PenguinSeven/assets/js/107.257c0c6e.js" as="script"><link rel="prefetch" href="/PenguinSeven/assets/js/10.e38c7cc5.js"><link rel="prefetch" href="/PenguinSeven/assets/js/100.b70b0c1d.js"><link rel="prefetch" href="/PenguinSeven/assets/js/101.46e03238.js"><link rel="prefetch" href="/PenguinSeven/assets/js/102.efb0e370.js"><link rel="prefetch" href="/PenguinSeven/assets/js/103.f5faa006.js"><link rel="prefetch" href="/PenguinSeven/assets/js/104.5564a1fa.js"><link rel="prefetch" href="/PenguinSeven/assets/js/105.39dab30f.js"><link rel="prefetch" href="/PenguinSeven/assets/js/106.c0bb3b4a.js"><link rel="prefetch" href="/PenguinSeven/assets/js/108.8fc0260e.js"><link rel="prefetch" href="/PenguinSeven/assets/js/109.a137b455.js"><link rel="prefetch" href="/PenguinSeven/assets/js/11.d23c0f5a.js"><link rel="prefetch" href="/PenguinSeven/assets/js/110.fc1e49b3.js"><link rel="prefetch" href="/PenguinSeven/assets/js/111.4a8ae938.js"><link rel="prefetch" href="/PenguinSeven/assets/js/112.48914f2b.js"><link rel="prefetch" href="/PenguinSeven/assets/js/12.3a7a7e61.js"><link rel="prefetch" href="/PenguinSeven/assets/js/13.f6d05845.js"><link rel="prefetch" href="/PenguinSeven/assets/js/14.619aee36.js"><link rel="prefetch" href="/PenguinSeven/assets/js/15.3b9d1f7c.js"><link rel="prefetch" href="/PenguinSeven/assets/js/16.b49954cb.js"><link rel="prefetch" href="/PenguinSeven/assets/js/17.e528107c.js"><link rel="prefetch" href="/PenguinSeven/assets/js/18.4f4038bf.js"><link rel="prefetch" href="/PenguinSeven/assets/js/19.bd01e132.js"><link rel="prefetch" href="/PenguinSeven/assets/js/20.e3c1893e.js"><link rel="prefetch" href="/PenguinSeven/assets/js/21.3ba92fa5.js"><link rel="prefetch" href="/PenguinSeven/assets/js/22.446578c9.js"><link rel="prefetch" href="/PenguinSeven/assets/js/23.1ec8450c.js"><link rel="prefetch" href="/PenguinSeven/assets/js/24.65a37d34.js"><link rel="prefetch" href="/PenguinSeven/assets/js/25.4f168d23.js"><link rel="prefetch" href="/PenguinSeven/assets/js/26.5934d5a2.js"><link rel="prefetch" href="/PenguinSeven/assets/js/27.cb31c557.js"><link rel="prefetch" href="/PenguinSeven/assets/js/28.bd201709.js"><link rel="prefetch" href="/PenguinSeven/assets/js/29.f3679f2e.js"><link rel="prefetch" href="/PenguinSeven/assets/js/3.0d8eae40.js"><link rel="prefetch" href="/PenguinSeven/assets/js/30.5d895107.js"><link rel="prefetch" href="/PenguinSeven/assets/js/31.2a21575b.js"><link rel="prefetch" href="/PenguinSeven/assets/js/32.81ff732f.js"><link rel="prefetch" href="/PenguinSeven/assets/js/33.ff7c2f5e.js"><link rel="prefetch" href="/PenguinSeven/assets/js/34.9bdb8c46.js"><link rel="prefetch" href="/PenguinSeven/assets/js/35.da89b41e.js"><link rel="prefetch" href="/PenguinSeven/assets/js/36.f8772b8e.js"><link rel="prefetch" href="/PenguinSeven/assets/js/37.61105f93.js"><link rel="prefetch" href="/PenguinSeven/assets/js/38.f7790cf4.js"><link rel="prefetch" href="/PenguinSeven/assets/js/39.54af282a.js"><link rel="prefetch" href="/PenguinSeven/assets/js/4.4f963454.js"><link rel="prefetch" href="/PenguinSeven/assets/js/40.1a7a9b9a.js"><link rel="prefetch" href="/PenguinSeven/assets/js/41.b02d0f12.js"><link rel="prefetch" href="/PenguinSeven/assets/js/42.b103deb5.js"><link rel="prefetch" href="/PenguinSeven/assets/js/43.e0b77010.js"><link rel="prefetch" href="/PenguinSeven/assets/js/44.588ffc70.js"><link rel="prefetch" href="/PenguinSeven/assets/js/45.f5e03ed0.js"><link rel="prefetch" href="/PenguinSeven/assets/js/46.f0dea127.js"><link rel="prefetch" href="/PenguinSeven/assets/js/47.2fd249d7.js"><link rel="prefetch" href="/PenguinSeven/assets/js/48.687fabe4.js"><link rel="prefetch" href="/PenguinSeven/assets/js/49.3fa54d08.js"><link rel="prefetch" href="/PenguinSeven/assets/js/5.5cd94255.js"><link rel="prefetch" href="/PenguinSeven/assets/js/50.055e08df.js"><link rel="prefetch" href="/PenguinSeven/assets/js/51.ce3e0044.js"><link rel="prefetch" href="/PenguinSeven/assets/js/52.9fd95bb4.js"><link rel="prefetch" href="/PenguinSeven/assets/js/53.c26ffd47.js"><link rel="prefetch" href="/PenguinSeven/assets/js/54.0541a968.js"><link rel="prefetch" href="/PenguinSeven/assets/js/55.6209f14b.js"><link rel="prefetch" href="/PenguinSeven/assets/js/56.d7565bf2.js"><link rel="prefetch" href="/PenguinSeven/assets/js/57.a153410b.js"><link rel="prefetch" href="/PenguinSeven/assets/js/58.24db348e.js"><link rel="prefetch" href="/PenguinSeven/assets/js/59.4215ec40.js"><link rel="prefetch" href="/PenguinSeven/assets/js/6.918d102d.js"><link rel="prefetch" href="/PenguinSeven/assets/js/60.8af7fe3a.js"><link rel="prefetch" href="/PenguinSeven/assets/js/61.8176ca2c.js"><link rel="prefetch" href="/PenguinSeven/assets/js/62.473842c3.js"><link rel="prefetch" href="/PenguinSeven/assets/js/63.3dd08959.js"><link rel="prefetch" href="/PenguinSeven/assets/js/64.f8ff329c.js"><link rel="prefetch" href="/PenguinSeven/assets/js/65.7c8e9d0f.js"><link rel="prefetch" href="/PenguinSeven/assets/js/66.719e81e3.js"><link rel="prefetch" href="/PenguinSeven/assets/js/67.aaaa6fb3.js"><link rel="prefetch" href="/PenguinSeven/assets/js/68.941206b0.js"><link rel="prefetch" href="/PenguinSeven/assets/js/69.68b0053c.js"><link rel="prefetch" href="/PenguinSeven/assets/js/7.47f27853.js"><link rel="prefetch" href="/PenguinSeven/assets/js/70.174fd7e6.js"><link rel="prefetch" href="/PenguinSeven/assets/js/71.d99ae443.js"><link rel="prefetch" href="/PenguinSeven/assets/js/72.a8402aeb.js"><link rel="prefetch" href="/PenguinSeven/assets/js/73.f91e4cde.js"><link rel="prefetch" href="/PenguinSeven/assets/js/74.53345e83.js"><link rel="prefetch" href="/PenguinSeven/assets/js/75.5550825f.js"><link rel="prefetch" href="/PenguinSeven/assets/js/76.7775f7d8.js"><link rel="prefetch" href="/PenguinSeven/assets/js/77.fc6220ec.js"><link rel="prefetch" href="/PenguinSeven/assets/js/78.b918de51.js"><link rel="prefetch" href="/PenguinSeven/assets/js/79.abf83adf.js"><link rel="prefetch" href="/PenguinSeven/assets/js/80.d8b3e41c.js"><link rel="prefetch" href="/PenguinSeven/assets/js/81.ef42d0c5.js"><link rel="prefetch" href="/PenguinSeven/assets/js/82.6b4daeeb.js"><link rel="prefetch" href="/PenguinSeven/assets/js/83.dd2cb066.js"><link rel="prefetch" href="/PenguinSeven/assets/js/84.16cd76e5.js"><link rel="prefetch" href="/PenguinSeven/assets/js/85.361035e2.js"><link rel="prefetch" href="/PenguinSeven/assets/js/86.f15739f4.js"><link rel="prefetch" href="/PenguinSeven/assets/js/87.c2e26100.js"><link rel="prefetch" href="/PenguinSeven/assets/js/88.3fd017d3.js"><link rel="prefetch" href="/PenguinSeven/assets/js/89.da561da4.js"><link rel="prefetch" href="/PenguinSeven/assets/js/90.af1641e9.js"><link rel="prefetch" href="/PenguinSeven/assets/js/91.a0270273.js"><link rel="prefetch" href="/PenguinSeven/assets/js/92.b1107c24.js"><link rel="prefetch" href="/PenguinSeven/assets/js/93.9f01b02f.js"><link rel="prefetch" href="/PenguinSeven/assets/js/94.686f81a4.js"><link rel="prefetch" href="/PenguinSeven/assets/js/95.f72d4f1c.js"><link rel="prefetch" href="/PenguinSeven/assets/js/96.06d3c75c.js"><link rel="prefetch" href="/PenguinSeven/assets/js/97.676935b9.js"><link rel="prefetch" href="/PenguinSeven/assets/js/98.8a6b338c.js"><link rel="prefetch" href="/PenguinSeven/assets/js/99.f7e47ec4.js"><link rel="prefetch" href="/PenguinSeven/assets/js/vendors~docsearch.70bf0358.js">
+    <link rel="stylesheet" href="/PenguinSeven/assets/css/0.styles.feb1df48.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/PenguinSeven/" class="home-link router-link-active"><!----> <span class="site-name">吧食笔记</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/PenguinSeven/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/PenguinSeven/php/" class="nav-link">
+  PHP
+</a></div><div class="nav-item"><a href="https://google.com" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  External
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/PenguinSeven/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/PenguinSeven/php/" class="nav-link">
+  PHP
+</a></div><div class="nav-item"><a href="https://google.com" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  External
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <!----> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="inno-setup-学习心得"><a href="#inno-setup-学习心得" class="header-anchor">#</a> INNO SETUP 学习心得</h2> <blockquote><p>###1.脚本结构</p></blockquote> <hr> <ol><li>[Setup] 段
+　　
+　　这个段包括了安装和卸载程序所使用的全局设置，并且有些关键字在你建立的安装程序中是必须要用到的。</li> <li>[Dirs] 段
+　　
+　　这个段是可选的，而且通常对于大多数简单的应用程序来书不是必需的。这个段是用来创建除用户选择的应用程序目录以外的其它的附加的目录，它是被自动创建的。这个段所创建的子目录是可以脱离主应用程序而共同使用的目录。当然在 [Files] 段里面的文件被复制到某个目录之前你并不一定要创建它，然而在卸载程序的时候在 [Dirs] 和 [UninstallDelete] 段里面没有指定的目录就不会被删除。</li> <li>[Files] 段
+　　
+　　这个段是可选的，但对于大多数安装程序来说是必不可少的。在这里定义了安装程序需要复制到用户的系统当中的全部文件。
+　　
+　　在安装期间，卸载程序和数据被自动的复制到应用程序的目录当中去，因此你不必手工的将它们添加到 [Files] 段。</li> <li>[Icons] 段
+　　
+　　这个段是可选的，但对于大多数安装程序来说是必不可少的。它定义了所有的安装程序要在用户系统中创建的程序管理器/开始菜单的图标。它也能被用来在其它的位置创建应用程序图标（快捷方式），比如就像桌面。
+　　
+　　卸载图标是由安装程序内部创建的，这样一来你就不需要在 [Icons] 段里面手工的添加它。默认情况下，安装程序运行在 Windows 95/NT 4+ 的时候是不创建卸载图标的 ――除了安装程序运行于 Windows NT 3.51 的时候。 要强制创建一个卸载图标，请使用 [Setup] 段里面的 AlwaysCreateUninstallIcon 关键字。</li> <li>[INI] 段
+　　
+　　此段是可选的，它定义了一些 .INI 文件项，在文件被复制以后安装程序在用户的系统中的设定。</li> <li>[InstallDelete] 段
+　　
+　　它使用的是和 [UninstallDelete] 段相同的格式，不同的是它是在安装程序的第一步被处理的。</li> <li>[Messages] 段
+　　
+　　[Messages] 段是用于定义安装程序和卸载程序所显示的消息。通常你不需要在你的脚本文件里面创建 [Messages] 段，默认情况下所有的显示消息都由 Inno Setup 包含的文件 Default.isl 定义。 （或由 [Setup] 段的关键字 MessagesFile 指定的任何文件）。</li> <li>[Registry] 段
+　　
+　　这个段是可选的，他定义了一些注册表项，用于在复制完文件之后创建在用户的系统中。</li> <li>[Run] %26amp; [UninstallRun] 段
+　　
+　　[Run] 段是可选的，指定任意数量的程序在成功安装程序以后及显示结束对话框之前被执行。同样 [UninstallRun] 段也是可选的，指定任意数量的程序在%26ldquo;卸载程序%26rdquo;的第一步时被执行。除非下面有其它说明，两个段共有相同的语法。
+　　每个程序按照你的脚本编排的顺序被执行，当出路 [Run]/[UninstallRun] 的项时，安装程序将会等到当前的程序终止之后才处理下一个，当然除非使用了 nowait 标记。</li> <li>[UninstallDelete] 段
+　　
+　　该段是可选的。该段是用来定义一些附加的除了那些被安装的应用程序之外的要被卸载程序删除的文件或目录。使用该段来删除由你的应用程序创建的 .INI 文件是一个常用的办法。卸载程序在卸载过程的最后一步处理这些项。</li></ol> <p></p> <blockquote><p>###2.目录常量</p></blockquote> <hr> <p>{app}
+　　应用程序目录，这是用户在安装向导的选择安装目录页里面所选择的。
+　　例如：如果你使用了 {app}\MYPROG.EXE 作为一项并且用户选择了“C:\MYPROG”作为应用程序的目录，那么安装程序就会将它转换成“C:\MYPROG\MYPROG.EXE”。</p> <p>{win}
+　　系统的 Windows 目录。例如：如果你使用了 {win}\MYPROG.INI 作为一项并且系统的 Windows 目录是“C:\WINDOWS”，那么安装程序就会将它转换成“C:\WINDOWS\MYPROG.INI”。</p> <p>{sys}
+　　系统的 Windows 系统(System)目录(在 Windows NT/2000 下是 System32)。例如：如果你使用了 {sys}\ CTL3D32.DLL 作为一项并且系统的 Windows 系统目录是“C:\WINDOWS\SYSTEM”，那么安装程序就会将它转换成“C:\ WINDOWS\SYSTEM\CTL3D32.DLL”。</p> <p>{src}
+　　这个文件夹指向安装程序所在的位置。
+　　例如：如果你使用了 {src}\MYPROG.EXE 作为一项并且用户是从“S:\ ”安装的，那么安装程序就会将它转换成“S:\MYPROG.EXE”。</p> <p>{sd}
+　　系统驱动器，它是指 Windows 被安装到的那个驱动器，典型的是“C:”，对于 Windows NT/2000，这个常量同系统的环境变量“SystemDrive”是等效的。</p> <p>{pf}
+　　程序文件夹(Program Files)，这个路径是系统的 Program Files 目录，典型的是“C:\Program Files”。</p> <p>{cf}
+　　公共文件夹(Common Files)，这个路径是系统的 Common Files 文件夹，典型的是“C:\Program Files\Common Files”。</p> <p>{tmp}
+　　临时目录，这个目录并不是用户的 TEMP 环境变量指向的目录，而是安装程序在启动时在用户的临时目录下建立的一个子目录，在安装程序退出时所有的文件和子目录将会被删除。对于在 [Run] 段里面要被执行且在安装以后又不需要的程序文件来说这个功能是非常有用的。</p> <p>{fonts}
+　　字体目录，在 Windows 95/NT 4+ 下有一个专门为字体设立的目录(通常这个目录在 Windows 目录下且被命名为“FONTS”)，这个常量就指向这个目录。对于 Windows NT 3.51，这个常量是和 {sys} 等效的，因为当时还没有字体目录。</p> <p>{dao}
+DAO 目录，当安装程序运行在 Windows 95/NT 4+ 上时，它被等效为 {cf}\Microsoft Shared\DAO，当运行于 Windows NT 3.51 时，它被等效为 {win}\MSAPPS\DAO。</p> <blockquote><p>###3.常见问题</p></blockquote> <hr> <h2 id="多语言安装包"><a href="#多语言安装包" class="header-anchor">#</a> 多语言安装包</h2> <div class="language-pascal extra-class"><pre class="language-pascal"><code><span class="token punctuation">[</span>Languages<span class="token punctuation">]</span>
+<span class="token keyword">Name</span><span class="token punctuation">:</span> &quot;en&quot;<span class="token punctuation">;</span> MessagesFile<span class="token punctuation">:</span> &quot;compiler<span class="token punctuation">:</span><span class="token keyword">Default</span><span class="token punctuation">.</span>isl&quot; <span class="token punctuation">;</span> LicenSeFile <span class="token punctuation">:</span>&quot;E<span class="token punctuation">:</span>\upupw\doc\readme_en<span class="token punctuation">.</span>txt&quot;
+<span class="token keyword">Name</span><span class="token punctuation">:</span> &quot;chs&quot;<span class="token punctuation">;</span> MessagesFile<span class="token punctuation">:</span> &quot;compiler<span class="token punctuation">:</span>Languages\china<span class="token punctuation">.</span>isl&quot;<span class="token punctuation">;</span> LicenSeFile <span class="token punctuation">:</span>&quot;E<span class="token punctuation">:</span>\upupw\doc\readme_chs<span class="token punctuation">.</span>txt&quot;
+
+<span class="token punctuation">[</span>Messages<span class="token punctuation">]</span>
+en<span class="token punctuation">.</span>BeveledLabel<span class="token operator">=</span>English
+chs<span class="token punctuation">.</span>BeveledLabel<span class="token operator">=</span>Chineses
+
+
+<span class="token punctuation">[</span>CustomMessages<span class="token punctuation">]</span>
+en<span class="token punctuation">.</span>MyAppName          <span class="token operator">=</span> Intelligent paperless conference management server
+en<span class="token punctuation">.</span>Uninstall          <span class="token operator">=</span> Uninstall
+
+
+chs<span class="token punctuation">.</span>MyAppName         <span class="token operator">=</span> 智能无纸化会议管理服务器
+chs<span class="token punctuation">.</span>Uninstall         <span class="token operator">=</span> 卸载
+
+<span class="token punctuation">;</span> 调用
+
+<span class="token punctuation">[</span>code<span class="token punctuation">]</span>
+
+ExpandConstant<span class="token punctuation">(</span><span class="token string">'{cm:MyAppName}'</span><span class="token punctuation">)</span>
+
+</code></pre></div><h2 id="修改ini文件"><a href="#修改ini文件" class="header-anchor">#</a> 修改ini文件</h2> <div class="language-pascal extra-class"><pre class="language-pascal"><code><span class="token punctuation">;</span>用于在用户系统中创建，修改或删除ini文件健值
+<span class="token punctuation">[</span>INI<span class="token punctuation">]</span>
+Filename<span class="token punctuation">:</span> &quot;<span class="token comment">{app}</span>\cfg<span class="token punctuation">.</span>ini&quot;<span class="token punctuation">;</span> Section<span class="token punctuation">:</span> &quot;Startup Options&quot;<span class="token punctuation">;</span> Flags<span class="token punctuation">:</span> uninsdeletesection
+Filename<span class="token punctuation">:</span> &quot;<span class="token comment">{app}</span>\cfg<span class="token punctuation">.</span>ini&quot;<span class="token punctuation">;</span> Section<span class="token punctuation">:</span> &quot;Startup Options&quot;<span class="token punctuation">;</span> Key<span class="token punctuation">:</span> &quot;server ip&quot;<span class="token punctuation">;</span> <span class="token keyword">String</span><span class="token punctuation">:</span> &quot;<span class="token number">127.0</span><span class="token punctuation">.</span><span class="token number">0.1</span>&quot;
+Filename<span class="token punctuation">:</span> &quot;<span class="token comment">{app}</span>\cfg<span class="token punctuation">.</span>ini&quot;<span class="token punctuation">;</span> Section<span class="token punctuation">:</span> &quot;Startup Options&quot;<span class="token punctuation">;</span> Key<span class="token punctuation">:</span> &quot;server port&quot;<span class="token punctuation">;</span> <span class="token keyword">String</span><span class="token punctuation">:</span> &quot;<span class="token number">8080</span>&quot;
+
+</code></pre></div><h2 id="安装、卸载判断进程-窗口名称"><a href="#安装、卸载判断进程-窗口名称" class="header-anchor">#</a> 安装、卸载判断进程(窗口名称)</h2> <div class="language-pascal extra-class"><pre class="language-pascal"><code><span class="token punctuation">[</span>Code<span class="token punctuation">]</span>
+<span class="token comment">// 判断进程</span>
+
+<span class="token keyword">var</span>
+ErrorCode<span class="token punctuation">:</span> Integer<span class="token punctuation">;</span>
+IsRunning<span class="token punctuation">:</span> Integer<span class="token punctuation">;</span>
+<span class="token comment">// 安装时判断客户端是否正在运行  </span>
+<span class="token keyword">function</span> InitializeSetup<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span> Boolean<span class="token punctuation">;</span>  
+<span class="token keyword">begin</span>  
+<span class="token keyword">Result</span> <span class="token operator">:=</span><span class="token keyword">true</span><span class="token punctuation">;</span> <span class="token comment">//安装程序继续  </span>
+IsRunning<span class="token operator">:=</span>FindWindowByWindowName<span class="token punctuation">(</span><span class="token string">'东方宽频网络电视'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  
+<span class="token keyword">while</span> IsRunning<span class="token operator">&lt;&gt;</span><span class="token number">0</span> <span class="token keyword">do</span> 
+<span class="token keyword">begin</span>  
+    <span class="token keyword">if</span> Msgbox<span class="token punctuation">(</span><span class="token string">'安装程序检测到客户端正在运行。'</span> <span class="token string">#13#13</span> <span class="token string">'您必须先关闭它然后单击“是”继续安装，或按“否”退出！'</span><span class="token punctuation">,</span> mbConfirmation<span class="token punctuation">,</span> MB_YESNO<span class="token punctuation">)</span> <span class="token operator">=</span> idNO <span class="token keyword">then</span>  
+    <span class="token keyword">begin</span>  
+      <span class="token keyword">Result</span> <span class="token operator">:=</span><span class="token keyword">false</span><span class="token punctuation">;</span> <span class="token comment">//安装程序退出  </span>
+      IsRunning <span class="token operator">:=</span><span class="token number">0</span><span class="token punctuation">;</span>  
+    <span class="token keyword">end</span> <span class="token keyword">else</span> <span class="token keyword">begin</span>  
+      <span class="token keyword">Result</span> <span class="token operator">:=</span><span class="token keyword">true</span><span class="token punctuation">;</span> <span class="token comment">//安装程序继续  </span>
+      IsRunning<span class="token operator">:=</span>FindWindowByWindowName<span class="token punctuation">(</span><span class="token string">'东方宽频网络电视'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  
+    <span class="token keyword">end</span><span class="token punctuation">;</span>  
+<span class="token keyword">end</span><span class="token punctuation">;</span>  
+<span class="token keyword">end</span><span class="token punctuation">;</span>
+
+  
+<span class="token comment">// 卸载时判断客户端是否正在运行  </span>
+<span class="token keyword">function</span> InitializeUninstall<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span> Boolean<span class="token punctuation">;</span>  
+<span class="token keyword">begin</span>  
+   <span class="token keyword">Result</span> <span class="token operator">:=</span><span class="token keyword">true</span><span class="token punctuation">;</span> <span class="token comment">//安装程序继续  </span>
+IsRunning<span class="token operator">:=</span>FindWindowByWindowName<span class="token punctuation">(</span><span class="token string">'东方宽频网络电视'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  
+<span class="token keyword">while</span> IsRunning<span class="token operator">&lt;&gt;</span><span class="token number">0</span> <span class="token keyword">do</span> 
+<span class="token keyword">begin</span>  
+ 
+    <span class="token keyword">if</span> Msgbox<span class="token punctuation">(</span><span class="token string">'安装程序检测到客户端正在运行。'</span> <span class="token string">#13#13</span> <span class="token string">'您必须先关闭它然后单击“是”继续安装，或按“否”退出！'</span><span class="token punctuation">,</span> mbConfirmation<span class="token punctuation">,</span> MB_YESNO<span class="token punctuation">)</span> <span class="token operator">=</span> idNO <span class="token keyword">then</span>  
+    <span class="token keyword">begin</span>  
+      <span class="token keyword">Result</span> <span class="token operator">:=</span><span class="token keyword">false</span><span class="token punctuation">;</span> <span class="token comment">//安装程序退出  </span>
+      IsRunning <span class="token operator">:=</span><span class="token number">0</span><span class="token punctuation">;</span>  
+    <span class="token keyword">end</span> <span class="token keyword">else</span> <span class="token keyword">begin</span>  
+      <span class="token keyword">Result</span> <span class="token operator">:=</span><span class="token keyword">true</span><span class="token punctuation">;</span> <span class="token comment">//安装程序继续  </span>
+      IsRunning<span class="token operator">:=</span>FindWindowByWindowName<span class="token punctuation">(</span><span class="token string">'东方宽频网络电视'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    
+    <span class="token keyword">end</span><span class="token punctuation">;</span>  
+<span class="token keyword">end</span><span class="token punctuation">;</span>  
+<span class="token keyword">end</span><span class="token punctuation">;</span>
+</code></pre></div><h2 id="安装、卸载判断进程-进程名称"><a href="#安装、卸载判断进程-进程名称" class="header-anchor">#</a> 安装、卸载判断进程(进程名称)</h2> <div class="language-pascal extra-class"><pre class="language-pascal"><code><span class="token comment">//引入库文件，不操作文件</span>
+<span class="token punctuation">[</span>Files<span class="token punctuation">]</span>
+Source<span class="token punctuation">:</span> &quot;E<span class="token punctuation">:</span>\upupw\psvince<span class="token punctuation">.</span>dll&quot;<span class="token punctuation">;</span> Flags<span class="token punctuation">:</span> dontcopy
+
+<span class="token comment">//code 段引用文件</span>
+<span class="token punctuation">[</span>code<span class="token punctuation">]</span>
+<span class="token keyword">function</span> IsModuleLoaded<span class="token punctuation">(</span>modulename<span class="token punctuation">:</span> AnsiString <span class="token punctuation">)</span><span class="token punctuation">:</span>  Boolean<span class="token punctuation">;</span>
+<span class="token keyword">external</span> <span class="token string">'IsModuleLoaded@files:psvince.dll stdcall'</span><span class="token punctuation">;</span>
+
+<span class="token comment">// PSVince控件在64位系统（Windows 7/Server 2008/Server 2012）下无法检测到进程，使用下面的函数可以解决。</span>
+<span class="token keyword">function</span> IsAppRunning<span class="token punctuation">(</span><span class="token keyword">const</span> FileName <span class="token punctuation">:</span> <span class="token keyword">string</span><span class="token punctuation">)</span><span class="token punctuation">:</span> Boolean<span class="token punctuation">;</span>
+<span class="token keyword">var</span>
+    FSWbemLocator<span class="token punctuation">:</span> Variant<span class="token punctuation">;</span>
+    FWMIService   <span class="token punctuation">:</span> Variant<span class="token punctuation">;</span>
+    FWbemObjectSet<span class="token punctuation">:</span> Variant<span class="token punctuation">;</span>
+<span class="token keyword">begin</span>
+    <span class="token keyword">Result</span> <span class="token operator">:=</span> <span class="token keyword">false</span><span class="token punctuation">;</span>
+    <span class="token keyword">try</span>
+      FSWbemLocator <span class="token operator">:=</span> CreateOleObject<span class="token punctuation">(</span><span class="token string">'WBEMScripting.SWBEMLocator'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      FWMIService <span class="token operator">:=</span> FSWbemLocator<span class="token punctuation">.</span>ConnectServer<span class="token punctuation">(</span><span class="token string">''</span><span class="token punctuation">,</span> <span class="token string">'root\CIMV2'</span><span class="token punctuation">,</span> <span class="token string">''</span><span class="token punctuation">,</span> <span class="token string">''</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      FWbemObjectSet <span class="token operator">:=</span> FWMIService<span class="token punctuation">.</span>ExecQuery<span class="token punctuation">(</span>Format<span class="token punctuation">(</span><span class="token string">'SELECT Name FROM Win32_Process Where Name=&quot;%s&quot;'</span><span class="token punctuation">,</span><span class="token punctuation">[</span>FileName<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">Result</span> <span class="token operator">:=</span> <span class="token punctuation">(</span>FWbemObjectSet<span class="token punctuation">.</span>Count <span class="token operator">&gt;</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      FWbemObjectSet <span class="token operator">:=</span> Unassigned<span class="token punctuation">;</span>
+      FWMIService <span class="token operator">:=</span> Unassigned<span class="token punctuation">;</span>
+      FSWbemLocator <span class="token operator">:=</span> Unassigned<span class="token punctuation">;</span>
+    <span class="token keyword">except</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>IsModuleLoaded<span class="token punctuation">(</span>FileName<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token keyword">then</span>
+        <span class="token keyword">begin</span>
+          <span class="token keyword">Result</span> <span class="token operator">:=</span> <span class="token keyword">false</span><span class="token punctuation">;</span>
+        <span class="token keyword">end</span>
+      <span class="token keyword">else</span>
+        <span class="token keyword">begin</span>
+          <span class="token keyword">Result</span> <span class="token operator">:=</span> <span class="token keyword">true</span><span class="token punctuation">;</span>
+        <span class="token keyword">end</span>
+      <span class="token keyword">end</span><span class="token punctuation">;</span>
+<span class="token keyword">end</span><span class="token punctuation">;</span>
+
+<span class="token comment">// example 判断进程是否正在运行</span>
+
+<span class="token keyword">function</span> InitializeSetup<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span> Boolean<span class="token punctuation">;</span>
+<span class="token keyword">begin</span>
+  <span class="token keyword">Result</span> <span class="token operator">:=</span> <span class="token keyword">true</span><span class="token punctuation">;</span>
+  <span class="token keyword">if</span>  IsAppRunning<span class="token punctuation">(</span><span class="token string">'httpd.exe'</span><span class="token punctuation">)</span> <span class="token keyword">then</span>
+  <span class="token keyword">begin</span>
+    <span class="token keyword">if</span> MsgBox<span class="token punctuation">(</span><span class="token string">'安装程序检测到 {#MyAppName} 正在运行！'#13''#13'单击“是”按钮关闭程序并继续安装；'#13''#13'单击“否”按钮退出安装！'</span><span class="token punctuation">,</span> mbConfirmation<span class="token punctuation">,</span> MB_YESNO<span class="token punctuation">)</span> <span class="token operator">=</span> IDYES <span class="token keyword">then</span>
+    <span class="token keyword">begin</span>
+      <span class="token keyword">Result</span><span class="token operator">:=</span> <span class="token keyword">true</span><span class="token punctuation">;</span>
+    <span class="token keyword">end</span>
+    <span class="token keyword">else</span>
+      <span class="token keyword">Result</span><span class="token operator">:=</span> <span class="token keyword">false</span><span class="token punctuation">;</span>
+  <span class="token keyword">end</span><span class="token punctuation">;</span>
+<span class="token keyword">end</span>
+</code></pre></div><h2 id="界面显示控制"><a href="#界面显示控制" class="header-anchor">#</a> 界面显示控制</h2> <div class="language-pascal extra-class"><pre class="language-pascal"><code><span class="token comment">// 界面显示控制，true 为隐藏</span>
+<span class="token comment">//预定义向导页 CurPageID 值</span>
+<span class="token comment">//wpWelcome, wpLicense, wpPassword, wpInfoBefore, wpUserInfo, wpSelectDir, wpSelectComponents, wpSelectProgramGroup, wpSelectTasks, wpReady, wpPreparing, wpInstalling, wpInfoAfter, wpFinished</span>
+
+<span class="token keyword">function</span> ShouldSkipPage<span class="token punctuation">(</span>PageID<span class="token punctuation">:</span> Integer<span class="token punctuation">)</span><span class="token punctuation">:</span> Boolean<span class="token punctuation">;</span>
+<span class="token keyword">begin</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>PageID <span class="token operator">=</span> wpSelectDir<span class="token punctuation">)</span> <span class="token operator">and</span> <span class="token punctuation">(</span>RadioButton1<span class="token punctuation">.</span>Checked<span class="token punctuation">)</span> <span class="token keyword">then</span>
+    <span class="token keyword">Result</span> <span class="token operator">:=</span> <span class="token keyword">True</span>
+  <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>PageID <span class="token operator">=</span> wpSelectProgramGroup<span class="token punctuation">)</span>  <span class="token operator">and</span> <span class="token punctuation">(</span>RadioButton1<span class="token punctuation">.</span>Checked<span class="token punctuation">)</span> <span class="token keyword">then</span>
+    <span class="token keyword">Result</span> <span class="token operator">:=</span> <span class="token keyword">True</span>
+<span class="token keyword">end</span><span class="token punctuation">;</span>
+</code></pre></div><h2 id="环境变量"><a href="#环境变量" class="header-anchor">#</a> 环境变量</h2> <div class="language-pascal extra-class"><pre class="language-pascal"><code><span class="token comment">//添加环境变量</span>
+<span class="token keyword">procedure</span> CurStepChanged<span class="token punctuation">(</span>CurStep<span class="token punctuation">:</span> TSetupStep<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">begin</span>
+<span class="token keyword">if</span> CurStep <span class="token operator">=</span> ssPostInstall <span class="token keyword">then</span>
+<span class="token keyword">begin</span>
+   SetEnv<span class="token punctuation">(</span><span class="token string">'path'</span><span class="token punctuation">,</span>ExpandConstant<span class="token punctuation">(</span><span class="token string">'{app}/Package/bpl;{app}/bin'</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token keyword">true</span><span class="token punctuation">,</span><span class="token keyword">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//在这儿调用,一定在这儿调用,安装完无须重启,立即生效</span>
+   <span class="token comment">//SetEnv('path','{app}/bin',true,true);</span>
+<span class="token keyword">end</span><span class="token punctuation">;</span>
+<span class="token keyword">end</span><span class="token punctuation">;</span>
+
+<span class="token comment">//删除环境变量</span>
+<span class="token keyword">procedure</span> CurUninstallStepChanged<span class="token punctuation">(</span>CurUninstallStep<span class="token punctuation">:</span> TUninstallStep<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">begin</span>
+SetEnv<span class="token punctuation">(</span><span class="token string">'path'</span><span class="token punctuation">,</span>ExpandConstant<span class="token punctuation">(</span><span class="token string">'{app}/Package/bpl;{app}/bin'</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token keyword">false</span><span class="token punctuation">,</span><span class="token keyword">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">//SetEnv('path','{app}/bin',false,true);</span>
+<span class="token keyword">end</span><span class="token punctuation">;</span>
+
+</code></pre></div><h2 id="自定义单选界面-含单击事件"><a href="#自定义单选界面-含单击事件" class="header-anchor">#</a> 自定义单选界面（含单击事件）</h2> <div class="language- extra-class"><pre class="language-text"><code>// 自定义界面
+ var
+  Page: TWizardPage; 
+  RadioButton1, RadioButton2: TRadioButton;
+  Lbl1, Lbl2: TNewStaticText;
+  TaskCode: Boolean;  
+
+
+{radio1的事件响应过程}
+procedure ClickRadio1(Sender: TObject);
+begin
+       TaskCode := true;
+end;
+
+{radio2的事件响应过程}
+procedure ClickRadio2(Sender: TObject);
+begin
+       TaskCode := false;
+end;
+ 
+procedure CreateAddonPage;
+begin
+  Page := CreateCustomPage(wpInfoBefore, '选择安装类型', '请根据您的需要选择安装的类型'); 
+      
+  RadioButton1 := TRadioButton.Create(Page);
+  RadioButton1.Left := ScaleX(45);
+  RadioButton1.Top := ScaleY(40);
+  RadioButton1.Width := Page.SurfaceWidth;
+  RadioButton1.Height := ScaleY(17);
+  RadioButton1.Caption := '标准安装';
+  RadioButton1.Checked := True;
+  RadioButton1.Parent := Page.Surface;
+  RadioButton1.OnClick:=@ClickRadio1;
+ 
+  Lbl1 := TNewStaticText.Create(Page);
+  Lbl1.Left := ScaleX(55);
+  Lbl1.Top := ScaleY(60);
+  Lbl1.Width := ScaleX(250);
+  Lbl1.Height := ScaleY(50);
+  Lbl1.Caption := '按照标准模式安装软件到您的电脑，数据库将更新覆盖。';
+  Lbl1.Parent := Page.Surface;
+ 
+  RadioButton2 := TRadioButton.Create(Page);
+  RadioButton2.Left := ScaleX(45);
+  RadioButton2.Top := RadioButton1.Top + ScaleY(60);
+  RadioButton2.Width := Page.SurfaceWidth;
+  RadioButton2.Height := ScaleY(17);
+  RadioButton2.Caption := '更新';
+  RadioButton2.Checked := false;
+  RadioButton2.Parent := Page.Surface;
+  RadioButton2.OnClick:=@ClickRadio2;
+ 
+  Lbl2 := TNewStaticText.Create(Page);
+  Lbl2.Left := ScaleX(55);
+  Lbl2.Top := Lbl1.Top + ScaleY(60);
+  Lbl2.Width := ScaleX(250);
+  Lbl2.Height := ScaleY(50);
+  Lbl2.Caption := '数据库不覆盖。';
+  Lbl2.Parent := Page.Surface;
+end;
+
+// 事件函数 初始化 
+procedure InitializeWizard();
+begin
+  CreateAddonPage;
+end;
+
+</code></pre></div><h2 id="插件函数-替换卸载图标"><a href="#插件函数-替换卸载图标" class="header-anchor">#</a> 插件函数 (替换卸载图标)</h2> <div class="language-pascal extra-class"><pre class="language-pascal"><code><span class="token comment">//插件函数用法  </span>
+<span class="token comment">//参数: 句柄(插件错误对话框的父句柄), exe文件完整路径名称, (exe文件中要替换的)图标资源名称, 图标文件的完整路径名称, (exe中要替换的图标资源所在)语系  </span>
+<span class="token comment">//返回值: 成功 = True, 失败 = False  </span>
+<span class="token comment">//安装初始化  </span>
+<span class="token keyword">function</span> UpdateIcon<span class="token punctuation">(</span><span class="token keyword">const</span> hWnd<span class="token punctuation">:</span> Integer<span class="token punctuation">;</span> <span class="token keyword">const</span> exeFileName<span class="token punctuation">,</span> exeIcon<span class="token punctuation">,</span> IcoFileName<span class="token punctuation">:</span> <span class="token keyword">String</span><span class="token punctuation">;</span> wlangID<span class="token punctuation">:</span> DWORD<span class="token punctuation">)</span><span class="token punctuation">:</span> Boolean<span class="token punctuation">;</span>  
+<span class="token keyword">external</span> <span class="token string">'UpdateIcon@files:UpdateIcon.dll stdcall'</span><span class="token punctuation">;</span>  
+<span class="token comment">//替换卸载程序的图标  </span>
+<span class="token keyword">function</span> UpdateUninstIcon<span class="token punctuation">(</span><span class="token keyword">const</span> IcoFileName<span class="token punctuation">:</span> <span class="token keyword">String</span><span class="token punctuation">)</span><span class="token punctuation">:</span> Boolean<span class="token punctuation">;</span>  
+<span class="token keyword">begin</span>   
+  <span class="token comment">//要替换图标的exe文件路径名称留空，则插件会自动替换掉Inno卸载程序的图标！其它参数类似！  </span>
+  <span class="token keyword">Result</span><span class="token operator">:=</span> UpdateIcon<span class="token punctuation">(</span>MainForm<span class="token punctuation">.</span>Handle<span class="token punctuation">,</span> <span class="token string">''</span><span class="token punctuation">,</span> <span class="token string">''</span><span class="token punctuation">,</span> IcoFileName<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//替换卸载图标  </span>
+<span class="token keyword">end</span><span class="token punctuation">;</span>  
+<span class="token keyword">procedure</span> CurStepChanged<span class="token punctuation">(</span>CurStep<span class="token punctuation">:</span> TSetupStep<span class="token punctuation">)</span><span class="token punctuation">;</span>  
+<span class="token keyword">var</span> uninspath<span class="token punctuation">,</span> uninsname<span class="token punctuation">,</span> NewUninsName<span class="token punctuation">,</span> MyAppName<span class="token punctuation">,</span>sIcon<span class="token punctuation">:</span> <span class="token keyword">String</span><span class="token punctuation">;</span>  
+  
+<span class="token keyword">begin</span>  
+  <span class="token comment">//注意: 替换卸载程序的图标，必须是在卸载程序生成之前！  </span>
+  <span class="token comment">//建议安装图标与卸载图标的格式与大小一致，否则可能会导致卸载程序出错！  </span>
+  <span class="token keyword">if</span> CurStep<span class="token operator">=</span>ssInstall <span class="token keyword">then</span>  
+    <span class="token keyword">begin</span>  
+    sIcon<span class="token operator">:=</span> ExpandConstant<span class="token punctuation">(</span><span class="token string">'{tmp}\uninstall.ico'</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//定义卸载图标  </span>
+    <span class="token comment">//ExtractTemporaryFile('UpdateIcon.dll');//该动态链接库可网上查找  </span>
+    ExtractTemporaryFile<span class="token punctuation">(</span>ExtractFileName<span class="token punctuation">(</span>sIcon<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//释放卸载图标  </span>
+    <span class="token comment">//要替换图标的exe文件路径名称留空，则插件会自动替换掉Inno卸载程序的图标！  </span>
+    UpdateUninstIcon<span class="token punctuation">(</span>sIcon<span class="token punctuation">)</span> <span class="token comment">//替换卸载图标  </span>
+    <span class="token keyword">end</span><span class="token punctuation">;</span>  
+  <span class="token keyword">if</span> CurStep<span class="token operator">=</span>ssDone <span class="token keyword">then</span>  
+    <span class="token keyword">begin</span>  
+    <span class="token comment">// 指定新的卸载文件名（不包含扩展名），请相应修改！    </span>
+    NewUninsName <span class="token operator">:=</span> <span class="token string">'YoyaUninstall'</span><span class="token punctuation">;</span>    
+    <span class="token comment">// 应用程序名称，与 [SEUTP] 段的 AppName 必须一致，请相应修改！    </span>
+    MyAppName <span class="token operator">:=</span> <span class="token string">'优芽互动电影播放器'</span><span class="token punctuation">;</span>    
+    <span class="token comment">// 以下重命名卸载文件    </span>
+    uninspath<span class="token operator">:=</span> ExtractFilePath<span class="token punctuation">(</span>ExpandConstant<span class="token punctuation">(</span><span class="token string">'{uninstallexe}'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    
+    uninsname<span class="token operator">:=</span> Copy<span class="token punctuation">(</span>ExtractFileName<span class="token punctuation">(</span>ExpandConstant<span class="token punctuation">(</span><span class="token string">'{uninstallexe}'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">8</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    
+    RenameFile<span class="token punctuation">(</span>uninspath <span class="token operator">+</span> uninsname <span class="token operator">+</span> <span class="token string">'.exe'</span><span class="token punctuation">,</span> uninspath <span class="token operator">+</span> NewUninsName <span class="token operator">+</span> <span class="token string">'.exe'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    
+    RenameFile<span class="token punctuation">(</span>uninspath <span class="token operator">+</span> uninsname <span class="token operator">+</span> <span class="token string">'.dat'</span><span class="token punctuation">,</span> uninspath <span class="token operator">+</span> NewUninsName <span class="token operator">+</span> <span class="token string">'.dat'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>   
+    <span class="token keyword">end</span><span class="token punctuation">;</span>   
+    <span class="token comment">// 以下修改相应的注册表内容  </span>
+    <span class="token keyword">if</span> RegKeyExists<span class="token punctuation">(</span>HKEY_LOCAL_MACHINE<span class="token punctuation">,</span> <span class="token string">'SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\{#APPID}_is1'</span><span class="token punctuation">)</span> <span class="token keyword">then</span>  
+    <span class="token keyword">begin</span>  
+    RegWriteStringValue<span class="token punctuation">(</span>HKEY_LOCAL_MACHINE<span class="token punctuation">,</span> <span class="token string">'SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\{#APPID}_is1'</span><span class="token punctuation">,</span> <span class="token string">'UninstallString'</span><span class="token punctuation">,</span> <span class="token string">'&quot;'</span> <span class="token operator">+</span> uninspath <span class="token operator">+</span> NewUninsName <span class="token operator">+</span> <span class="token string">'.exe&quot;'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  
+    RegWriteStringValue<span class="token punctuation">(</span>HKEY_LOCAL_MACHINE<span class="token punctuation">,</span> <span class="token string">'SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\{#APPID}_is1'</span><span class="token punctuation">,</span> <span class="token string">'QuietUninstallString'</span><span class="token punctuation">,</span> <span class="token string">'&quot;'</span> <span class="token operator">+</span> uninspath <span class="token operator">+</span> NewUninsName <span class="token operator">+</span> <span class="token string">'.exe&quot; /SILENT'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  
+    <span class="token keyword">end</span><span class="token punctuation">;</span>     
+<span class="token keyword">end</span><span class="token punctuation">;</span>
+
+</code></pre></div><h2 id="判断程序是否安装-1"><a href="#判断程序是否安装-1" class="header-anchor">#</a> 判断程序是否安装(1)</h2> <div class="language-pascal extra-class"><pre class="language-pascal"><code><span class="token comment">//  判断程序是否存在，卸载程序，多安装程序窗口判断</span>
+<span class="token keyword">var</span>
+is_Sys <span class="token punctuation">,</span> is_value<span class="token punctuation">:</span> integer<span class="token punctuation">;</span>
+S_syschar<span class="token punctuation">,</span> S_currentchar<span class="token punctuation">,</span> S_current<span class="token punctuation">,</span>S_sys<span class="token punctuation">,</span> S<span class="token punctuation">,</span>ResultStr <span class="token punctuation">:</span> <span class="token keyword">string</span><span class="token punctuation">;</span>
+I <span class="token punctuation">,</span>CloseNum<span class="token punctuation">:</span> Integer<span class="token punctuation">;</span>
+ErrorCode<span class="token punctuation">:</span> Integer<span class="token punctuation">;</span>
+Guid_names<span class="token punctuation">,</span>window_name <span class="token punctuation">:</span> TArrayOfString<span class="token punctuation">;</span>
+bool  <span class="token punctuation">:</span> Boolean<span class="token punctuation">;</span>
+<span class="token keyword">const</span> AppName<span class="token operator">=</span><span class="token string">'{D0D0B722-C6F9-4A89-AB56-1417B9BD1400}_is1'</span><span class="token punctuation">;</span>
+<span class="token comment">{程序安装前判断主程序是否在运行}</span>
+<span class="token keyword">function</span> InitializeSetup<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span> Boolean<span class="token punctuation">;</span>
+<span class="token keyword">var</span>
+  ResultCode<span class="token punctuation">:</span> Integer<span class="token punctuation">;</span>
+<span class="token keyword">begin</span>
+  <span class="token keyword">if</span> RegGetSubkeyNames<span class="token punctuation">(</span>HKEY_LOCAL_MACHINE<span class="token punctuation">,</span><span class="token string">'SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall'</span><span class="token punctuation">,</span>Guid_names<span class="token punctuation">)</span> <span class="token keyword">then</span>
+  <span class="token keyword">begin</span>
+    <span class="token keyword">for</span> I<span class="token operator">:=</span><span class="token number">0</span> <span class="token keyword">to</span> GetArrayLength<span class="token punctuation">(</span>Guid_names<span class="token punctuation">)</span><span class="token operator">-</span><span class="token number">1</span> <span class="token keyword">do</span>
+    <span class="token keyword">begin</span>
+      S <span class="token operator">:=</span> Guid_names<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+      <span class="token comment">//注册表中找到了此键</span>
+      <span class="token keyword">if</span> AppName <span class="token operator">=</span> Guid_names<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token keyword">then</span>
+      <span class="token keyword">begin</span>
+        bool <span class="token operator">:=</span> RegQueryStringValue<span class="token punctuation">(</span>HKEY_LOCAL_MACHINE<span class="token punctuation">,</span><span class="token string">'SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\'</span><span class="token operator">+</span>S<span class="token punctuation">,</span><span class="token string">'UninstallString'</span><span class="token punctuation">,</span>ResultStr<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">//ResultStr := RemoveQuotes(ResultStr);</span>
+        <span class="token keyword">if</span> bool <span class="token keyword">then</span>
+        <span class="token keyword">begin</span>
+           <span class="token keyword">if</span> MsgBox<span class="token punctuation">(</span><span class="token string">'安装程序检测到当前计算机已经安装了AIS_Server。'</span> <span class="token string">#13#13</span> <span class="token string">'您是否要卸载AIS_Server？'</span><span class="token punctuation">,</span>  mbConfirmation<span class="token punctuation">,</span> MB_YESNO<span class="token punctuation">)</span> <span class="token operator">=</span> IDYES <span class="token keyword">then</span>
+            <span class="token comment">//   ShellExec('', ExpandConstant('{app}\unins000.exe'), '','', SW_SHOW, ewNoWait, ResultCode);</span>
+            <span class="token keyword">begin</span>
+              Exec<span class="token punctuation">(</span>RemoveQuotes<span class="token punctuation">(</span>ResultStr<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">''</span><span class="token punctuation">,</span> <span class="token string">''</span><span class="token punctuation">,</span> SW_SHOW<span class="token punctuation">,</span> ewWaitUntilTerminated<span class="token punctuation">,</span> ResultCode<span class="token punctuation">)</span><span class="token punctuation">;</span>
+              <span class="token keyword">Result</span> <span class="token operator">:=</span> <span class="token keyword">false</span><span class="token punctuation">;</span>
+            <span class="token keyword">end</span>
+        <span class="token keyword">end</span>
+        <span class="token keyword">break</span><span class="token punctuation">;</span>
+      <span class="token keyword">end</span>
+      <span class="token keyword">else</span>
+      <span class="token comment">//zdx 5.8 判断是否已经打开了一个安装程序</span>
+      <span class="token keyword">begin</span>
+        <span class="token keyword">if</span> FindWindowbyWindowName<span class="token punctuation">(</span><span class="token string">'安装 - AIS_Server'</span><span class="token punctuation">)</span><span class="token operator">&lt;&gt;</span><span class="token number">0</span> <span class="token keyword">then</span>
+        <span class="token keyword">begin</span>
+          MsgBox<span class="token punctuation">(</span><span class="token string">'安装程序检测到有另外一个安装程序已经在运行了'</span><span class="token punctuation">,</span> mbConfirmation<span class="token punctuation">,</span> MB_OK<span class="token punctuation">)</span><span class="token punctuation">;</span>
+          <span class="token keyword">Result</span> <span class="token operator">:=</span> <span class="token keyword">false</span><span class="token punctuation">;</span>
+          <span class="token keyword">break</span><span class="token punctuation">;</span>
+        <span class="token keyword">end</span>
+      <span class="token keyword">end</span>
+    <span class="token keyword">end</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> I <span class="token operator">=</span> GetArrayLength<span class="token punctuation">(</span>Guid_names<span class="token punctuation">)</span> <span class="token keyword">then</span>
+      <span class="token keyword">Result</span> <span class="token operator">:=</span> <span class="token keyword">true</span><span class="token punctuation">;</span>
+  <span class="token keyword">end</span>
+  <span class="token keyword">else</span>
+    <span class="token keyword">Result</span> <span class="token operator">:=</span> <span class="token keyword">true</span><span class="token punctuation">;</span>
+<span class="token keyword">end</span><span class="token punctuation">;</span> 
+
+</code></pre></div><h2 id="判断程序是否已安装-2"><a href="#判断程序是否已安装-2" class="header-anchor">#</a> 判断程序是否已安装（2）</h2> <div class="language-pascal extra-class"><pre class="language-pascal"><code> <span class="token comment">// 修改注册表</span>
+<span class="token punctuation">[</span>Registry<span class="token punctuation">]</span>
+Root<span class="token punctuation">:</span> HKLM<span class="token punctuation">;</span> Subkey<span class="token punctuation">:</span> Software\The Application<span class="token punctuation">;</span> ValueType<span class="token punctuation">:</span> <span class="token keyword">string</span><span class="token punctuation">;</span> ValueName<span class="token punctuation">:</span> Installed version<span class="token punctuation">;</span> ValueData<span class="token punctuation">:</span> <span class="token string">'2.0'</span><span class="token punctuation">;</span> Flags<span class="token punctuation">:</span> uninsdeletekey
+
+<span class="token punctuation">[</span>Code<span class="token punctuation">]</span>
+<span class="token keyword">function</span> GetInstalledVersion<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span> <span class="token keyword">String</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span>
+InstalledVersion<span class="token punctuation">:</span> <span class="token keyword">String</span><span class="token punctuation">;</span>
+<span class="token keyword">begin</span>
+InstalledVersion <span class="token operator">:=</span><span class="token string">''</span><span class="token punctuation">;</span>
+RegQueryStringValue<span class="token punctuation">(</span>HKLM<span class="token punctuation">,</span> <span class="token string">'Software\The Application'</span><span class="token punctuation">,</span> <span class="token string">'Installed version'</span><span class="token punctuation">,</span> InstalledVersion<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">Result</span> <span class="token operator">:=</span> InstalledVersion<span class="token punctuation">;</span>
+<span class="token keyword">end</span><span class="token punctuation">;</span>
+
+<span class="token keyword">function</span> InitializeSetup<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span> Boolean<span class="token punctuation">;</span>
+<span class="token keyword">var</span>
+PrevVer<span class="token punctuation">:</span> <span class="token keyword">String</span><span class="token punctuation">;</span>
+<span class="token keyword">begin</span>
+PrevVer <span class="token operator">:=</span> GetInstalledVersion<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">result</span> <span class="token operator">:=</span> <span class="token keyword">true</span><span class="token punctuation">;</span>
+<span class="token keyword">if</span> length<span class="token punctuation">(</span>PrevVer<span class="token punctuation">)</span> <span class="token operator">&gt;</span> <span class="token number">0</span> <span class="token keyword">then</span> <span class="token keyword">begin</span>
+<span class="token comment">//如果发现程序已经安装过了</span>
+MsgBox <span class="token punctuation">(</span><span class="token string">'本程序的 '</span> <span class="token operator">+</span> PrevVer <span class="token operator">+</span> <span class="token string">' 版本已经安装，请卸载后再安装本程序. 安装程序将关闭.'</span><span class="token punctuation">,</span> mbError<span class="token punctuation">,</span> MB_OK<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">result</span> <span class="token operator">:=</span> <span class="token keyword">false</span><span class="token punctuation">;</span>
+<span class="token keyword">end</span><span class="token punctuation">;</span>
+<span class="token keyword">end</span><span class="token punctuation">;</span>
+</code></pre></div><h2 id="下载、复制、删除文件"><a href="#下载、复制、删除文件" class="header-anchor">#</a> 下载、复制、删除文件</h2> <div class="language-pascal extra-class"><pre class="language-pascal"><code>itd_addfile<span class="token punctuation">(</span><span class="token string">'http://test.com/Test.exe'</span><span class="token punctuation">,</span>ExpandConstant<span class="token punctuation">(</span><span class="token string">'{src}\Test.exe'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// Copy the file when it's finished the download</span>
+FileCopy<span class="token punctuation">(</span>ExpandConstant<span class="token punctuation">(</span><span class="token string">'{tmp}\Test.exe'</span><span class="token punctuation">)</span><span class="token punctuation">,</span> ExpandConstant<span class="token punctuation">(</span><span class="token string">'{app}\Test.exe'</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token keyword">False</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// Delete the old file</span>
+DeleteFile<span class="token punctuation">(</span>ExpandConstant<span class="token punctuation">(</span><span class="token string">'{src}\Test.exe'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h2 id="自定义函数控制文件安装"><a href="#自定义函数控制文件安装" class="header-anchor">#</a> 自定义函数控制文件安装</h2> <div class="language-pascal extra-class"><pre class="language-pascal"><code><span class="token comment">// 验证文件是否执行</span>
+ <span class="token punctuation">[</span>Files<span class="token punctuation">]</span>
+Source<span class="token punctuation">:</span> &quot;MYPROG<span class="token punctuation">.</span>EXE&quot;<span class="token punctuation">;</span> DestDir<span class="token punctuation">:</span> &quot;<span class="token comment">{app}</span>&quot;<span class="token punctuation">;</span> Check<span class="token punctuation">:</span> MyProgCheck
+Source<span class="token punctuation">:</span> &quot;A\MYFILE<span class="token punctuation">.</span>TXT&quot;<span class="token punctuation">;</span> DestDir<span class="token punctuation">:</span> &quot;<span class="token comment">{app}</span>&quot;<span class="token punctuation">;</span> Check<span class="token punctuation">:</span> MyDirCheck<span class="token punctuation">(</span>ExpandConstant<span class="token punctuation">(</span><span class="token string">'{app}\A'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+Source<span class="token punctuation">:</span> &quot;B\MYFILE<span class="token punctuation">.</span>TXT&quot;<span class="token punctuation">;</span> DestDir<span class="token punctuation">:</span> &quot;<span class="token comment">{app}</span>&quot;<span class="token punctuation">;</span> Check<span class="token punctuation">:</span> DirExists<span class="token punctuation">(</span>ExpandConstant<span class="token punctuation">(</span><span class="token string">'{app}\B'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token punctuation">[</span>Code<span class="token punctuation">]</span>
+<span class="token keyword">var</span>
+  MyProgChecked<span class="token punctuation">:</span> Boolean<span class="token punctuation">;</span>
+  MyProgCheckResult<span class="token punctuation">:</span> Boolean<span class="token punctuation">;</span>
+
+<span class="token comment">// 根据用户自定义返回</span>
+<span class="token keyword">function</span> MyProgCheck<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span> Boolean<span class="token punctuation">;</span>
+<span class="token keyword">begin</span>
+  <span class="token keyword">if</span> <span class="token operator">not</span> MyProgChecked <span class="token keyword">then</span> <span class="token keyword">begin</span>
+    MyProgCheckResult <span class="token operator">:=</span> MsgBox<span class="token punctuation">(</span><span class="token string">'Do you want to install MyProg.exe to '</span> <span class="token operator">+</span> ExtractFilePath<span class="token punctuation">(</span>CurrentFileName<span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">'?'</span><span class="token punctuation">,</span> mbConfirmation<span class="token punctuation">,</span> MB_YESNO<span class="token punctuation">)</span> <span class="token operator">=</span> idYes<span class="token punctuation">;</span>
+    MyProgChecked <span class="token operator">:=</span> <span class="token keyword">True</span><span class="token punctuation">;</span>
+  <span class="token keyword">end</span><span class="token punctuation">;</span>
+  <span class="token keyword">Result</span> <span class="token operator">:=</span> MyProgCheckResult<span class="token punctuation">;</span>
+<span class="token keyword">end</span><span class="token punctuation">;</span>
+
+
+<span class="token comment">// 判断文件夹是否存在</span>
+<span class="token keyword">function</span> MyDirCheck<span class="token punctuation">(</span>DirName<span class="token punctuation">:</span> <span class="token keyword">String</span><span class="token punctuation">)</span><span class="token punctuation">:</span> Boolean<span class="token punctuation">;</span>
+<span class="token keyword">begin</span>
+  <span class="token keyword">Result</span> <span class="token operator">:=</span> DirExists<span class="token punctuation">(</span>DirName<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">end</span><span class="token punctuation">;</span>
+</code></pre></div><h2 id="其他自定义函数"><a href="#其他自定义函数" class="header-anchor">#</a> 其他自定义函数</h2> <div class="language-pascal extra-class"><pre class="language-pascal"><code>
+<span class="token comment">// 执行程序</span>
+<span class="token keyword">function</span> TaskUninstallShell<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span> Boolean<span class="token punctuation">;</span>
+  <span class="token keyword">var</span>
+  ResultCode<span class="token punctuation">:</span> Integer<span class="token punctuation">;</span>
+<span class="token keyword">begin</span>
+    Exec<span class="token punctuation">(</span>ExpandConstant<span class="token punctuation">(</span><span class="token string">'{app}\uninstall.exe'</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">''</span><span class="token punctuation">,</span> <span class="token string">''</span><span class="token punctuation">,</span> SW_HIDE<span class="token punctuation">,</span>
+     ewWaitUntilTerminated<span class="token punctuation">,</span> ResultCode<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">end</span><span class="token punctuation">;</span>
+
+  <span class="token comment">// 关闭进程</span>
+<span class="token keyword">function</span> TaskKillProcessByName<span class="token punctuation">(</span><span class="token keyword">const</span> FileName <span class="token punctuation">:</span> <span class="token keyword">string</span><span class="token punctuation">)</span><span class="token punctuation">:</span> Boolean<span class="token punctuation">;</span>
+  <span class="token keyword">var</span>
+  ResultCode<span class="token punctuation">:</span> Integer<span class="token punctuation">;</span>
+<span class="token keyword">begin</span>
+    Exec<span class="token punctuation">(</span>ExpandConstant<span class="token punctuation">(</span><span class="token string">'taskkill.exe'</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">'/f /im '</span> <span class="token operator">+</span> <span class="token string">'&quot;'</span> <span class="token operator">+</span> FileName <span class="token operator">+</span> <span class="token string">'&quot;'</span><span class="token punctuation">,</span> <span class="token string">''</span><span class="token punctuation">,</span> SW_HIDE<span class="token punctuation">,</span>
+     ewWaitUntilTerminated<span class="token punctuation">,</span> ResultCode<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">end</span><span class="token punctuation">;</span>
+
+  <span class="token comment">// 卸载serverDaemon服务</span>
+<span class="token keyword">function</span> TaskShutDownDaemon<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span> Boolean<span class="token punctuation">;</span>
+  <span class="token keyword">var</span>
+  ResultCode<span class="token punctuation">:</span> Integer<span class="token punctuation">;</span>
+<span class="token keyword">begin</span>
+     Exec<span class="token punctuation">(</span>ExpandConstant<span class="token punctuation">(</span><span class="token string">'{app}\paperless\ServerDaemon\ServerDaemon.exe'</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">' -d '</span><span class="token punctuation">,</span> <span class="token string">''</span><span class="token punctuation">,</span> SW_SHOW<span class="token punctuation">,</span>
+     ewWaitUntilTerminated<span class="token punctuation">,</span> ResultCode<span class="token punctuation">)</span>
+<span class="token keyword">end</span><span class="token punctuation">;</span>
+
+ <span class="token comment">// 停止服务</span>
+<span class="token keyword">function</span> TaskStopService<span class="token punctuation">(</span><span class="token keyword">const</span> FileName <span class="token punctuation">:</span> <span class="token keyword">string</span><span class="token punctuation">)</span><span class="token punctuation">:</span> Boolean<span class="token punctuation">;</span>
+  <span class="token keyword">var</span>
+  ResultCode<span class="token punctuation">:</span> Integer<span class="token punctuation">;</span>
+<span class="token keyword">begin</span>
+    Exec<span class="token punctuation">(</span>ExpandConstant<span class="token punctuation">(</span><span class="token string">'net.exe'</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">' stop '</span> <span class="token operator">+</span> <span class="token string">'&quot;'</span> <span class="token operator">+</span> FileName <span class="token operator">+</span> <span class="token string">'&quot;'</span><span class="token punctuation">,</span> <span class="token string">''</span><span class="token punctuation">,</span> SW_HIDE<span class="token punctuation">,</span>
+     ewWaitUntilTerminated<span class="token punctuation">,</span> ResultCode<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">end</span><span class="token punctuation">;</span>
+
+</code></pre></div><h2 id="完全删除"><a href="#完全删除" class="header-anchor">#</a> 完全删除</h2> <div class="language-pascal extra-class"><pre class="language-pascal"><code>
+<span class="token punctuation">[</span>UninstallRun<span class="token punctuation">]</span>
+Filename<span class="token punctuation">:</span> &quot;<span class="token comment">{cmd}</span>&quot;<span class="token punctuation">;</span> Parameters<span class="token punctuation">:</span> &quot;<span class="token operator">/</span>c rd <span class="token operator">/</span>s <span class="token operator">/</span>q &quot;&quot;<span class="token comment">{app}</span>&quot;&quot;&quot;<span class="token punctuation">;</span> Flags<span class="token punctuation">:</span> hidewizard runhidden
+
+
+<span class="token punctuation">[</span>UninstallDelete<span class="token punctuation">]</span>
+<span class="token keyword">Name</span><span class="token punctuation">:</span> <span class="token comment">{app}</span><span class="token punctuation">;</span> <span class="token keyword">Type</span><span class="token punctuation">:</span> filesandordirs
+
+</code></pre></div><h2 id="设置环境变量"><a href="#设置环境变量" class="header-anchor">#</a> 设置环境变量</h2> <p>零、使用cmd添加 (必须重启才能生效)</p> <div class="language-cmd extra-class"><pre class="language-text"><code>set &quot;str=HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment&quot;
+for /f &quot;skip=2 tokens=2*&quot; %%a in ('REG QUERY &quot;%str%&quot; /v Path') do set &quot;regstr=%%b&quot;
+set src=%ROOT_PATH%ffmpeg\bin\
+if &quot;%src%&quot;==&quot;&quot; goto :eof
+echo %regstr%|find &quot;;%src%&quot;&gt;nul&amp;&amp;echo 已经存在%src%||(
+  setlocal enabledelayedexpansion
+  set &quot;regstr=!regstr!;%src%&quot;
+  reg add &quot;!str!&quot; /v Path /t REG_EXPAND_SZ /f /d &quot;!regstr!
+  endlocal
+)
+</code></pre></div><p>一、在[setup]段添加</p> <div class="language-pascal extra-class"><pre class="language-pascal"><code>ChangesEnvironment<span class="token operator">=</span><span class="token keyword">true</span>
+</code></pre></div><p>说明：让安装包在结束后，通知系统环境变量已经改变。</p> <p>二、在[code]段添加</p> <blockquote><p>对于Windows NT系统，环境变量的设置，当前用户变量对应到注册表项HKEY_CURRENT_USER\Environment，系统环境变量对应到注册表项HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Environment，所以对于环境变量可以在安装或卸载时通过注册表的修改进行设置。</p></blockquote> <div class="language-pascal extra-class"><pre class="language-pascal"><code>
+<span class="token comment">// 设置环境变量函数</span>
+<span class="token keyword">procedure</span> SetEnv<span class="token punctuation">(</span>aEnvName<span class="token punctuation">,</span> aEnvValue<span class="token punctuation">:</span> <span class="token keyword">string</span><span class="token punctuation">;</span> aIsInstall<span class="token punctuation">,</span> aIsInsForAllUser<span class="token punctuation">:</span> Boolean<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span>
+sOrgValue<span class="token punctuation">:</span> <span class="token keyword">string</span><span class="token punctuation">;</span>
+S1<span class="token punctuation">,</span> sFileName<span class="token punctuation">:</span> <span class="token keyword">string</span><span class="token punctuation">;</span>
+bRetValue<span class="token punctuation">,</span> bInsForAllUser<span class="token punctuation">:</span> Boolean<span class="token punctuation">;</span>
+SL<span class="token punctuation">:</span> TStringList<span class="token punctuation">;</span>
+x<span class="token punctuation">:</span> integer<span class="token punctuation">;</span>
+<span class="token keyword">begin</span>
+bInsForAllUser <span class="token operator">:=</span> aIsInsForAllUser<span class="token punctuation">;</span>
+<span class="token keyword">if</span> UsingWinNT <span class="token keyword">then</span>
+<span class="token keyword">begin</span>
+   <span class="token keyword">if</span> bInsForAllUser <span class="token keyword">then</span>
+     bRetValue <span class="token operator">:=</span> RegQueryStringValue<span class="token punctuation">(</span>HKEY_LOCAL_MACHINE<span class="token punctuation">,</span> <span class="token string">'SYSTEM\CurrentControlSet\Control\Session Manager\Environment'</span><span class="token punctuation">,</span> aEnvName<span class="token punctuation">,</span> sOrgValue<span class="token punctuation">)</span>
+   <span class="token keyword">else</span>
+     bRetValue <span class="token operator">:=</span> RegQueryStringValue<span class="token punctuation">(</span>HKEY_CURRENT_USER<span class="token punctuation">,</span> <span class="token string">'Environment'</span><span class="token punctuation">,</span> aEnvName<span class="token punctuation">,</span> sOrgValue<span class="token punctuation">)</span>
+   sOrgValue <span class="token operator">:=</span> Trim<span class="token punctuation">(</span>sOrgValue<span class="token punctuation">)</span><span class="token punctuation">;</span>
+   <span class="token keyword">begin</span>
+     S1 <span class="token operator">:=</span> aEnvValue<span class="token punctuation">;</span>
+     <span class="token keyword">if</span> pos<span class="token punctuation">(</span>Uppercase<span class="token punctuation">(</span>s1<span class="token punctuation">)</span><span class="token punctuation">,</span> Uppercase<span class="token punctuation">(</span>sOrgValue<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">=</span> <span class="token number">0</span> <span class="token keyword">then</span> <span class="token comment">//还没有加入</span>
+     <span class="token keyword">begin</span>
+       <span class="token keyword">if</span> aIsInstall <span class="token keyword">then</span>
+       <span class="token keyword">begin</span>
+         x <span class="token operator">:=</span> Length<span class="token punctuation">(</span>sOrgValue<span class="token punctuation">)</span><span class="token punctuation">;</span>
+         <span class="token keyword">if</span> <span class="token punctuation">(</span>x <span class="token operator">&gt;</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token operator">and</span> <span class="token punctuation">(</span>StringOfChar<span class="token punctuation">(</span>sOrgValue<span class="token punctuation">[</span>x<span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">&lt;&gt;</span> <span class="token string">';'</span><span class="token punctuation">)</span> <span class="token keyword">then</span>
+           sOrgValue <span class="token operator">:=</span> sOrgValue <span class="token operator">+</span> <span class="token string">';'</span><span class="token punctuation">;</span>
+         sOrgValue <span class="token operator">:=</span> sOrgValue <span class="token operator">+</span> S1<span class="token punctuation">;</span>
+       <span class="token keyword">end</span><span class="token punctuation">;</span>
+     <span class="token keyword">end</span> <span class="token keyword">else</span>
+     <span class="token keyword">begin</span>
+       <span class="token keyword">if</span> <span class="token operator">not</span> aIsInstall <span class="token keyword">then</span>
+       <span class="token keyword">begin</span>
+         StringChangeEx<span class="token punctuation">(</span>sOrgValue<span class="token punctuation">,</span> S1 <span class="token operator">+</span> <span class="token string">';'</span><span class="token punctuation">,</span> <span class="token string">''</span><span class="token punctuation">,</span> <span class="token keyword">True</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+         StringChangeEx<span class="token punctuation">(</span>sOrgValue<span class="token punctuation">,</span> S1<span class="token punctuation">,</span> <span class="token string">''</span><span class="token punctuation">,</span> <span class="token keyword">True</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+       <span class="token keyword">end</span><span class="token punctuation">;</span>
+     <span class="token keyword">end</span><span class="token punctuation">;</span>
+
+     <span class="token keyword">if</span> bInsForAllUser <span class="token keyword">then</span>
+       RegWriteStringValue<span class="token punctuation">(</span>HKEY_LOCAL_MACHINE<span class="token punctuation">,</span> <span class="token string">'SYSTEM\CurrentControlSet\Control\Session Manager\Environment'</span><span class="token punctuation">,</span> aEnvName<span class="token punctuation">,</span> sOrgValue<span class="token punctuation">)</span>
+     <span class="token keyword">else</span>
+     <span class="token keyword">begin</span>
+       <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">not</span> aIsInstall<span class="token punctuation">)</span> <span class="token operator">and</span> <span class="token punctuation">(</span>Trim<span class="token punctuation">(</span>sOrgValue<span class="token punctuation">)</span> <span class="token operator">=</span> <span class="token string">''</span><span class="token punctuation">)</span> <span class="token keyword">then</span>
+         RegDeleteValue<span class="token punctuation">(</span>HKEY_CURRENT_USER<span class="token punctuation">,</span> <span class="token string">'Environment'</span><span class="token punctuation">,</span> aEnvName<span class="token punctuation">)</span>
+       <span class="token keyword">else</span>
+         RegWriteStringValue<span class="token punctuation">(</span>HKEY_CURRENT_USER<span class="token punctuation">,</span> <span class="token string">'Environment'</span><span class="token punctuation">,</span> aEnvName<span class="token punctuation">,</span> sOrgValue<span class="token punctuation">)</span><span class="token punctuation">;</span>
+     <span class="token keyword">end</span><span class="token punctuation">;</span>
+   <span class="token keyword">end</span><span class="token punctuation">;</span>
+<span class="token keyword">end</span> <span class="token keyword">else</span> <span class="token comment">//非NT 系统,如Win98</span>
+<span class="token keyword">begin</span>
+   SL <span class="token operator">:=</span> TStringList<span class="token punctuation">.</span>Create<span class="token punctuation">;</span>
+   <span class="token keyword">try</span>
+     sFileName <span class="token operator">:=</span> ExpandConstant<span class="token punctuation">(</span><span class="token string">'{sd}\autoexec.bat'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+     LoadStringFromFile<span class="token punctuation">(</span>sFileName<span class="token punctuation">,</span> S1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+     SL<span class="token punctuation">.</span>Text <span class="token operator">:=</span> s1<span class="token punctuation">;</span>
+     s1 <span class="token operator">:=</span>   <span class="token string">'&quot;'</span> <span class="token operator">+</span> aEnvValue <span class="token operator">+</span> <span class="token string">'&quot;'</span><span class="token punctuation">;</span>
+     s1 <span class="token operator">:=</span> <span class="token string">'set '</span><span class="token operator">+</span>aEnvName <span class="token operator">+</span><span class="token string">'=%path%;'</span> <span class="token operator">+</span> s1 <span class="token punctuation">;</span>
+
+     bRetValue <span class="token operator">:=</span> <span class="token keyword">False</span><span class="token punctuation">;</span>
+     x <span class="token operator">:=</span> SL<span class="token punctuation">.</span>IndexOf<span class="token punctuation">(</span>s1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+     <span class="token keyword">if</span> x <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">1</span> <span class="token keyword">then</span>
+     <span class="token keyword">begin</span>
+       <span class="token keyword">if</span> aIsInstall <span class="token keyword">then</span>
+       <span class="token keyword">begin</span>
+         SL<span class="token punctuation">.</span>Add<span class="token punctuation">(</span>s1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+         bRetValue <span class="token operator">:=</span> <span class="token keyword">True</span><span class="token punctuation">;</span>
+       <span class="token keyword">end</span><span class="token punctuation">;</span>
+     <span class="token keyword">end</span> <span class="token keyword">else</span> <span class="token comment">//还没添加</span>
+       <span class="token keyword">if</span> <span class="token operator">not</span> aIsInstall <span class="token keyword">then</span>
+       <span class="token keyword">begin</span>
+         SL<span class="token punctuation">.</span>Delete<span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">;</span>
+         bRetValue <span class="token operator">:=</span> <span class="token keyword">True</span><span class="token punctuation">;</span>
+       <span class="token keyword">end</span><span class="token punctuation">;</span>
+
+     <span class="token keyword">if</span> bRetValue <span class="token keyword">then</span>
+       SL<span class="token punctuation">.</span>SaveToFile<span class="token punctuation">(</span>sFileName<span class="token punctuation">)</span><span class="token punctuation">;</span>
+   <span class="token keyword">finally</span>
+     SL<span class="token punctuation">.</span>free<span class="token punctuation">;</span>
+   <span class="token keyword">end</span><span class="token punctuation">;</span>
+
+<span class="token keyword">end</span><span class="token punctuation">;</span>
+<span class="token keyword">end</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 安装前添加环境变量</span>
+<span class="token keyword">procedure</span> CurStepChanged<span class="token punctuation">(</span>CurStep<span class="token punctuation">:</span> TSetupStep<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">begin</span>
+ <span class="token keyword">if</span> CurStep <span class="token operator">=</span> ssInstall <span class="token keyword">then</span>
+ <span class="token keyword">begin</span>
+ <span class="token comment">// 将{app}路径添加到path环境变量中</span>
+    SetEnv<span class="token punctuation">(</span><span class="token string">'path'</span><span class="token punctuation">,</span>ExpandConstant<span class="token punctuation">(</span><span class="token string">'{app}'</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token keyword">true</span><span class="token punctuation">,</span><span class="token keyword">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//在这儿调用,一定在这儿调用,安装完无须重启,立即生效</span>
+ <span class="token keyword">end</span><span class="token punctuation">;</span>
+<span class="token keyword">end</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 卸载前删除环境变量</span>
+<span class="token keyword">procedure</span> CurUninstallStepChanged<span class="token punctuation">(</span>CurUninstallStep<span class="token punctuation">:</span> TUninstallStep<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">begin</span>
+ <span class="token comment">// 将{app}路径从path环境变量中删除</span>
+ SetEnv<span class="token punctuation">(</span><span class="token string">'path'</span><span class="token punctuation">,</span>ExpandConstant<span class="token punctuation">(</span><span class="token string">'{app}'</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token keyword">false</span><span class="token punctuation">,</span><span class="token keyword">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">end</span><span class="token punctuation">;</span>
+</code></pre></div><h2 id="自定义界面保存xml文件"><a href="#自定义界面保存xml文件" class="header-anchor">#</a> 自定义界面保存xml文件</h2> <blockquote><ol><li>读取xml 文件</li></ol></blockquote> <div class="language-pascal extra-class"><pre class="language-pascal"><code>
+<span class="token keyword">var</span>
+  CustomEdit<span class="token punctuation">:</span> TEdit<span class="token punctuation">;</span>
+  CustomPageID<span class="token punctuation">:</span> Integer<span class="token punctuation">;</span>
+
+<span class="token keyword">function</span> LoadValueFromXML<span class="token punctuation">(</span><span class="token keyword">const</span> AFileName<span class="token punctuation">,</span> APath<span class="token punctuation">:</span> <span class="token keyword">string</span><span class="token punctuation">)</span><span class="token punctuation">:</span> <span class="token keyword">string</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span>
+  XMLNode<span class="token punctuation">:</span> Variant<span class="token punctuation">;</span>
+  XMLDocument<span class="token punctuation">:</span> Variant<span class="token punctuation">;</span>  
+<span class="token keyword">begin</span>
+  <span class="token keyword">Result</span> <span class="token operator">:=</span> <span class="token string">''</span><span class="token punctuation">;</span>
+  XMLDocument <span class="token operator">:=</span> CreateOleObject<span class="token punctuation">(</span><span class="token string">'Msxml2.DOMDocument.6.0'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">try</span>
+    XMLDocument<span class="token punctuation">.</span>async <span class="token operator">:=</span> <span class="token keyword">False</span><span class="token punctuation">;</span>
+    XMLDocument<span class="token punctuation">.</span>load<span class="token punctuation">(</span>AFileName<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>XMLDocument<span class="token punctuation">.</span>parseError<span class="token punctuation">.</span>errorCode <span class="token operator">&lt;&gt;</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token keyword">then</span>
+      MsgBox<span class="token punctuation">(</span><span class="token string">'The XML file could not be parsed. '</span> <span class="token operator">+</span> 
+        XMLDocument<span class="token punctuation">.</span>parseError<span class="token punctuation">.</span>reason<span class="token punctuation">,</span> mbError<span class="token punctuation">,</span> MB_OK<span class="token punctuation">)</span>
+    <span class="token keyword">else</span>
+    <span class="token keyword">begin</span>
+      XMLDocument<span class="token punctuation">.</span>setProperty<span class="token punctuation">(</span><span class="token string">'SelectionLanguage'</span><span class="token punctuation">,</span> <span class="token string">'XPath'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      XMLNode <span class="token operator">:=</span> XMLDocument<span class="token punctuation">.</span>selectSingleNode<span class="token punctuation">(</span>APath<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">Result</span> <span class="token operator">:=</span> XMLNode<span class="token punctuation">.</span>text<span class="token punctuation">;</span>
+    <span class="token keyword">end</span><span class="token punctuation">;</span>
+  <span class="token keyword">except</span>
+    MsgBox<span class="token punctuation">(</span><span class="token string">'An error occured!'</span> <span class="token operator">+</span> <span class="token string">#13#10</span> <span class="token operator">+</span> GetExceptionMessage<span class="token punctuation">,</span> mbError<span class="token punctuation">,</span> MB_OK<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">end</span><span class="token punctuation">;</span>
+<span class="token keyword">end</span><span class="token punctuation">;</span>
+
+</code></pre></div><blockquote><p>2.修改xml文件</p></blockquote> <div class="language-pascal extra-class"><pre class="language-pascal"><code>
+<span class="token keyword">procedure</span> SaveValueToXML<span class="token punctuation">(</span><span class="token keyword">const</span> AFileName<span class="token punctuation">,</span> APath<span class="token punctuation">,</span> AValue<span class="token punctuation">:</span> <span class="token keyword">string</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span>
+  XMLNode<span class="token punctuation">:</span> Variant<span class="token punctuation">;</span>
+  XMLDocument<span class="token punctuation">:</span> Variant<span class="token punctuation">;</span>  
+<span class="token keyword">begin</span>
+  XMLDocument <span class="token operator">:=</span> CreateOleObject<span class="token punctuation">(</span><span class="token string">'Msxml2.DOMDocument.6.0'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">try</span>
+    XMLDocument<span class="token punctuation">.</span>async <span class="token operator">:=</span> <span class="token keyword">False</span><span class="token punctuation">;</span>
+    XMLDocument<span class="token punctuation">.</span>load<span class="token punctuation">(</span>AFileName<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>XMLDocument<span class="token punctuation">.</span>parseError<span class="token punctuation">.</span>errorCode <span class="token operator">&lt;&gt;</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token keyword">then</span>
+      MsgBox<span class="token punctuation">(</span><span class="token string">'The XML file could not be parsed. '</span> <span class="token operator">+</span> 
+        XMLDocument<span class="token punctuation">.</span>parseError<span class="token punctuation">.</span>reason<span class="token punctuation">,</span> mbError<span class="token punctuation">,</span> MB_OK<span class="token punctuation">)</span>
+    <span class="token keyword">else</span>
+    <span class="token keyword">begin</span>
+      XMLDocument<span class="token punctuation">.</span>setProperty<span class="token punctuation">(</span><span class="token string">'SelectionLanguage'</span><span class="token punctuation">,</span> <span class="token string">'XPath'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      XMLNode <span class="token operator">:=</span> XMLDocument<span class="token punctuation">.</span>selectSingleNode<span class="token punctuation">(</span>APath<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      XMLNode<span class="token punctuation">.</span>text <span class="token operator">:=</span> AValue<span class="token punctuation">;</span>
+      XMLDocument<span class="token punctuation">.</span>save<span class="token punctuation">(</span>AFileName<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">end</span><span class="token punctuation">;</span>
+  <span class="token keyword">except</span>
+    MsgBox<span class="token punctuation">(</span><span class="token string">'An error occured!'</span> <span class="token operator">+</span> <span class="token string">#13#10</span> <span class="token operator">+</span> GetExceptionMessage<span class="token punctuation">,</span> mbError<span class="token punctuation">,</span> MB_OK<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">end</span><span class="token punctuation">;</span>
+<span class="token keyword">end</span><span class="token punctuation">;</span>
+
+</code></pre></div><blockquote><p>3.自定义修改xml界面</p></blockquote> <div class="language-pascal extra-class"><pre class="language-pascal"><code><span class="token keyword">procedure</span> CreatOnEditIpPage<span class="token punctuation">;</span>
+<span class="token keyword">var</span>  
+  CustomPage<span class="token punctuation">:</span> TWizardPage<span class="token punctuation">;</span>
+<span class="token keyword">begin</span>
+  CustomPage <span class="token operator">:=</span> CreateCustomPage<span class="token punctuation">(</span>wpWelcome<span class="token punctuation">,</span> <span class="token string">'Custom Page'</span><span class="token punctuation">,</span> 
+    <span class="token string">'Enter the new value that will be saved into the XML file'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  CustomPageID <span class="token operator">:=</span> CustomPage<span class="token punctuation">.</span>ID<span class="token punctuation">;</span>
+  CustomEdit <span class="token operator">:=</span> TEdit<span class="token punctuation">.</span>Create<span class="token punctuation">(</span>WizardForm<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  CustomEdit<span class="token punctuation">.</span>Parent <span class="token operator">:=</span> CustomPage<span class="token punctuation">.</span>Surface<span class="token punctuation">;</span>
+<span class="token keyword">end</span><span class="token punctuation">;</span>
+
+</code></pre></div><blockquote><ol start="4"><li>使用</li></ol></blockquote> <div class="language-pascal extra-class"><pre class="language-pascal"><code>
+<span class="token comment">// 系统过程，判断pageID，读取xml文件</span>
+<span class="token keyword">procedure</span> CurPageChanged<span class="token punctuation">(</span>CurPageID<span class="token punctuation">:</span> Integer<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">begin</span>
+  <span class="token keyword">if</span> CurPageID <span class="token operator">=</span> CustomPageID <span class="token keyword">then</span>
+    CustomEdit<span class="token punctuation">.</span>Text <span class="token operator">:=</span> LoadValueFromXML<span class="token punctuation">(</span> <span class="token string">'C:\Program Files\Inno Setup 5\test\config.xml'</span><span class="token punctuation">,</span> <span class="token string">'//ServerConf/CMSIP'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">end</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 系统函数，根据pageID，判断点击下一步图标，保存xml文件</span>
+<span class="token keyword">function</span> NextButtonClick<span class="token punctuation">(</span>CurPageID<span class="token punctuation">:</span> Integer<span class="token punctuation">)</span><span class="token punctuation">:</span> Boolean<span class="token punctuation">;</span>
+<span class="token keyword">begin</span>
+  <span class="token keyword">Result</span> <span class="token operator">:=</span> <span class="token keyword">True</span><span class="token punctuation">;</span>
+  <span class="token keyword">if</span> CurPageID <span class="token operator">=</span> CustomPageID <span class="token keyword">then</span>
+    SaveValueToXML<span class="token punctuation">(</span> <span class="token string">'C:\Program Files\Inno Setup 5\test\config.xml'</span><span class="token punctuation">,</span> <span class="token string">'//ServerConf/CMSIP'</span><span class="token punctuation">,</span> CustomEdit<span class="token punctuation">.</span>Text<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">end</span><span class="token punctuation">;</span>
+
+</code></pre></div><h2 id="ini文件修改字段-获取安装包语言"><a href="#ini文件修改字段-获取安装包语言" class="header-anchor">#</a> ini文件修改字段 (获取安装包语言)</h2> <div class="language-pascal extra-class"><pre class="language-pascal"><code>
+<span class="token punctuation">[</span>Code<span class="token punctuation">]</span>
+
+<span class="token keyword">function</span> MyLangName<span class="token punctuation">(</span>Param<span class="token punctuation">:</span><span class="token keyword">String</span><span class="token punctuation">)</span><span class="token punctuation">:</span> <span class="token keyword">String</span><span class="token punctuation">;</span>      
+<span class="token keyword">begin</span>               
+  <span class="token keyword">Result</span> <span class="token operator">:=</span> ActiveLanguage<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">end</span><span class="token punctuation">;</span>
+
+<span class="token punctuation">[</span>INI<span class="token punctuation">]</span>  
+
+<span class="token comment">// 使用pascal 获取语言类型修改ini文件</span>
+Filename<span class="token punctuation">:</span> &quot;lan<span class="token punctuation">.</span>ini&quot;<span class="token punctuation">;</span> Section<span class="token punctuation">:</span> &quot;settings&quot;<span class="token punctuation">;</span> Key<span class="token punctuation">:</span> &quot;language&quot;<span class="token punctuation">;</span> <span class="token keyword">String</span><span class="token punctuation">:</span> &quot;<span class="token comment">{code:MyLangName}</span>&quot;<span class="token punctuation">;</span>
+ 
+</code></pre></div></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">上次更新时间:</span> <span class="time">4/28/2018, 10:53:07 AM</span></div></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/PenguinSeven/assets/js/app.feb3916a.js" defer></script><script src="/PenguinSeven/assets/js/2.f28e70e0.js" defer></script><script src="/PenguinSeven/assets/js/1.bb87e0ea.js" defer></script><script src="/PenguinSeven/assets/js/107.257c0c6e.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Mysql 数据库 | 吧食笔记</title>
+    <meta name="generator" content="VuePress 1.9.10">
+    <link rel="icon" href="/PenguinSeven/logo.png">
+    <meta name="description" content="PenguinSeven">
+    
+    <link rel="preload" href="/PenguinSeven/assets/css/0.styles.feb1df48.css" as="style"><link rel="preload" href="/PenguinSeven/assets/js/app.feb3916a.js" as="script"><link rel="preload" href="/PenguinSeven/assets/js/2.f28e70e0.js" as="script"><link rel="preload" href="/PenguinSeven/assets/js/1.bb87e0ea.js" as="script"><link rel="preload" href="/PenguinSeven/assets/js/66.719e81e3.js" as="script"><link rel="prefetch" href="/PenguinSeven/assets/js/10.e38c7cc5.js"><link rel="prefetch" href="/PenguinSeven/assets/js/100.b70b0c1d.js"><link rel="prefetch" href="/PenguinSeven/assets/js/101.46e03238.js"><link rel="prefetch" href="/PenguinSeven/assets/js/102.efb0e370.js"><link rel="prefetch" href="/PenguinSeven/assets/js/103.f5faa006.js"><link rel="prefetch" href="/PenguinSeven/assets/js/104.5564a1fa.js"><link rel="prefetch" href="/PenguinSeven/assets/js/105.39dab30f.js"><link rel="prefetch" href="/PenguinSeven/assets/js/106.c0bb3b4a.js"><link rel="prefetch" href="/PenguinSeven/assets/js/107.257c0c6e.js"><link rel="prefetch" href="/PenguinSeven/assets/js/108.8fc0260e.js"><link rel="prefetch" href="/PenguinSeven/assets/js/109.a137b455.js"><link rel="prefetch" href="/PenguinSeven/assets/js/11.d23c0f5a.js"><link rel="prefetch" href="/PenguinSeven/assets/js/110.fc1e49b3.js"><link rel="prefetch" href="/PenguinSeven/assets/js/111.4a8ae938.js"><link rel="prefetch" href="/PenguinSeven/assets/js/112.48914f2b.js"><link rel="prefetch" href="/PenguinSeven/assets/js/12.3a7a7e61.js"><link rel="prefetch" href="/PenguinSeven/assets/js/13.f6d05845.js"><link rel="prefetch" href="/PenguinSeven/assets/js/14.619aee36.js"><link rel="prefetch" href="/PenguinSeven/assets/js/15.3b9d1f7c.js"><link rel="prefetch" href="/PenguinSeven/assets/js/16.b49954cb.js"><link rel="prefetch" href="/PenguinSeven/assets/js/17.e528107c.js"><link rel="prefetch" href="/PenguinSeven/assets/js/18.4f4038bf.js"><link rel="prefetch" href="/PenguinSeven/assets/js/19.bd01e132.js"><link rel="prefetch" href="/PenguinSeven/assets/js/20.e3c1893e.js"><link rel="prefetch" href="/PenguinSeven/assets/js/21.3ba92fa5.js"><link rel="prefetch" href="/PenguinSeven/assets/js/22.446578c9.js"><link rel="prefetch" href="/PenguinSeven/assets/js/23.1ec8450c.js"><link rel="prefetch" href="/PenguinSeven/assets/js/24.65a37d34.js"><link rel="prefetch" href="/PenguinSeven/assets/js/25.4f168d23.js"><link rel="prefetch" href="/PenguinSeven/assets/js/26.5934d5a2.js"><link rel="prefetch" href="/PenguinSeven/assets/js/27.cb31c557.js"><link rel="prefetch" href="/PenguinSeven/assets/js/28.bd201709.js"><link rel="prefetch" href="/PenguinSeven/assets/js/29.f3679f2e.js"><link rel="prefetch" href="/PenguinSeven/assets/js/3.0d8eae40.js"><link rel="prefetch" href="/PenguinSeven/assets/js/30.5d895107.js"><link rel="prefetch" href="/PenguinSeven/assets/js/31.2a21575b.js"><link rel="prefetch" href="/PenguinSeven/assets/js/32.81ff732f.js"><link rel="prefetch" href="/PenguinSeven/assets/js/33.ff7c2f5e.js"><link rel="prefetch" href="/PenguinSeven/assets/js/34.9bdb8c46.js"><link rel="prefetch" href="/PenguinSeven/assets/js/35.da89b41e.js"><link rel="prefetch" href="/PenguinSeven/assets/js/36.f8772b8e.js"><link rel="prefetch" href="/PenguinSeven/assets/js/37.61105f93.js"><link rel="prefetch" href="/PenguinSeven/assets/js/38.f7790cf4.js"><link rel="prefetch" href="/PenguinSeven/assets/js/39.54af282a.js"><link rel="prefetch" href="/PenguinSeven/assets/js/4.4f963454.js"><link rel="prefetch" href="/PenguinSeven/assets/js/40.1a7a9b9a.js"><link rel="prefetch" href="/PenguinSeven/assets/js/41.b02d0f12.js"><link rel="prefetch" href="/PenguinSeven/assets/js/42.b103deb5.js"><link rel="prefetch" href="/PenguinSeven/assets/js/43.e0b77010.js"><link rel="prefetch" href="/PenguinSeven/assets/js/44.588ffc70.js"><link rel="prefetch" href="/PenguinSeven/assets/js/45.f5e03ed0.js"><link rel="prefetch" href="/PenguinSeven/assets/js/46.f0dea127.js"><link rel="prefetch" href="/PenguinSeven/assets/js/47.2fd249d7.js"><link rel="prefetch" href="/PenguinSeven/assets/js/48.687fabe4.js"><link rel="prefetch" href="/PenguinSeven/assets/js/49.3fa54d08.js"><link rel="prefetch" href="/PenguinSeven/assets/js/5.5cd94255.js"><link rel="prefetch" href="/PenguinSeven/assets/js/50.055e08df.js"><link rel="prefetch" href="/PenguinSeven/assets/js/51.ce3e0044.js"><link rel="prefetch" href="/PenguinSeven/assets/js/52.9fd95bb4.js"><link rel="prefetch" href="/PenguinSeven/assets/js/53.c26ffd47.js"><link rel="prefetch" href="/PenguinSeven/assets/js/54.0541a968.js"><link rel="prefetch" href="/PenguinSeven/assets/js/55.6209f14b.js"><link rel="prefetch" href="/PenguinSeven/assets/js/56.d7565bf2.js"><link rel="prefetch" href="/PenguinSeven/assets/js/57.a153410b.js"><link rel="prefetch" href="/PenguinSeven/assets/js/58.24db348e.js"><link rel="prefetch" href="/PenguinSeven/assets/js/59.4215ec40.js"><link rel="prefetch" href="/PenguinSeven/assets/js/6.918d102d.js"><link rel="prefetch" href="/PenguinSeven/assets/js/60.8af7fe3a.js"><link rel="prefetch" href="/PenguinSeven/assets/js/61.8176ca2c.js"><link rel="prefetch" href="/PenguinSeven/assets/js/62.473842c3.js"><link rel="prefetch" href="/PenguinSeven/assets/js/63.3dd08959.js"><link rel="prefetch" href="/PenguinSeven/assets/js/64.f8ff329c.js"><link rel="prefetch" href="/PenguinSeven/assets/js/65.7c8e9d0f.js"><link rel="prefetch" href="/PenguinSeven/assets/js/67.aaaa6fb3.js"><link rel="prefetch" href="/PenguinSeven/assets/js/68.941206b0.js"><link rel="prefetch" href="/PenguinSeven/assets/js/69.68b0053c.js"><link rel="prefetch" href="/PenguinSeven/assets/js/7.47f27853.js"><link rel="prefetch" href="/PenguinSeven/assets/js/70.174fd7e6.js"><link rel="prefetch" href="/PenguinSeven/assets/js/71.d99ae443.js"><link rel="prefetch" href="/PenguinSeven/assets/js/72.a8402aeb.js"><link rel="prefetch" href="/PenguinSeven/assets/js/73.f91e4cde.js"><link rel="prefetch" href="/PenguinSeven/assets/js/74.53345e83.js"><link rel="prefetch" href="/PenguinSeven/assets/js/75.5550825f.js"><link rel="prefetch" href="/PenguinSeven/assets/js/76.7775f7d8.js"><link rel="prefetch" href="/PenguinSeven/assets/js/77.fc6220ec.js"><link rel="prefetch" href="/PenguinSeven/assets/js/78.b918de51.js"><link rel="prefetch" href="/PenguinSeven/assets/js/79.abf83adf.js"><link rel="prefetch" href="/PenguinSeven/assets/js/80.d8b3e41c.js"><link rel="prefetch" href="/PenguinSeven/assets/js/81.ef42d0c5.js"><link rel="prefetch" href="/PenguinSeven/assets/js/82.6b4daeeb.js"><link rel="prefetch" href="/PenguinSeven/assets/js/83.dd2cb066.js"><link rel="prefetch" href="/PenguinSeven/assets/js/84.16cd76e5.js"><link rel="prefetch" href="/PenguinSeven/assets/js/85.361035e2.js"><link rel="prefetch" href="/PenguinSeven/assets/js/86.f15739f4.js"><link rel="prefetch" href="/PenguinSeven/assets/js/87.c2e26100.js"><link rel="prefetch" href="/PenguinSeven/assets/js/88.3fd017d3.js"><link rel="prefetch" href="/PenguinSeven/assets/js/89.da561da4.js"><link rel="prefetch" href="/PenguinSeven/assets/js/90.af1641e9.js"><link rel="prefetch" href="/PenguinSeven/assets/js/91.a0270273.js"><link rel="prefetch" href="/PenguinSeven/assets/js/92.b1107c24.js"><link rel="prefetch" href="/PenguinSeven/assets/js/93.9f01b02f.js"><link rel="prefetch" href="/PenguinSeven/assets/js/94.686f81a4.js"><link rel="prefetch" href="/PenguinSeven/assets/js/95.f72d4f1c.js"><link rel="prefetch" href="/PenguinSeven/assets/js/96.06d3c75c.js"><link rel="prefetch" href="/PenguinSeven/assets/js/97.676935b9.js"><link rel="prefetch" href="/PenguinSeven/assets/js/98.8a6b338c.js"><link rel="prefetch" href="/PenguinSeven/assets/js/99.f7e47ec4.js"><link rel="prefetch" href="/PenguinSeven/assets/js/vendors~docsearch.70bf0358.js">
+    <link rel="stylesheet" href="/PenguinSeven/assets/css/0.styles.feb1df48.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/PenguinSeven/" class="home-link router-link-active"><!----> <span class="site-name">吧食笔记</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/PenguinSeven/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/PenguinSeven/php/" class="nav-link">
+  PHP
+</a></div><div class="nav-item"><a href="https://google.com" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  External
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/PenguinSeven/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/PenguinSeven/php/" class="nav-link">
+  PHP
+</a></div><div class="nav-item"><a href="https://google.com" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  External
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <!----> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="mysql-数据库"><a href="#mysql-数据库" class="header-anchor">#</a> Mysql 数据库</h1> <h2 id="常见问题"><a href="#常见问题" class="header-anchor">#</a> 常见问题</h2> <h3 id="_1-修改权限"><a href="#_1-修改权限" class="header-anchor">#</a> 1. 修改权限</h3> <div class="language-mysql extra-class"><pre class="language-text"><code>-- 赋予任何主机访问数据的权限
+GRANT ALL RIVILEGES ON *.* TO 'root'@'%' WITH GRANT OPTION              
+</code></pre></div><h3 id="_2-结束符定义"><a href="#_2-结束符定义" class="header-anchor">#</a> 2. 结束符定义</h3> <ul><li><p>总所周知，mysql的命令行执行每一条命令是以分号结尾的，也就是说识别是否为一条命令，是根据分号决定的。
+然而存储过程中设计多条语句，很可能出现多个分号，所以直接把存储过程复制到命令号一般都会失败</p></li> <li><p>解决方法是需要加一个分隔符，让命令行知道整个存储过程的代码是完整的一块代码,代码如下</p></li></ul> <div class="language-mysql extra-class"><pre class="language-text"><code>DELIMITER //     
+CREATE PROCEDURE p_name (IN b INTEGER(12))     
+begin     
+ declare a INTEGER(12);     
+ set a=12;     
+ INSERT INTO t VALUES (a);     
+ SELECT s1* a FROM t;     
+End     
+//    
+
+</code></pre></div><ul><li><p>如代码中所示，在存储过程的开头加上“DELIMITER //”,结尾加上“//”就ok了</p></li> <li><p>执行后续的sql ，需将结束符重新定义</p></li></ul> <div class="language-mysql extra-class"><pre class="language-text"><code>DELIMITER ;
+</code></pre></div><h3 id="_3-order-by-自定义规则"><a href="#_3-order-by-自定义规则" class="header-anchor">#</a> 3. ORDER BY 自定义规则</h3> <blockquote><p>问题描述:<br>
+大家都知道, MySQL 中按某字段升序排列的 SQL 为 (以 id 为例, 下同):</p></blockquote> <div class="language-mysql extra-class"><pre class="language-text"><code>
+SELECT * FROM `MyTable` 
+WHERE `id` IN (1, 7, 3, 5) 
+ORDER BY `id` ASC
+
+</code></pre></div><p>降序排列的 SQL 为:</p> <div class="language-mysql extra-class"><pre class="language-text"><code>SELECT * FROM `MyTable` 
+WHERE `id` IN (1, 7, 3, 5) 
+ORDER BY `id` DESC
+</code></pre></div><p>有时以上排序并不能满足我们的需求. 例如, 我们想要按 id 以 5, 3, 7, 1 的顺序排列, 该如何实现. 这也是很多国内外同行经常遇到的问题之一.</p> <p>下面我们给出按表中某字段, 以我们想要的列表方式排序的解决方案.
+解决方案用&quot;按字段排序&quot; (ORDER BY FIELD).语法:</p> <div class="language-mysql extra-class"><pre class="language-text"><code>  SELECT * FROM MyTable 
+  ORDER BY FIELD(`id`, 5, 3, 7, 1)
+</code></pre></div><p>要注意的是, FIELD 后面是没有空格的.
+因此, 完整的 SQL 为:</p> <div class="language-mysql extra-class"><pre class="language-text"><code>SELECT * FROM `MyTable` 
+WHERE `id` IN (1, 7, 3, 5) 
+ORDER BY FIELD(`id`, 5, 3, 7, 1)
+</code></pre></div><p>常见应用:</p> <div class="language-mysql extra-class"><pre class="language-text"><code>SELECT * FROM `MyTable` 
+WHERE `name` IN ('张三', '李四', '王五', '孙六') 
+ORDER BY FIELD(`name`, '李四', '孙六', '张三', '王五')
+</code></pre></div><h3 id="_4-查询字段和注释"><a href="#_4-查询字段和注释" class="header-anchor">#</a> 4.查询字段和注释</h3> <div class="language-mysql extra-class"><pre class="language-text"><code>  select COLUMN_NAME,column_comment 
+  from INFORMATION_SCHEMA.Columns 
+  where table_name='表名' and table_schema='数据库'
+  
+</code></pre></div><h3 id="_5-查询表结构"><a href="#_5-查询表结构" class="header-anchor">#</a> 5.查询表结构</h3> <div class="language-mysql extra-class"><pre class="language-text"><code>
+SELECT a.table_name,b.TABLE_COMMENT,a.COLUMN_NAME,a.COLUMN_TYPE,a.COLUMN_COMMENT 
+FROM information_schema.COLUMNS a 
+JOIN information_schema.TABLES b ON a.table_schema = b.table_schema AND a.table_name = b.table_name
+WHERE a.table_name = 'question';
+
+</code></pre></div><h3 id="_6-时间转换"><a href="#_6-时间转换" class="header-anchor">#</a> 6.时间转换</h3> <div class="language-mysql extra-class"><pre class="language-text"><code>
+UNIX_TIMESTAMP('2017-04-21 08:30:00') - FLOOR(RAND()*100*3600*24);
+
+date_format();
+
+</code></pre></div><h3 id="_7-根据日期查数据"><a href="#_7-根据日期查数据" class="header-anchor">#</a> 7. 根据日期查数据</h3> <blockquote><p>来源地址： https://www.cnblogs.com/inkyi/p/5382868.html</p></blockquote> <p>user_event ：用户事件表</p> <p>create_time ：表中存储时间的字段</p> <div class="language-mysql extra-class"><pre class="language-text"><code>
+#获取当月数据
+SELECT * FROM user_event WHERE DATE_FORMAT(create_time,'%Y-%m') = DATE_FORMAT(NOW(),'%Y-%m');  
+#获取3月份数据
+SELECT * FROM user_event WHERE DATE_FORMAT(create_time,'%Y-%m') = DATE_FORMAT('2016-03-01','%Y-%m');  
+
+#获取三月份数据
+SELECT * FROM user_event WHERE YEAR(create_time)='2016' AND MONTH(create_time)='3';  
+
+#获取本周数据
+SELECT * FROM user_event WHERE YEARWEEK(DATE_FORMAT(create_time,'%Y-%m-%d')) = YEARWEEK(NOW());   
+
+#查询上周的数据 
+SELECT * FROM user_event WHERE YEARWEEK(DATE_FORMAT(create_time,'%Y-%m-%d')) = YEARWEEK(NOW())-1;   
+
+#查询距离当前现在6个月的数据 
+SELECT * FROM user_event WHERE create_time BETWEEN DATE_SUB(NOW(),interval 6 month) and NOW();  
+
+#查询上个月的数据 
+SELECT * FROM user_event WHERE DATE_FORMAT(create_time,'%Y-%m')=DATE_FORMAT(DATE_SUB(CURDATE(), INTERVAL 1 MONTH),'%Y-%m');  
+
+
+#查询今天的信息记录：
+SELECT * FROM user_event WHERE TO_DAYS(`create_time`) = TO_DAYS(NOW());  
+
+#查询昨天的信息记录：
+SELECT * FROM user_event WHERE TO_DAYS(now()) - TO_DAYS(create_time) &lt;= 1;  
+
+#查询近7天的信息记录：
+SELECT * FROM user_event WHERE DATE_SUB(curdate(), INTERVAL 7 DAY) &lt;= DATE(create_time);  
+
+#查询近30天的信息记录：
+SELECT * FROM user_event WHERE DATE_SUB(curdate(), INTERVAL 30 DAY) &lt;= DATE(create_time);  
+
+#查询上一月的信息记录：
+SELECT * FROM user_event WHERE PERIOD_DIFF(DATE_FORMAT(NOW(), '%Y%m'), DATE_FORMAT(create_time, '%Y%m')) =1;   
+</code></pre></div><h3 id="_8-导出数据库结构和数据"><a href="#_8-导出数据库结构和数据" class="header-anchor">#</a> 8. 导出数据库结构和数据</h3> <div class="language-shell extra-class"><pre class="language-shell"><code>$ mysqldump <span class="token parameter variable">-uroot</span> <span class="token parameter variable">-p</span> dbname <span class="token operator">&gt;</span> dbname .sql
+</code></pre></div><h3 id="_9-查看用户登录-限制ip"><a href="#_9-查看用户登录-限制ip" class="header-anchor">#</a> 9. 查看用户登录，限制ip</h3> <div class="language-mysql extra-class"><pre class="language-text"><code>SELECT user,host FROM mysql.user;
+</code></pre></div><h3 id="_10-新增用户限制ip"><a href="#_10-新增用户限制ip" class="header-anchor">#</a> 10. 新增用户限制ip</h3> <div class="language-mysql extra-class"><pre class="language-text"><code>GRANT ALL PRIVILEGES ON *.* TO 'root'@'222.240.125.80'IDENTIFIED BY 'edu2019weft1' WITH GRANT OPTION;
+
+flush privileges;
+</code></pre></div><h3 id="_11-临时修改数据库sql-mode"><a href="#_11-临时修改数据库sql-mode" class="header-anchor">#</a> 11. 临时修改数据库<code>sql_mode</code></h3> <div class="language-mysql extra-class"><pre class="language-text"><code>set global  sql_mode='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION' ;
+set session  sql_mode='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION' ;
+</code></pre></div></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">上次更新时间:</span> <span class="time">3/27/2020, 2:28:29 AM</span></div></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/PenguinSeven/assets/js/app.feb3916a.js" defer></script><script src="/PenguinSeven/assets/js/2.f28e70e0.js" defer></script><script src="/PenguinSeven/assets/js/1.bb87e0ea.js" defer></script><script src="/PenguinSeven/assets/js/66.719e81e3.js" defer></script>
+  </body>
+</html>

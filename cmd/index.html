@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>CMD 批处理脚步 | 吧食笔记</title>
+    <meta name="generator" content="VuePress 1.9.10">
+    <link rel="icon" href="/PenguinSeven/logo.png">
+    <meta name="description" content="PenguinSeven">
+    
+    <link rel="preload" href="/PenguinSeven/assets/css/0.styles.feb1df48.css" as="style"><link rel="preload" href="/PenguinSeven/assets/js/app.feb3916a.js" as="script"><link rel="preload" href="/PenguinSeven/assets/js/2.f28e70e0.js" as="script"><link rel="preload" href="/PenguinSeven/assets/js/1.bb87e0ea.js" as="script"><link rel="preload" href="/PenguinSeven/assets/js/32.81ff732f.js" as="script"><link rel="prefetch" href="/PenguinSeven/assets/js/10.e38c7cc5.js"><link rel="prefetch" href="/PenguinSeven/assets/js/100.b70b0c1d.js"><link rel="prefetch" href="/PenguinSeven/assets/js/101.46e03238.js"><link rel="prefetch" href="/PenguinSeven/assets/js/102.efb0e370.js"><link rel="prefetch" href="/PenguinSeven/assets/js/103.f5faa006.js"><link rel="prefetch" href="/PenguinSeven/assets/js/104.5564a1fa.js"><link rel="prefetch" href="/PenguinSeven/assets/js/105.39dab30f.js"><link rel="prefetch" href="/PenguinSeven/assets/js/106.c0bb3b4a.js"><link rel="prefetch" href="/PenguinSeven/assets/js/107.257c0c6e.js"><link rel="prefetch" href="/PenguinSeven/assets/js/108.8fc0260e.js"><link rel="prefetch" href="/PenguinSeven/assets/js/109.a137b455.js"><link rel="prefetch" href="/PenguinSeven/assets/js/11.d23c0f5a.js"><link rel="prefetch" href="/PenguinSeven/assets/js/110.fc1e49b3.js"><link rel="prefetch" href="/PenguinSeven/assets/js/111.4a8ae938.js"><link rel="prefetch" href="/PenguinSeven/assets/js/112.48914f2b.js"><link rel="prefetch" href="/PenguinSeven/assets/js/12.3a7a7e61.js"><link rel="prefetch" href="/PenguinSeven/assets/js/13.f6d05845.js"><link rel="prefetch" href="/PenguinSeven/assets/js/14.619aee36.js"><link rel="prefetch" href="/PenguinSeven/assets/js/15.3b9d1f7c.js"><link rel="prefetch" href="/PenguinSeven/assets/js/16.b49954cb.js"><link rel="prefetch" href="/PenguinSeven/assets/js/17.e528107c.js"><link rel="prefetch" href="/PenguinSeven/assets/js/18.4f4038bf.js"><link rel="prefetch" href="/PenguinSeven/assets/js/19.bd01e132.js"><link rel="prefetch" href="/PenguinSeven/assets/js/20.e3c1893e.js"><link rel="prefetch" href="/PenguinSeven/assets/js/21.3ba92fa5.js"><link rel="prefetch" href="/PenguinSeven/assets/js/22.446578c9.js"><link rel="prefetch" href="/PenguinSeven/assets/js/23.1ec8450c.js"><link rel="prefetch" href="/PenguinSeven/assets/js/24.65a37d34.js"><link rel="prefetch" href="/PenguinSeven/assets/js/25.4f168d23.js"><link rel="prefetch" href="/PenguinSeven/assets/js/26.5934d5a2.js"><link rel="prefetch" href="/PenguinSeven/assets/js/27.cb31c557.js"><link rel="prefetch" href="/PenguinSeven/assets/js/28.bd201709.js"><link rel="prefetch" href="/PenguinSeven/assets/js/29.f3679f2e.js"><link rel="prefetch" href="/PenguinSeven/assets/js/3.0d8eae40.js"><link rel="prefetch" href="/PenguinSeven/assets/js/30.5d895107.js"><link rel="prefetch" href="/PenguinSeven/assets/js/31.2a21575b.js"><link rel="prefetch" href="/PenguinSeven/assets/js/33.ff7c2f5e.js"><link rel="prefetch" href="/PenguinSeven/assets/js/34.9bdb8c46.js"><link rel="prefetch" href="/PenguinSeven/assets/js/35.da89b41e.js"><link rel="prefetch" href="/PenguinSeven/assets/js/36.f8772b8e.js"><link rel="prefetch" href="/PenguinSeven/assets/js/37.61105f93.js"><link rel="prefetch" href="/PenguinSeven/assets/js/38.f7790cf4.js"><link rel="prefetch" href="/PenguinSeven/assets/js/39.54af282a.js"><link rel="prefetch" href="/PenguinSeven/assets/js/4.4f963454.js"><link rel="prefetch" href="/PenguinSeven/assets/js/40.1a7a9b9a.js"><link rel="prefetch" href="/PenguinSeven/assets/js/41.b02d0f12.js"><link rel="prefetch" href="/PenguinSeven/assets/js/42.b103deb5.js"><link rel="prefetch" href="/PenguinSeven/assets/js/43.e0b77010.js"><link rel="prefetch" href="/PenguinSeven/assets/js/44.588ffc70.js"><link rel="prefetch" href="/PenguinSeven/assets/js/45.f5e03ed0.js"><link rel="prefetch" href="/PenguinSeven/assets/js/46.f0dea127.js"><link rel="prefetch" href="/PenguinSeven/assets/js/47.2fd249d7.js"><link rel="prefetch" href="/PenguinSeven/assets/js/48.687fabe4.js"><link rel="prefetch" href="/PenguinSeven/assets/js/49.3fa54d08.js"><link rel="prefetch" href="/PenguinSeven/assets/js/5.5cd94255.js"><link rel="prefetch" href="/PenguinSeven/assets/js/50.055e08df.js"><link rel="prefetch" href="/PenguinSeven/assets/js/51.ce3e0044.js"><link rel="prefetch" href="/PenguinSeven/assets/js/52.9fd95bb4.js"><link rel="prefetch" href="/PenguinSeven/assets/js/53.c26ffd47.js"><link rel="prefetch" href="/PenguinSeven/assets/js/54.0541a968.js"><link rel="prefetch" href="/PenguinSeven/assets/js/55.6209f14b.js"><link rel="prefetch" href="/PenguinSeven/assets/js/56.d7565bf2.js"><link rel="prefetch" href="/PenguinSeven/assets/js/57.a153410b.js"><link rel="prefetch" href="/PenguinSeven/assets/js/58.24db348e.js"><link rel="prefetch" href="/PenguinSeven/assets/js/59.4215ec40.js"><link rel="prefetch" href="/PenguinSeven/assets/js/6.918d102d.js"><link rel="prefetch" href="/PenguinSeven/assets/js/60.8af7fe3a.js"><link rel="prefetch" href="/PenguinSeven/assets/js/61.8176ca2c.js"><link rel="prefetch" href="/PenguinSeven/assets/js/62.473842c3.js"><link rel="prefetch" href="/PenguinSeven/assets/js/63.3dd08959.js"><link rel="prefetch" href="/PenguinSeven/assets/js/64.f8ff329c.js"><link rel="prefetch" href="/PenguinSeven/assets/js/65.7c8e9d0f.js"><link rel="prefetch" href="/PenguinSeven/assets/js/66.719e81e3.js"><link rel="prefetch" href="/PenguinSeven/assets/js/67.aaaa6fb3.js"><link rel="prefetch" href="/PenguinSeven/assets/js/68.941206b0.js"><link rel="prefetch" href="/PenguinSeven/assets/js/69.68b0053c.js"><link rel="prefetch" href="/PenguinSeven/assets/js/7.47f27853.js"><link rel="prefetch" href="/PenguinSeven/assets/js/70.174fd7e6.js"><link rel="prefetch" href="/PenguinSeven/assets/js/71.d99ae443.js"><link rel="prefetch" href="/PenguinSeven/assets/js/72.a8402aeb.js"><link rel="prefetch" href="/PenguinSeven/assets/js/73.f91e4cde.js"><link rel="prefetch" href="/PenguinSeven/assets/js/74.53345e83.js"><link rel="prefetch" href="/PenguinSeven/assets/js/75.5550825f.js"><link rel="prefetch" href="/PenguinSeven/assets/js/76.7775f7d8.js"><link rel="prefetch" href="/PenguinSeven/assets/js/77.fc6220ec.js"><link rel="prefetch" href="/PenguinSeven/assets/js/78.b918de51.js"><link rel="prefetch" href="/PenguinSeven/assets/js/79.abf83adf.js"><link rel="prefetch" href="/PenguinSeven/assets/js/80.d8b3e41c.js"><link rel="prefetch" href="/PenguinSeven/assets/js/81.ef42d0c5.js"><link rel="prefetch" href="/PenguinSeven/assets/js/82.6b4daeeb.js"><link rel="prefetch" href="/PenguinSeven/assets/js/83.dd2cb066.js"><link rel="prefetch" href="/PenguinSeven/assets/js/84.16cd76e5.js"><link rel="prefetch" href="/PenguinSeven/assets/js/85.361035e2.js"><link rel="prefetch" href="/PenguinSeven/assets/js/86.f15739f4.js"><link rel="prefetch" href="/PenguinSeven/assets/js/87.c2e26100.js"><link rel="prefetch" href="/PenguinSeven/assets/js/88.3fd017d3.js"><link rel="prefetch" href="/PenguinSeven/assets/js/89.da561da4.js"><link rel="prefetch" href="/PenguinSeven/assets/js/90.af1641e9.js"><link rel="prefetch" href="/PenguinSeven/assets/js/91.a0270273.js"><link rel="prefetch" href="/PenguinSeven/assets/js/92.b1107c24.js"><link rel="prefetch" href="/PenguinSeven/assets/js/93.9f01b02f.js"><link rel="prefetch" href="/PenguinSeven/assets/js/94.686f81a4.js"><link rel="prefetch" href="/PenguinSeven/assets/js/95.f72d4f1c.js"><link rel="prefetch" href="/PenguinSeven/assets/js/96.06d3c75c.js"><link rel="prefetch" href="/PenguinSeven/assets/js/97.676935b9.js"><link rel="prefetch" href="/PenguinSeven/assets/js/98.8a6b338c.js"><link rel="prefetch" href="/PenguinSeven/assets/js/99.f7e47ec4.js"><link rel="prefetch" href="/PenguinSeven/assets/js/vendors~docsearch.70bf0358.js">
+    <link rel="stylesheet" href="/PenguinSeven/assets/css/0.styles.feb1df48.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/PenguinSeven/" class="home-link router-link-active"><!----> <span class="site-name">吧食笔记</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/PenguinSeven/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/PenguinSeven/php/" class="nav-link">
+  PHP
+</a></div><div class="nav-item"><a href="https://google.com" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  External
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/PenguinSeven/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/PenguinSeven/php/" class="nav-link">
+  PHP
+</a></div><div class="nav-item"><a href="https://google.com" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  External
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <!----> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="cmd-批处理脚步"><a href="#cmd-批处理脚步" class="header-anchor">#</a> CMD 批处理脚步</h2> <h3 id="_1-系统相关"><a href="#_1-系统相关" class="header-anchor">#</a> 1. 系统相关</h3> <h4 id="_1-路径常量"><a href="#_1-路径常量" class="header-anchor">#</a> 1. 路径常量</h4> <div class="language-cmd extra-class"><pre class="language-text"><code>
+@echo off
+echo 当前盘符：%~d0
+echo 当前盘符和路径：%~dp0
+echo 当前批处理全路径：%~f0
+echo 当前盘符和路径的短文件名格式：%~sdp0
+echo 当前CMD默认目录：%cd%
+echo 目录中有空格也可以加入&quot;&quot;避免找不到路径
+pause
+
+</code></pre></div><h4 id="_2-延时3秒"><a href="#_2-延时3秒" class="header-anchor">#</a> 2. 延时3秒</h4> <div class="language-cmd extra-class"><pre class="language-text"><code>    ping -n 3 127.0.0.1&gt;nul
+</code></pre></div><h4 id="_3-创建服务"><a href="#_3-创建服务" class="header-anchor">#</a> 3. 创建服务</h4> <div class="language-cmd extra-class"><pre class="language-text"><code>    sc create &quot;Windows Managemont Installer&quot; binPath= &quot;cmd.exe /c start c:\a.exe&quot; start= auto
+</code></pre></div><h3 id="_2-操作系统环境变量"><a href="#_2-操作系统环境变量" class="header-anchor">#</a> 2. 操作系统环境变量</h3> <h4 id="_1-实例一-批处理设置系统环境变量"><a href="#_1-实例一-批处理设置系统环境变量" class="header-anchor">#</a> 1. 实例一：批处理设置系统环境变量</h4> <div class="language-cmd extra-class"><pre class="language-text"><code>::添加环境变量JAVA_HOME
+@echo off
+echo 添加java环境变量
+set regpath=HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Environment
+set evname=JAVA_HOME
+set javapath=c:\java\jdk
+reg add &quot;%regpath%&quot; /v %evname% /d %javapath% /f
+pause&gt;nul
+ 
+ 
+::删除环境变量JAVA_HOME
+@echo off
+echo 删除java环境变量
+set regpath=HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Environment
+set evname=JAVA_HOME
+reg delete &quot;%regpath%&quot; /v &quot;%evname%&quot;  /f
+pause&gt;nul
+
+</code></pre></div><h4 id="_2-实例二-先判断该环境变量是否已经存在-如果不存在则添加该环境变量。"><a href="#_2-实例二-先判断该环境变量是否已经存在-如果不存在则添加该环境变量。" class="header-anchor">#</a> 2. 实例二：先判断该环境变量是否已经存在,如果不存在则添加该环境变量。</h4> <div class="language-cmd extra-class"><pre class="language-text"><code>@echo off
+    @set Path_=D:\Program Files
+    for,/f,&quot;skip=4 tokens=1,2,*&quot;,%%a,in,('reg query &quot;HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Control\Session Manager\Environment&quot; /v Path'),do,( 
+    @set PathAll_=%%c
+    )
+    echo %PathAll_%|find /i &quot;%Path_%&quot; &amp;&amp; set IsNull=true|| set IsNull=false
+    if not %IsNull%==true (
+          reg add &quot;HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Control\Session Manager\Environment&quot; /v Path /t REG_EXPAND_SZ /d &quot;%PathAll_%;%Path_%&quot; /f
+    )
+pause
+</code></pre></div><h3 id="_3-apache-守护进程"><a href="#_3-apache-守护进程" class="header-anchor">#</a> 3. apache 守护进程</h3> <h4 id="_1-安装服务"><a href="#_1-安装服务" class="header-anchor">#</a> 1. 安装服务</h4> <div class="language-cmd extra-class"><pre class="language-text"><code>    %CD%\%guard_dir%\winsw.exe install &gt;nul 2&gt;nul
+</code></pre></div><h4 id="_2-开启服务"><a href="#_2-开启服务" class="header-anchor">#</a> 2. 开启服务</h4> <div class="language-cmd extra-class"><pre class="language-text"><code> %net% start %updaemon_vc% &gt;nul 2&gt;nul
+</code></pre></div><h4 id="_3-判断进程"><a href="#_3-判断进程" class="header-anchor">#</a> 3. 判断进程</h4> <div class="language-cmd extra-class"><pre class="language-text"><code>  tasklist|findstr /i updaemon.exe &gt;nul 2&gt;nul &amp;&amp; goto start_U_OK || goto start_U_ERROR
+</code></pre></div><h4 id="_4-卸载"><a href="#_4-卸载" class="header-anchor">#</a> 4. 卸载</h4> <div class="language-cmd extra-class"><pre class="language-text"><code>    :: 根据服务名称kill
+    %taskkill% /fi &quot;SERVICES eq %updaemon_vc%&quot; /f /t &gt;nul 2&gt;nul
+    :: 卸载服务
+    %CD%\%guard_dir%\winsw.exe uninstall &gt;nul 2&gt;nul
+</code></pre></div><h4 id="_5-详解"><a href="#_5-详解" class="header-anchor">#</a> 5. 详解</h4> <p>守护进程项目名称 “Windows Service Wrapper”,配置文件：</p> <div class="language-xml extra-class"><pre class="language-xml"><code><span class="token prolog">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>service</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>id</span><span class="token punctuation">&gt;</span></span>UPUPW_updaemon_A<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>id</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>name</span><span class="token punctuation">&gt;</span></span>UPUPW_updaemon_A<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>name</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>description</span><span class="token punctuation">&gt;</span></span>用于支持Apache守护进程随服务启动<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>description</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>executable</span><span class="token punctuation">&gt;</span></span>E:/upupw/upcore/updaemon.exe<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>executable</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>logpath</span><span class="token punctuation">&gt;</span></span>E:/upupw/Guard/<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>logpath</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>logmode</span><span class="token punctuation">&gt;</span></span>roll<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>logmode</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>depend</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>depend</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>startargument</span><span class="token punctuation">&gt;</span></span>-p E:/upupw/upcore/updaemon.exe<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>startargument</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>stopargument</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>stopargument</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>service</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><h3 id="_4-程序控制"><a href="#_4-程序控制" class="header-anchor">#</a> 4. 程序控制</h3> <h4 id="apache-相关"><a href="#apache-相关" class="header-anchor">#</a> apache 相关</h4> <ul><li>初始化配置文件</li></ul> <div class="language-cmd extra-class"><pre class="language-text"><code>    :: 执行外部程序，调用upcfg(),为 false 跳转至菜单栏
+    set php=%upcore_dir%\upcore.exe -d extension_dir=%upcore_dir% -d date.timezone=UTC -n %upcore_dir%\up.dll
+    %php% upcfg(); || %pause% &amp;&amp; goto menu
+    
+</code></pre></div><ul><li>安装,指定生成的服务名称</li></ul> <div class="language-cmd extra-class"><pre class="language-text"><code>
+:: 安装apache应用，将结果重定向到nul
+c:\wamp\apche\bin\httpd.exe -k install -n &quot;Apache Server&quot; &gt;nul 2&gt;nul
+
+</code></pre></div><ul><li>开启</li></ul> <div class="language-cmd extra-class"><pre class="language-text"><code>:: 启动apache应用，
+c:\wamp\apche\bin\httpd.exe -k start -n &quot;Apache Server&quot; &gt;nul 2&gt;nul
+
+</code></pre></div><h4 id="mysql-相关"><a href="#mysql-相关" class="header-anchor">#</a> mysql 相关</h4> <ul><li>安装成系统服务</li></ul> <div class="language-cmd extra-class"><pre class="language-text"><code>    %CD%\%database_dir%\bin\mysqld.exe --install &quot;Mysql Server&quot; --defaults-file=&quot;%CD%\%database_dir%\my.ini&quot; &gt;nul 2&gt;nul
+</code></pre></div><ul><li>启动服务</li></ul> <div class="language-cmd extra-class"><pre class="language-text"><code>     %net% start &quot;Mysql Server&quot;
+</code></pre></div><ul><li>判断进程</li></ul> <div class="language-cmd extra-class"><pre class="language-text"><code> tasklist|findstr /i mysqld.exe &gt;nul 2&gt;nul &amp;&amp; goto start_M_OK || goto start_M_ERROR
+</code></pre></div><h4 id="redis-相关"><a href="#redis-相关" class="header-anchor">#</a> redis 相关</h4> <ul><li>安装成系统服务</li></ul> <div class="language-cmd extra-class"><pre class="language-text"><code>     %CD%\%redis_dir%\redis-server.exe --service-install %CD%\%redis_conf% --service-name %redis_vc% &gt;nul 2&gt;nul
+</code></pre></div><ul><li>启动服务</li></ul> <div class="language-cmd extra-class"><pre class="language-text"><code>      %CD%\%redis_dir%\redis-server.exe --service-start --service-name %redis_vc% &gt;nul 2&gt;nul
+</code></pre></div><ul><li>判断进程</li></ul> <div class="language-cmd extra-class"><pre class="language-text"><code>tasklist|findstr /i redis-server.exe &gt;nul 2&gt;nul &amp;&amp; goto start_C_OK || goto start_C_ERROR
+</code></pre></div><h4 id="nginx-相关"><a href="#nginx-相关" class="header-anchor">#</a> nginx 相关</h4> <ul><li>nginx 并无默认安装服务方式，</li></ul> <blockquote><p>使用了“Windows Service Wrapper”，配置文件如下：</p></blockquote> <div class="language-xml extra-class"><pre class="language-xml"><code><span class="token comment">&lt;!-- php 部分 --&gt;</span>
+<span class="token prolog">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>service</span><span class="token punctuation">&gt;</span></span>  
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>id</span><span class="token punctuation">&gt;</span></span>UPUPW_PHPFPM<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>id</span><span class="token punctuation">&gt;</span></span>  
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>name</span><span class="token punctuation">&gt;</span></span>UPUPW_PHPFPM<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>name</span><span class="token punctuation">&gt;</span></span>  
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>description</span><span class="token punctuation">&gt;</span></span>用于支持PHP-FastCGI随服务启动<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>description</span><span class="token punctuation">&gt;</span></span>  
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>executable</span><span class="token punctuation">&gt;</span></span>X:/upupw/PHP7/phpfpm.exe<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>executable</span><span class="token punctuation">&gt;</span></span> 
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>logpath</span><span class="token punctuation">&gt;</span></span>X:/upupw/PHP7/phpfpm/<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>logpath</span><span class="token punctuation">&gt;</span></span> 
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>logmode</span><span class="token punctuation">&gt;</span></span>roll<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>logmode</span><span class="token punctuation">&gt;</span></span> 
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>depend</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>depend</span><span class="token punctuation">&gt;</span></span>  
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>startargument</span><span class="token punctuation">&gt;</span></span>&quot;X:/upupw/PHP7/php-cgi.exe -c X:/upupw/PHP7/php.ini&quot; -n 8 -i 127.0.0.1 -p 9070<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>startargument</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>stopargument</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>stopargument</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>service</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><div class="language-xml extra-class"><pre class="language-xml"><code>
+<span class="token comment">&lt;!-- nginx 部分 --&gt;</span>
+<span class="token prolog">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>service</span><span class="token punctuation">&gt;</span></span>  
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>id</span><span class="token punctuation">&gt;</span></span>UPUPW_Nginx<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>id</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>name</span><span class="token punctuation">&gt;</span></span>UPUPW_Nginx<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>name</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>description</span><span class="token punctuation">&gt;</span></span>用于支持Nginx随服务启动<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>description</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>executable</span><span class="token punctuation">&gt;</span></span>X:/upupw/Nginx/nginx.exe<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>executable</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>logpath</span><span class="token punctuation">&gt;</span></span>X:/upupw/Nginx/<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>logpath</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>logmode</span><span class="token punctuation">&gt;</span></span>roll<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>logmode</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>depend</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>depend</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>startargument</span><span class="token punctuation">&gt;</span></span>-p X:/upupw/Nginx<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>startargument</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>stopargument</span><span class="token punctuation">&gt;</span></span>-p X:/upupw/Nginx -s stop<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>stopargument</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>service</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><ul><li>安装服务、启动服务（先起php，后起 nginx）</li></ul> <div class="language-cmd extra-class"><pre class="language-text"><code>:: 初始化配置文件
+%php% upcfg(); || %pause% &amp;&amp; goto menu
+:: 安装php服务，
+%CD%\%phpfpm%\winsw.exe install &gt;nul 2&gt;nul
+:: 启动服务
+%net% start %cgi_vc% &gt;nul 2&gt;nul
+:: 验证进程
+tasklist|findstr /i phpfpm.exe &gt;nul 2&gt;nul &amp;&amp; goto start_FPM_OK || goto start_FPM_ERROR
+
+:: 安装nginx服务
+%CD%\%nginx_dir%\winsw.exe install &gt;nul 2&gt;nul
+:: 启动nginx服务
+%net% start %nginx_vc% &gt;nul 2&gt;nul
+:: 根据pid文件验证服务是否已启动
+if exist %CD%\%nginx_dir%\logs\*.pid goto start_N_OK
+
+</code></pre></div><ul><li>停止服务</li></ul> <div class="language-cmd extra-class"><pre class="language-text"><code>
+:: 停止nginx服务
+%net% stop %nginx_vc% &gt;nul 2&gt;nul
+
+:: kill nginx，php 服务
+%taskkill% /fi &quot;SERVICES eq %nginx_vc%&quot; /f /t &gt;nul 2&gt;nul
+%taskkill% /fi &quot;SERVICES eq %cgi_vc%&quot; /f /t &gt;nul 2&gt;nul
+
+:: 卸载nginx，php 服务
+%CD%\%nginx_dir%\winsw.exe uninstall &gt;nul 2&gt;nul
+%CD%\%phpfpm%\winsw.exe uninstall &gt;nul 2&gt;nul
+
+:: kill php进程，删除pid文件
+%taskkill% /im phpfpm.exe /f /t&gt;nul 2&gt;nul
+%taskkill% /im php-cgi.exe /f /t&gt;nul 2&gt;nul
+del /f/s/q %CD%\%nginx_dir%\logs\*.pid /q&gt;nul 2&gt;nul
+
+</code></pre></div><ul><li>配置文件模版</li></ul> <div class="language-config extra-class"><pre class="language-text"><code>
+server {
+            # 监听端口
+            listen       ' . $port . '; 
+            # 域名 和 别名
+            server_name  ' . $hn . ' alias ' . $hAlias . ';
+            location / {
+                root   ' . $htdocs . ';
+                index  index.html index.htm default.html default.htm index.php default.php app.php u.php;
+                include        ' . $htdocs . '/up-*.conf;
+            }
+            autoindex off;
+            include advanced_settings.conf;
+            #include expires.conf;
+            location ~* .*\/(attachment|attachments|uploadfiles|avatar)\/.*\.(php|PHP7|phps|asp|aspx|jsp)$ {
+            deny all;
+            }
+            location ~ ^.+\.php {
+                root           ' . $htdocs . ';
+                fastcgi_pass   bakend;
+                fastcgi_index  index.php;
+                fastcgi_split_path_info ^((?U).+\.php)(/?.+)$;
+                fastcgi_param  PATH_INFO $fastcgi_path_info;
+                fastcgi_param  PATH_TRANSLATED $document_root$fastcgi_path_info;
+                include        fastcgi.conf;
+            }
+		}
+		
+##server ' . $hn . ' end}
+
+</code></pre></div><h4 id="php-相关"><a href="#php-相关" class="header-anchor">#</a> php 相关</h4> <h4 id="ftp-相关"><a href="#ftp-相关" class="header-anchor">#</a> FTP 相关</h4></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">上次更新时间:</span> <span class="time">5/2/2018, 10:29:20 AM</span></div></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/PenguinSeven/assets/js/app.feb3916a.js" defer></script><script src="/PenguinSeven/assets/js/2.f28e70e0.js" defer></script><script src="/PenguinSeven/assets/js/1.bb87e0ea.js" defer></script><script src="/PenguinSeven/assets/js/32.81ff732f.js" defer></script>
+  </body>
+</html>
