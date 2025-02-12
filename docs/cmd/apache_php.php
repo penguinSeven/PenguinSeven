@@ -3,18 +3,18 @@
   http://www.upupw.net
   webmaster@upupw.net
 */
-$updir = getcwd();
-$sysroot = env('SystemRoot');
-$apache_dir = env('apache_dir');
-$php_dir = env('php_dir');
+$updir        = getcwd();
+$sysroot      = env('SystemRoot');
+$apache_dir   = env('apache_dir');
+$php_dir      = env('php_dir');
 $database_dir = env('database_dir');
-$guard_dir = env('guard_dir');
-$winsw_m = $guard_dir . '\winsw.xml';
-$httpd_conf = $apache_dir . '\conf\httpd.conf';
-$vhosts_conf = env('vhosts_conf');
-$php_ini = $php_dir . '\php.ini';
-$my_ini = $database_dir . '\my.ini';
-$upd_c = env('upd_config');
+$guard_dir    = env('guard_dir');
+$winsw_m      = $guard_dir . '\winsw.xml';
+$httpd_conf   = $apache_dir . '\conf\httpd.conf';
+$vhosts_conf  = env('vhosts_conf');
+$php_ini      = $php_dir . '\php.ini';
+$my_ini       = $database_dir . '\my.ini';
+$upd_c        = env('upd_config');
 if (count($argv) > 1) {
     $a = implode(' ', $argv);
     $a = substr($a, strlen($argv[0]) + 1);
@@ -42,7 +42,7 @@ function regrpl($p, $r, $s)
 {
     $p = '/' . $p . '/im';
     $s = preg_replace($p, $r, $s);
-    if ($s === NULL) quit('regrpl(): 出错! 为保护数据而终止.', 1);
+    if ($s === null) quit('regrpl(): 出错! 为保护数据而终止.', 1);
     return $s;
 }
 
@@ -50,7 +50,7 @@ function rfile($fn)
 {
     if (file_exists($fn)) {
         $handle = fopen($fn, 'r');
-        $c = fread($handle, filesize($fn));
+        $c      = fread($handle, filesize($fn));
         fclose($handle);
         return $c;
     } else {
@@ -64,7 +64,7 @@ function wfile($fn, $c)
         quit('文件 ' . $fn . ' 不可写', 1);
     else {
         $handle = fopen($fn, 'w');
-        if (fwrite($handle, $c) === FALSE)
+        if (fwrite($handle, $c) === false)
             quit('写入文件 ' . $fn . ' 失败', 1);
         fclose($handle);
     }
@@ -97,9 +97,9 @@ function chk_path($path)
 
 function chk_port($port)
 {
-    $s = shell_exec('netstat.exe -ano');
+    $s   = shell_exec('netstat.exe -ano');
     $tok = strtok($s, ' ');
-    $pid = NULL;
+    $pid = null;
     while ($tok) {
         if (($tok == '0.0.0.0:' . $port) || ($tok == '127.0.0.1:' . $port)) {
             for ($i = 3; $i; $i--)
@@ -109,33 +109,33 @@ function chk_port($port)
         }
         $tok = strtok(' ');
     }
-    $task = NULL;
+    $task = null;
     if (is_numeric($pid)) {
-        $lst = array(
-            'w3wp.exe' => 'IIS',
-            'w3svc.exe' => 'IIS',
-            'inetinfo.exe' => 'IIS',
-            'kangle.exe' => 'Kangle',
-            'nginx.exe' => 'Nginx',
-            'httpd.exe' => 'Apache',
-            'java.exe' => 'Java',
-            'tomcat.exe' => 'Tomcat',
-            'tomcat6.exe' => 'Tomcat',
-            'tomcat7.exe' => 'Tomcat',
-            'tomcat8.exe' => 'Tomcat',
-            'memcached.exe' => 'MemCached',
-            'redis-server.exe' => 'Redis',
-            'mysqld-nt.exe' => 'MySQL-Old',
-            'mysqld.exe' => 'MySQL/MariaDB',
-            'linxftp.exe' => 'LinxFTP',
+        $lst  = [
+            'w3wp.exe'             => 'IIS',
+            'w3svc.exe'            => 'IIS',
+            'inetinfo.exe'         => 'IIS',
+            'kangle.exe'           => 'Kangle',
+            'nginx.exe'            => 'Nginx',
+            'httpd.exe'            => 'Apache',
+            'java.exe'             => 'Java',
+            'tomcat.exe'           => 'Tomcat',
+            'tomcat6.exe'          => 'Tomcat',
+            'tomcat7.exe'          => 'Tomcat',
+            'tomcat8.exe'          => 'Tomcat',
+            'memcached.exe'        => 'MemCached',
+            'redis-server.exe'     => 'Redis',
+            'mysqld-nt.exe'        => 'MySQL-Old',
+            'mysqld.exe'           => 'MySQL/MariaDB',
+            'linxftp.exe'          => 'LinxFTP',
             'FileZilla_server.exe' => 'FileZilla',
             'FileZilla server.exe' => 'FileZilla',
-            'Serv-U.exe' => 'Serv-U',
-            'Thunder.exe' => '迅雷',
-            'WebThunder.exe' => 'Web迅雷');
-        $s = shell_exec('tasklist.exe /fi "pid eq ' . $pid . '" /nh');
+            'Serv-U.exe'           => 'Serv-U',
+            'Thunder.exe'          => '迅雷',
+            'WebThunder.exe'       => 'Web迅雷'];
+        $s    = shell_exec('tasklist.exe /fi "pid eq ' . $pid . '" /nh');
         $task = trim(strtok($s, ' '));
-        $d = ' ';
+        $d    = ' ';
         if (isset($lst[$task]))
             $d = ' "' . $lst[$task] . '" ';
         quit(' 端口 ' . $port . ' 已被' . $d . '(' . $task . ' PID ' . $pid . ') 使用!', 1);
@@ -176,38 +176,38 @@ function mysql_port($newport)
 function upcfg()
 {
     global $apache_dir, $php_dir, $guard_dir, $database_dir, $httpd_conf, $vhosts_conf, $php_ini, $updir, $sysroot, $winsw_m, $my_ini;
-    $str = rfile($php_ini);
+    $str   = rfile($php_ini);
     $updir = rpl("\\", '\\\\', $updir);
-    $str = regrpl('[A-Z]:\\\\.*?[^\\\\\r\n]+(\\\\temp)', $updir . '$1', $str);
-    $str = regrpl('[A-Z]:\\\\.*?[^\\\\\r\n]+(\\\\PHP7)', $updir . '$1', $str);
-    $str = regrpl('[A-Z]:\\\\.*?[^\\\\\r\n]+(\\\\Apache2)', $updir . '$1', $str);
-    $str = regrpl('[A-Z]:\\\\.*?[^\\\\\r\n]+(\\\\Guard)', $updir . '$1', $str);
-    $str = regrpl('[A-Z]:\\\\.*?[^\\\\\r\n]+(\\\\sendmail)', $updir . '$1', $str);
-    $str = regrpl('[A-Z]:\\\\.*?[^\\\\\r\n]+(\\\\xdebug)', $updir . '$1', $str);
+    $str   = regrpl('[A-Z]:\\\\.*?[^\\\\\r\n]+(\\\\temp)', $updir . '$1', $str);
+    $str   = regrpl('[A-Z]:\\\\.*?[^\\\\\r\n]+(\\\\PHP7)', $updir . '$1', $str);
+    $str   = regrpl('[A-Z]:\\\\.*?[^\\\\\r\n]+(\\\\Apache2)', $updir . '$1', $str);
+    $str   = regrpl('[A-Z]:\\\\.*?[^\\\\\r\n]+(\\\\Guard)', $updir . '$1', $str);
+    $str   = regrpl('[A-Z]:\\\\.*?[^\\\\\r\n]+(\\\\sendmail)', $updir . '$1', $str);
+    $str   = regrpl('[A-Z]:\\\\.*?[^\\\\\r\n]+(\\\\xdebug)', $updir . '$1', $str);
     wfile($php_ini, $str);
-    $str = rfile($vhosts_conf);
-    $str = regrpl('(open_basedir ")[^;]+(\\\\htdocs[^;]+;)', '$1' . $updir . '$2', $str);
-    $str = regrpl('(open_basedir ")[^;]+(\\\\vhosts\\\\[^;]+;)', '$1' . $updir . '$2', $str);
-    $str = regrpl('([A-Z]:\\\\[^\\\\])[^;]+(\\\\Guard[^;]+;)', $updir . '$2', $str);
-    $str = regrpl('([A-Z]:\\\\[^\\\\])[^;]+(\\\\phpmyadmin[^;]+;)', $updir . '$2', $str);
-    $str = regrpl('([A-Z]:\\\\[^\\\\])[^;]+(\\\\temp[^;]+;)', $updir . '$2', $str);
-    $str = regrpl('([A-Z]:\\\\[^\\\\])[^;]+(\\\\Temp\\\\\")', $sysroot . '$2', $str);
+    $str   = rfile($vhosts_conf);
+    $str   = regrpl('(open_basedir ")[^;]+(\\\\htdocs[^;]+;)', '$1' . $updir . '$2', $str);
+    $str   = regrpl('(open_basedir ")[^;]+(\\\\vhosts\\\\[^;]+;)', '$1' . $updir . '$2', $str);
+    $str   = regrpl('([A-Z]:\\\\[^\\\\])[^;]+(\\\\Guard[^;]+;)', $updir . '$2', $str);
+    $str   = regrpl('([A-Z]:\\\\[^\\\\])[^;]+(\\\\phpmyadmin[^;]+;)', $updir . '$2', $str);
+    $str   = regrpl('([A-Z]:\\\\[^\\\\])[^;]+(\\\\temp[^;]+;)', $updir . '$2', $str);
+    $str   = regrpl('([A-Z]:\\\\[^\\\\])[^;]+(\\\\Temp\\\\\")', $sysroot . '$2', $str);
     $updir = rpl("\\\\", '/', $updir);
-    $str = regrpl('[A-Z]:\/.*?[^\/\r\n]+(\/htdocs)', $updir . '$1', $str);
-    $str = regrpl('[A-Z]:\/.*?[^\/\r\n]+(\/vhosts)', $updir . '$1', $str);
+    $str   = regrpl('[A-Z]:\/.*?[^\/\r\n]+(\/htdocs)', $updir . '$1', $str);
+    $str   = regrpl('[A-Z]:\/.*?[^\/\r\n]+(\/vhosts)', $updir . '$1', $str);
     wfile($vhosts_conf, $str);
-    $str = rfile($httpd_conf);
+    $str   = rfile($httpd_conf);
     $updir = rpl("\\\\", '/', $updir);
-    $str = regrpl('[A-Z]:\/.*?[^\/\r\n]+(\/Apache2)', $updir . '$1', $str);
-    $str = regrpl('[A-Z]:\/.*?[^\/\r\n]+(\/htdocs)', $updir . '$1', $str);
-    $str = regrpl('[A-Z]:\/.*?[^\/\r\n]+(\/phpmyadmin)', $updir . '$1', $str);
-    $str = regrpl('[A-Z]:\/.*?[^\/\r\n]+(\/Guard)', $updir . '$1', $str);
-    $str = regrpl('[A-Z]:\/.*?[^\/\r\n]+(\/PHP7)', $updir . '$1', $str);
+    $str   = regrpl('[A-Z]:\/.*?[^\/\r\n]+(\/Apache2)', $updir . '$1', $str);
+    $str   = regrpl('[A-Z]:\/.*?[^\/\r\n]+(\/htdocs)', $updir . '$1', $str);
+    $str   = regrpl('[A-Z]:\/.*?[^\/\r\n]+(\/phpmyadmin)', $updir . '$1', $str);
+    $str   = regrpl('[A-Z]:\/.*?[^\/\r\n]+(\/Guard)', $updir . '$1', $str);
+    $str   = regrpl('[A-Z]:\/.*?[^\/\r\n]+(\/PHP7)', $updir . '$1', $str);
     wfile($httpd_conf, $str);
-    $str = rfile($winsw_m);
+    $str   = rfile($winsw_m);
     $updir = rpl("\\\\", '/', $updir);
-    $str = regrpl('[A-Z]:\/.*?[^\/\r\n]+(\/upcore)', $updir . '$1', $str);
-    $str = regrpl('[A-Z]:\/.*?[^\/\r\n]+(\/Guard)', $updir . '$1', $str);
+    $str   = regrpl('[A-Z]:\/.*?[^\/\r\n]+(\/upcore)', $updir . '$1', $str);
+    $str   = regrpl('[A-Z]:\/.*?[^\/\r\n]+(\/Guard)', $updir . '$1', $str);
     wfile($winsw_m, $str);
 }
 
@@ -262,7 +262,7 @@ function vhost_add($hn, $htdocs, $port, $hAlias, $lt)
 {
     global $vhosts_conf, $updir, $sysroot;
     $htdocs = trim($htdocs);
-    $hn = trim($hn);
+    $hn     = trim($hn);
     if (regrpl('[\d]+', '', $hn) === '') quit(' # 主机名不能为纯数字!', 1);
     if ($tmp = regrpl('[a-z0-9\.-]+', '', $hn)) quit(' # 主机名含有非法字符 "' . $tmp . '"', 1);
     if ($port < 1 || $port > 65535) exit;
@@ -275,7 +275,7 @@ function vhost_add($hn, $htdocs, $port, $hAlias, $lt)
         @mkdir($tmp);
         $htdocs = $updir . '/' . $tmp;
         $htdocs = rpl("\\", '/', $htdocs);
-        $vhDir = $updir . '\\vhosts\\' . $hn;
+        $vhDir  = $updir . '\\vhosts\\' . $hn;
         if (!file_exists($updir . '/' . $tmp . '/u.php'))
             copy($updir . '/upcore/u.p', $updir . '/' . $tmp . '/u.php');
         if (!file_exists($updir . '/' . $tmp . '/ErrorFiles'))
@@ -338,7 +338,7 @@ function vhost_mod($vh, $n_hA)
         if (substr_count($n_hA, '+'))
             $n_hA = rpl('+', ' ' . $hA . ' ', $n_hA);
         $n_hA = trim(regrpl('[ \t]+', ' ', $n_hA));
-        $str = regrpl('(ServerName ' . $vh . '.*\r\n.*ServerAlias)[ \t]+' . quotemeta($hA) . "(\r\n)", '$1 ' . $n_hA . '$2', $str);
+        $str  = regrpl('(ServerName ' . $vh . '.*\r\n.*ServerAlias)[ \t]+' . quotemeta($hA) . "(\r\n)", '$1 ' . $n_hA . '$2', $str);
     }
     wfile($vhosts_conf, $str);
 }
@@ -374,7 +374,7 @@ function showvhs()
     for ($i = 0; $i < count($Vhs); $i++) {
         $vh = str_pad(cuts($Vhs[$i], 'ServerName ', ':'), 18) . '| ';
         $vh .= cuts($Vhs[$i], 'ServerAlias ', "\n");
-        $P = cuts($Vhs[$i], 'DocumentRoot "', "\"\n");
+        $P  = cuts($Vhs[$i], 'DocumentRoot "', "\"\n");
         if (!$P) {
             $P = cuts($Vhs[$i], 'ProxyPass / http://', "/\n");
             if ($P) $P = '@' . $P;
@@ -383,7 +383,7 @@ function showvhs()
             $P = regrpl('[A-Z]:\/[^.*]+.*(vhosts)', '$1', $P);
         }
         if ($P) $vh = str_pad($vh, 42) . ' | ' . @str_pad($P, '0', 20);
-        $vh = str_pad($vh, (strlen($vh) < 71) ? 70 : 150) . '|';
+        $vh  = str_pad($vh, (strlen($vh) < 71) ? 70 : 150) . '|';
         $str .= ' |' . str_pad($i, 3, ' ', STR_PAD_LEFT) . ' | ' . $vh . "\r\n";
     }
     echo ' ' . str_repeat('-', 78) . "\r\n";
@@ -396,13 +396,13 @@ function showvhs()
 
 function rvhs($str)
 {
-    $Vhs = array();
+    $Vhs = [];
     $str = regrpl('\s*\n\s*', "\n", $str);
     $str = regrpl('[ \t]+', ' ', $str);
     for ($i = 0; $str = strstr($str, "<Vir"); $i++) {
-        $p = strpos($str, "</Vir") + 14;
+        $p       = strpos($str, "</Vir") + 14;
         $Vhs[$i] = substr($str, 1, $p);
-        $str = substr($str, $p);
+        $str     = substr($str, $p);
     }
     return $Vhs;
 }
@@ -410,7 +410,7 @@ function rvhs($str)
 function cuts($str, $a, $z)
 {
     $p0 = strpos($str, $a);
-    if ($p0 === FALSE) return $p0;
+    if ($p0 === false) return $p0;
     $p1 = strlen($a) + $p0;
     $p2 = strpos($str, $z, $p1);
     return substr($str, $p1, $p2 - $p1);
@@ -439,22 +439,22 @@ function cfg_bak($Arg)
     global $httpd_conf, $vhosts_conf, $php_ini;
     $Arg = explode(' ', $Arg);
     dl('php_zip.dll');
-    $Files = array(
+    $Files   = [
         $httpd_conf,
         $vhosts_conf,
         $php_ini,
-        env('database_dir') . '/my.ini'
-    );
+        env('database_dir') . '/my.ini',
+    ];
     $zipfile = env('cfg_bak_zip');
-    $zip = new ZipArchive;
+    $zip     = new ZipArchive;
     $zip->open($zipfile, ZIPARCHIVE::CREATE);
     if (!$zip->locateName($tmp = 'UPUPW_Config_Backup'))
         $zip->addFromString($tmp, '');
-    $Entries = array();
+    $Entries = [];
     for ($i = 0; $i < $zip->numFiles; $i++)
         $Entries[$i] = $zip->getNameIndex($i);
-    $BakDirs = array();
-    foreach ($Entries As $e) {
+    $BakDirs = [];
+    foreach ($Entries as $e) {
         if ($p = strpos($e, '/')) {
             $bakDir = substr($e, 0, $p);
             if (!in_array($bakDir, $BakDirs))
@@ -463,7 +463,7 @@ function cfg_bak($Arg)
     }
     if ($Arg[0] === 'backup') {
         $bakDir = $Arg[1] . '_' . gmdate('YmdHi', strtotime('+8 hour'));
-        $tmp = $bakDir;
+        $tmp    = $bakDir;
         for ($i = 1; in_array($tmp . '/', $BakDirs); $i++)
             $tmp = $bakDir . '_' . $i;
         $bakDir = $tmp;
@@ -498,7 +498,7 @@ function cfg_bak($Arg)
         $n = $Arg[1];
         if (isset($BakDirs[$n])) {
             $bakDir = $BakDirs[$n];
-            foreach ($Entries As $e) {
+            foreach ($Entries as $e) {
                 if (substr($e, 0, strlen($bakDir)) === $bakDir)
                     $zip->deleteName($e);
             }
@@ -515,20 +515,20 @@ function cfg_xnsp($Arg)
     global $my_ini, $php_ini;
     $Arg = explode(' ', $Arg);
     dl('php_zip.dll');
-    $Files = array(
+    $Files   = [
         $my_ini,
         $php_ini,
-    );
+    ];
     $zipfile = env('cfg_xnsp_zip');
-    $zip = new ZipArchive;
+    $zip     = new ZipArchive;
     $zip->open($zipfile, ZIPARCHIVE::CREATE);
     if (!$zip->locateName($tmp = 'UPUPW_Config_XNSP'))
         $zip->addFromString($tmp, '');
-    $Entries = array();
+    $Entries = [];
     for ($i = 0; $i < $zip->numFiles; $i++)
         $Entries[$i] = $zip->getNameIndex($i);
-    $BakDirs = array();
-    foreach ($Entries As $e) {
+    $BakDirs = [];
+    foreach ($Entries as $e) {
         if ($p = strpos($e, '/')) {
             $bakDir = substr($e, 0, $p);
             if (!in_array($bakDir, $BakDirs))
@@ -564,19 +564,19 @@ function cfg_sckf($Arg)
     global $php_ini;
     $Arg = explode(' ', $Arg);
     dl('php_zip.dll');
-    $Files = array(
+    $Files   = [
         $php_ini,
-    );
+    ];
     $zipfile = env('cfg_sckf_zip');
-    $zip = new ZipArchive;
+    $zip     = new ZipArchive;
     $zip->open($zipfile, ZIPARCHIVE::CREATE);
     if (!$zip->locateName($tmp = 'UPUPW_Config_SCKF'))
         $zip->addFromString($tmp, '');
-    $Entries = array();
+    $Entries = [];
     for ($i = 0; $i < $zip->numFiles; $i++)
         $Entries[$i] = $zip->getNameIndex($i);
-    $BakDirs = array();
-    foreach ($Entries As $e) {
+    $BakDirs = [];
+    foreach ($Entries as $e) {
         if ($p = strpos($e, '/')) {
             $bakDir = substr($e, 0, $p);
             if (!in_array($bakDir, $BakDirs))
