@@ -6,7 +6,7 @@ module.exports = {
     head: [
         ['link', { rel: 'icon', href: '/logo.png' }]
     ],
-    port : '8080',              //指定用于 dev 服务器的端口
+    port : '8077',              //指定用于 dev 服务器的端口
 
     configureWebpack: {
         resolve: {
